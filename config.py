@@ -379,7 +379,8 @@ STRATEGY_CONFIG = {
         'enhanced_confirmation': True,
         'max_position': 0.1,
         'confidence_threshold': 0.75,
-        'min_candles': 50  # Minimum candles required for analysis
+        'min_candles': 50,  # Minimum candles required for analysis
+        'swing_threshold': 0.02  # Minimum swing threshold for detection
     },
     
     'support_resistance': {
