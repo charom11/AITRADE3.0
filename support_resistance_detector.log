@@ -39967,3 +39967,79 @@
 2025-08-03 18:22:49,488 - INFO - Initialized detector for BTC/USDT on binance (5m)
 2025-08-03 18:23:03,412 - INFO - Initialized detector for BTC/USDT on binance (5m)
 2025-08-03 18:23:42,337 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-03 18:25:26,245 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-03 18:26:56,600 - INFO - Database setup complete: trading_signals.db
+2025-08-03 18:26:58,262 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-03 18:26:58,268 - INFO - Connected to binance
+2025-08-03 18:26:58,268 - INFO - Fibonacci detector initialized for BTC/USDT on 5m
+2025-08-03 18:26:58,276 - INFO - Initialized detector for ETH/USDT on binance (5m)
+2025-08-03 18:26:58,284 - INFO - Connected to binance
+2025-08-03 18:26:58,284 - INFO - Fibonacci detector initialized for ETH/USDT on 5m
+2025-08-03 18:26:58,289 - INFO - Initialized detector for BNB/USDT on binance (5m)
+2025-08-03 18:26:58,295 - INFO - Connected to binance
+2025-08-03 18:26:58,295 - INFO - Fibonacci detector initialized for BNB/USDT on 5m
+2025-08-03 18:26:58,301 - INFO - Initialized detector for ADA/USDT on binance (5m)
+2025-08-03 18:26:58,306 - INFO - Connected to binance
+2025-08-03 18:26:58,306 - INFO - Fibonacci detector initialized for ADA/USDT on 5m
+2025-08-03 18:26:58,312 - INFO - Initialized detector for SOL/USDT on binance (5m)
+2025-08-03 18:26:58,317 - INFO - Connected to binance
+2025-08-03 18:26:58,317 - INFO - Fibonacci detector initialized for SOL/USDT on 5m
+2025-08-03 18:26:58,317 - INFO - Initialized detectors for 5 symbols
+2025-08-03 18:26:58,420 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-03 18:27:23,361 - INFO - Database setup complete: trading_signals.db
+2025-08-03 18:27:24,646 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-03 18:27:24,651 - INFO - Connected to binance
+2025-08-03 18:27:24,651 - INFO - Fibonacci detector initialized for BTC/USDT on 5m
+2025-08-03 18:27:24,657 - INFO - Initialized detector for ETH/USDT on binance (5m)
+2025-08-03 18:27:24,663 - INFO - Connected to binance
+2025-08-03 18:27:24,663 - INFO - Fibonacci detector initialized for ETH/USDT on 5m
+2025-08-03 18:27:24,668 - INFO - Initialized detector for BNB/USDT on binance (5m)
+2025-08-03 18:27:24,673 - INFO - Connected to binance
+2025-08-03 18:27:24,674 - INFO - Fibonacci detector initialized for BNB/USDT on 5m
+2025-08-03 18:27:24,678 - INFO - Initialized detector for ADA/USDT on binance (5m)
+2025-08-03 18:27:24,684 - INFO - Connected to binance
+2025-08-03 18:27:24,684 - INFO - Fibonacci detector initialized for ADA/USDT on 5m
+2025-08-03 18:27:24,689 - INFO - Initialized detector for SOL/USDT on binance (5m)
+2025-08-03 18:27:24,695 - INFO - Connected to binance
+2025-08-03 18:27:24,695 - INFO - Fibonacci detector initialized for SOL/USDT on 5m
+2025-08-03 18:27:24,695 - INFO - Initialized detectors for 5 symbols
+2025-08-03 18:27:24,816 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-03 18:27:24,824 - INFO - Connected to binance
+2025-08-03 18:27:24,825 - INFO - Fibonacci detector initialized for BTC/USDT on 5m
+2025-08-03 18:27:24,825 - INFO - Added strategy: Momentum
+2025-08-03 18:27:24,825 - INFO - Added strategy: MeanReversion
+2025-08-03 18:27:24,825 - INFO - Added strategy: PairsTrading
+2025-08-03 18:27:24,825 - INFO - Added strategy: Divergence
+2025-08-03 18:27:24,825 - INFO - Added strategy: SupportResistance
+2025-08-03 18:27:24,825 - INFO - Added strategy: Fibonacci
+2025-08-03 18:27:24,825 - INFO - All strategies initialized successfully
+2025-08-03 18:27:24,825 - INFO - Added strategy: Momentum
+2025-08-03 18:27:24,826 - INFO - Added strategy: MeanReversion
+2025-08-03 18:27:24,826 - INFO - Added strategy: PairsTrading
+2025-08-03 18:27:24,826 - INFO - Added strategy: Divergence
+2025-08-03 18:27:24,826 - INFO - All strategies initialized successfully
+2025-08-03 18:27:24,826 - INFO - All detectors initialized successfully
+2025-08-03 18:27:24,827 - INFO - Real-time trading system started
+2025-08-03 18:27:25,557 - INFO - Generated signals for strategy: Momentum
+2025-08-03 18:27:25,557 - ERROR - Error generating signals for MeanReversion: 'MeanReversionStrategy' object has no attribute '_calculate_bollinger_bands'
+2025-08-03 18:27:25,570 - ERROR - Error generating signals for PairsTrading: 'z_score_threshold'
+2025-08-03 18:27:25,571 - ERROR - Error generating signals for Divergence: 'confirm_with_support_resistance'
+2025-08-03 18:27:25,631 - INFO - Generated signals for strategy: SupportResistance
+2025-08-03 18:27:25,740 - INFO - Generated signals for strategy: Fibonacci
+2025-08-03 18:27:25,753 - ERROR - Error in data processing loop: 'recommended_action'
+2025-08-03 18:27:36,412 - INFO - Generated signals for strategy: Momentum
+2025-08-03 18:27:36,412 - ERROR - Error generating signals for MeanReversion: 'MeanReversionStrategy' object has no attribute '_calculate_bollinger_bands'
+2025-08-03 18:27:36,424 - ERROR - Error generating signals for PairsTrading: 'z_score_threshold'
+2025-08-03 18:27:36,425 - ERROR - Error generating signals for Divergence: 'confirm_with_support_resistance'
+2025-08-03 18:27:36,486 - INFO - Generated signals for strategy: SupportResistance
+2025-08-03 18:27:36,599 - INFO - Generated signals for strategy: Fibonacci
+2025-08-03 18:27:36,611 - ERROR - Error in data processing loop: 'recommended_action'
+2025-08-03 18:27:47,351 - INFO - Generated signals for strategy: Momentum
+2025-08-03 18:27:47,351 - ERROR - Error generating signals for MeanReversion: 'MeanReversionStrategy' object has no attribute '_calculate_bollinger_bands'
+2025-08-03 18:27:47,366 - ERROR - Error generating signals for PairsTrading: 'z_score_threshold'
+2025-08-03 18:27:47,366 - ERROR - Error generating signals for Divergence: 'confirm_with_support_resistance'
+2025-08-03 18:27:47,439 - INFO - Generated signals for strategy: SupportResistance
+2025-08-03 18:27:47,571 - INFO - Generated signals for strategy: Fibonacci
+2025-08-03 18:27:47,585 - ERROR - Error in data processing loop: 'recommended_action'
+2025-08-03 18:27:49,521 - INFO - Trading system stopped
+2025-08-03 18:27:49,522 - INFO - Results exported to trading_results_20250803_182749.json

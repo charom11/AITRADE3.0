@@ -1,0 +1,25 @@
+{
+  "system_info": {
+    "symbols": [
+      "BTC/USDT",
+      "ETH/USDT",
+      "BNB/USDT",
+      "ADA/USDT",
+      "SOL/USDT"
+    ],
+    "timeframe": "5m",
+    "start_time": null,
+    "end_time": null,
+    "enable_live_trading": false,
+    "enable_backtesting": true
+  },
+  "performance_metrics": {
+    "total_signals": 0,
+    "executed_trades": 0,
+    "winning_trades": 0,
+    "total_pnl": 0.0,
+    "max_drawdown": 0.0,
+    "sharpe_ratio": 0.0
+  },
+  "signals": []
+}

@@ -381,6 +381,32 @@ class MeanReversionStrategy(BaseStrategy):
         
         return signals
     
+    def _calculate_bollinger_bands(self, prices: pd.Series, period: int = 20, std_dev: float = 2) -> Tuple[pd.Series, pd.Series]:
+        """Calculate Bollinger Bands"""
+        sma = prices.rolling(window=period).mean()
+        std = prices.rolling(window=period).std()
+        upper_band = sma + (std * std_dev)
+        lower_band = sma - (std * std_dev)
+        return upper_band, lower_band
+    
+    def _calculate_rsi(self, prices: pd.Series, period: int = 14) -> pd.Series:
+        """Calculate RSI"""
+        delta = prices.diff()
+        gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
+        loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
+        rs = gain / loss
+        rsi = 100 - (100 / (1 + rs))
+        return rsi
+    
+    def _calculate_atr(self, data: pd.DataFrame, period: int = 14) -> pd.Series:
+        """Calculate Average True Range"""
+        high_low = data['high'] - data['low']
+        high_close = np.abs(data['high'] - data['close'].shift())
+        low_close = np.abs(data['low'] - data['close'].shift())
+        true_range = np.maximum(high_low, np.maximum(high_close, low_close))
+        atr = true_range.rolling(window=period).mean()
+        return atr
+    
     def _calculate_signal_strength(self, data: pd.DataFrame) -> pd.Series:
         """Calculate signal strength based on multiple factors"""
         strength = pd.Series(0.0, index=data.index)
@@ -675,7 +701,7 @@ class SupportResistanceStrategy(BaseStrategy):
                 exchange='binance',
                 timeframe='5m',
                 min_touches=config['min_touches'],
-                zone_buffer=config.get('buffer_percentage', 0.005),
+                zone_buffer=config['zone_buffer'],
                 volume_threshold=config['volume_threshold'],
                 swing_sensitivity=config['swing_sensitivity'],
                 enable_charts=config['enable_charts'],

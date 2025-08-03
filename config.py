@@ -385,7 +385,7 @@ STRATEGY_CONFIG = {
     
     'support_resistance': {
         'min_touches': 3,       # Increased from 2
-        'buffer_percentage': 0.005,  # 0.5% buffer for zone identification
+        'zone_buffer': 0.005,  # 0.5% buffer for zone identification
         'volume_threshold': 0.8,
         'swing_sensitivity': 0.02,
         'enable_charts': True,
@@ -396,6 +396,7 @@ STRATEGY_CONFIG = {
     },
     
     'fibonacci': {
+        'buffer_percentage': 0.003,  # 0.3% buffer for level identification
         'swing_window': 20,
         'min_swing_strength': 0.03,
         'retracement_levels': [0.236, 0.382, 0.5, 0.618, 0.786],
