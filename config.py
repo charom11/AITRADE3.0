@@ -385,7 +385,7 @@ STRATEGY_CONFIG = {
     
     'support_resistance': {
         'min_touches': 3,       # Increased from 2
-        'zone_buffer': 0.005,   # 0.5% buffer
+        'buffer_percentage': 0.005,  # 0.5% buffer for zone identification
         'volume_threshold': 0.8,
         'swing_sensitivity': 0.02,
         'enable_charts': True,

@@ -675,7 +675,7 @@ class SupportResistanceStrategy(BaseStrategy):
                 exchange='binance',
                 timeframe='5m',
                 min_touches=config['min_touches'],
-                zone_buffer=config['zone_buffer'],
+                zone_buffer=config.get('buffer_percentage', 0.005),
                 volume_threshold=config['volume_threshold'],
                 swing_sensitivity=config['swing_sensitivity'],
                 enable_charts=config['enable_charts'],

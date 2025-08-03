@@ -39964,3 +39964,6 @@
 2025-08-03 17:55:44,107 - INFO - Generated signals for strategy: MeanReversion
 2025-08-03 17:55:44,107 - INFO - Generated signals for strategy: PairsTrading
 2025-08-03 17:55:44,219 - INFO - Generated signals for strategy: Divergence
+2025-08-03 18:22:49,488 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-03 18:23:03,412 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-03 18:23:42,337 - INFO - Initialized detector for BTC/USDT on binance (5m)
