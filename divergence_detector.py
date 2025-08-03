@@ -101,10 +101,14 @@ class DivergenceDetector:
         Returns:
             Tuple of (high_indices, low_indices)
         """
+        # Safety check: ensure we have enough data
+        if len(data) < 2 * window + 2:
+            return [], []
+            
         highs = []
         lows = []
         
-        for i in range(window, len(data) - window):
+        for i in range(window, len(data) - window - 1):
             # Check for swing high
             if all(data[column].iloc[i] >= data[column].iloc[i-j] for j in range(1, window+1)) and \
                all(data[column].iloc[i] >= data[column].iloc[i+j] for j in range(1, window+1)):

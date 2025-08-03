@@ -43,6 +43,8 @@ from strategies import (
     MeanReversionStrategy, 
     PairsTradingStrategy, 
     DivergenceStrategy,
+    SupportResistanceStrategy,
+    FibonacciStrategy,
     StrategyManager
 )
 from config import STRATEGY_CONFIG, TRADING_CONFIG
@@ -301,11 +303,15 @@ class RealLiveTradingSystem:
         mean_reversion_strategy = MeanReversionStrategy(STRATEGY_CONFIG['mean_reversion'])
         pairs_strategy = PairsTradingStrategy(STRATEGY_CONFIG['pairs_trading'])
         divergence_strategy = DivergenceStrategy(STRATEGY_CONFIG['divergence'])
+        support_resistance_strategy = SupportResistanceStrategy(STRATEGY_CONFIG['support_resistance'])
+        fibonacci_strategy = FibonacciStrategy(STRATEGY_CONFIG['fibonacci'])
         
         self.strategy_manager.add_strategy(momentum_strategy)
         self.strategy_manager.add_strategy(mean_reversion_strategy)
         self.strategy_manager.add_strategy(pairs_strategy)
         self.strategy_manager.add_strategy(divergence_strategy)
+        self.strategy_manager.add_strategy(support_resistance_strategy)
+        self.strategy_manager.add_strategy(fibonacci_strategy)
         
         logger.info("All strategies initialized successfully")
     
@@ -706,44 +712,85 @@ Time: {timestamp}
         self.send_telegram_alert(message)
     
     def data_processing_loop(self):
-        """Main data processing loop"""
+        """Main data processing loop with unified signal evaluation"""
         while self.running:
             try:
+                # Collect live data for all symbols
+                live_data = {
+                    'price_data': {},
+                    'support_resistance': {},
+                    'fibonacci': {},
+                    'divergence': {}
+                }
+                
                 for symbol in self.symbols:
                     # Fetch live data
                     data = self.fetch_live_data(symbol)
                     if data is None:
                         continue
                     
-                    # Analyze market conditions
-                    condition = self.analyze_market_conditions(symbol, data)
-                    if condition is None:
-                        continue
+                    live_data['price_data'][symbol] = data
                     
-                    # Store market condition
-                    self.condition_history.append(condition)
-                    self.save_market_condition_to_database(condition)
+                    # Get detection module outputs
+                    if symbol in self.detectors:
+                        # Support/Resistance zones
+                        sr_detector = self.detectors[symbol]['support_resistance']
+                        support_zones, resistance_zones = sr_detector.identify_zones(data)
+                        live_data['support_resistance'][symbol] = {
+                            'support_zones': support_zones,
+                            'resistance_zones': resistance_zones
+                        }
+                        
+                        # Fibonacci levels
+                        fib_detector = self.detectors[symbol]['fibonacci']
+                        fib_detector.update_fibonacci_levels(data)
+                        live_data['fibonacci'][symbol] = fib_detector.fibonacci_levels
+                        
+                        # Divergence analysis
+                        div_detector = self.detectors[symbol]['divergence']
+                        divergence_analysis = div_detector.analyze_divergence(data)
+                        live_data['divergence'][symbol] = divergence_analysis
+                
+                # Evaluate unified signals using StrategyManager
+                if live_data['price_data']:
+                    unified_signals = self.strategy_manager.evaluate_trade_signal(live_data)
                     
-                    # Generate trading signal
-                    signal = self.generate_trading_signal(condition)
-                    if signal is not None:
-                        # Backtest signal if enabled
-                        if self.enable_backtesting:
-                            backtest_result = self.backtest_signal(signal)
-                            signal.backtest_result = backtest_result
-                        
-                        # Store signal
-                        self.signal_history.append(signal)
-                        self.save_signal_to_database(signal)
-                        
-                        # Send alerts
-                        self.send_signal_alert(signal)
-                        
-                        # Execute trade
-                        self.execute_trade(signal)
-                        
-                        # Update performance metrics
-                        self.performance_metrics['total_signals'] += 1
+                    # Process signals
+                    for symbol, signal_result in unified_signals.items():
+                        if signal_result['recommended_action'] != 'hold':
+                            # Create trading signal
+                            signal = TradingSignal(
+                                timestamp=signal_result['timestamp'],
+                                symbol=symbol,
+                                signal_type=signal_result['recommended_action'],
+                                strength=abs(signal_result['signal']),
+                                confidence=signal_result['confidence'],
+                                price=signal_result['current_price'],
+                                conditions=signal_result['reasoning'],
+                                support_resistance=live_data['support_resistance'].get(symbol),
+                                fibonacci_level=live_data['fibonacci'].get(symbol),
+                                divergence=live_data['divergence'].get(symbol),
+                                strategy_signals=signal_result['strategy_contributions']
+                            )
+                            
+                            # Backtest signal if enabled
+                            if self.enable_backtesting:
+                                backtest_result = self.backtest_signal(signal)
+                                signal.backtest_result = backtest_result
+                            
+                            # Store signal
+                            self.signal_history.append(signal)
+                            self.save_signal_to_database(signal)
+                            
+                            # Send alerts
+                            self.send_signal_alert(signal)
+                            
+                            # Execute trade if confidence is high enough
+                            if signal.confidence >= 0.7:
+                                self.execute_trade(signal)
+                            
+                            # Update performance metrics
+                            self.performance_metrics['total_signals'] += 1
                 
                 # Sleep based on timeframe
                 if self.timeframe == '1m':

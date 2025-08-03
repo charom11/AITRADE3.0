@@ -74,6 +74,22 @@ STRATEGY_CONFIG = {
         'confirm_with_support_resistance': True,  # Confirm with S/R levels
         'confirm_with_candlestick': True,        # Confirm with candlestick patterns
         'risk_per_trade': 0.025, # 2.5% risk per trade (higher for divergence)
+    },
+    'support_resistance': {
+        'min_touches': 2,        # Minimum touches for zone confirmation
+        'zone_buffer': 0.003,    # 0.3% buffer for zones
+        'volume_threshold': 1.5, # Volume spike threshold
+        'swing_sensitivity': 0.02, # 2% swing sensitivity
+        'risk_per_trade': 0.02,  # 2% risk per trade
+        'enable_charts': False,  # Enable chart generation
+        'enable_alerts': True,   # Enable alerts
+    },
+    'fibonacci': {
+        'buffer_percentage': 0.003, # 0.3% buffer for levels
+        'min_swing_strength': 0.6,  # Minimum swing strength
+        'risk_per_trade': 0.02,     # 2% risk per trade
+        'enable_charts': False,     # Enable chart generation
+        'enable_alerts': True,      # Enable alerts
     }
 }
 

@@ -1,6 +1,6 @@
 """
 Trading Strategies for Mini Hedge Fund
-Implements momentum, mean reversion, pairs trading, and divergence strategies
+Implements momentum, mean reversion, pairs trading, divergence, support/resistance, and fibonacci strategies
 """
 
 import pandas as pd
@@ -8,8 +8,22 @@ import numpy as np
 from typing import Dict, List, Tuple, Optional
 import logging
 from abc import ABC, abstractmethod
+from datetime import datetime
 
 from config import STRATEGY_CONFIG
+
+# Import detection modules
+try:
+    from live_support_resistance_detector import LiveSupportResistanceDetector, SupportResistanceZone
+    from live_fibonacci_detector import LiveFibonacciDetector, FibonacciLevel, SwingPoint
+    from divergence_detector import DivergenceDetector
+except ImportError as e:
+    logging.warning(f"Some detection modules not available: {e}")
+    LiveSupportResistanceDetector = None
+    LiveFibonacciDetector = None
+    DivergenceDetector = None
+from live_support_resistance_detector import LiveSupportResistanceDetector
+from live_fibonacci_detector import LiveFibonacciDetector
 
 class BaseStrategy(ABC):
     """Base class for all trading strategies"""
@@ -429,6 +443,236 @@ class DivergenceStrategy(BaseStrategy):
             confirm_signals=self.config['confirm_with_support_resistance']
         )
 
+
+class SupportResistanceStrategy(BaseStrategy):
+    """
+    Support and Resistance Strategy based on key price levels
+    - Long when price bounces off support with volume confirmation
+    - Short when price rejects from resistance with volume confirmation
+    """
+    
+    def __init__(self, config: dict = None):
+        if config is None:
+            config = {
+                'min_touches': 2,
+                'zone_buffer': 0.003,  # 0.3%
+                'volume_threshold': 1.5,
+                'swing_sensitivity': 0.02,  # 2%
+                'risk_per_trade': 0.02,
+                'enable_charts': False,
+                'enable_alerts': True
+            }
+        super().__init__('SupportResistance', config)
+        
+        # Initialize detector if available
+        if LiveSupportResistanceDetector:
+            self.detector = LiveSupportResistanceDetector(
+                min_touches=config['min_touches'],
+                zone_buffer=config['zone_buffer'],
+                volume_threshold=config['volume_threshold'],
+                swing_sensitivity=config['swing_sensitivity'],
+                enable_charts=config['enable_charts'],
+                enable_alerts=config['enable_alerts']
+            )
+        else:
+            self.detector = None
+            self.logger.warning("LiveSupportResistanceDetector not available")
+
+    def generate_signals(self, data: pd.DataFrame) -> pd.DataFrame:
+        signals = data.copy()
+        signals['signal'] = 0
+        signals['support_level'] = 0.0
+        signals['resistance_level'] = 0.0
+        signals['zone_strength'] = 0.0
+        signals['volume_confirmed'] = False
+        
+        if self.detector is None:
+            return signals
+            
+        try:
+            # Set data in detector
+            self.detector.data = data
+            self.detector.current_price = data['close'].iloc[-1]
+            
+            # Update zones
+            self.detector.update_zones(data)
+            
+            # Get current zones
+            support_zones = self.detector.support_zones
+            resistance_zones = self.detector.resistance_zones
+            
+            current_price = data['close'].iloc[-1]
+            
+            # Check for support bounce
+            for zone in support_zones:
+                if (current_price >= zone.price_range[0] and 
+                    current_price <= zone.price_range[1] and 
+                    zone.strength >= 0.6):
+                    
+                    # Check for bounce pattern (price was lower, now higher)
+                    recent_low = data['low'].tail(5).min()
+                    if current_price > recent_low * 1.005:  # 0.5% bounce
+                        signals.iloc[-1, signals.columns.get_loc('signal')] = 1
+                        signals.iloc[-1, signals.columns.get_loc('support_level')] = zone.level
+                        signals.iloc[-1, signals.columns.get_loc('zone_strength')] = zone.strength
+                        signals.iloc[-1, signals.columns.get_loc('volume_confirmed')] = zone.volume_confirmed
+                        break
+            
+            # Check for resistance rejection
+            for zone in resistance_zones:
+                if (current_price >= zone.price_range[0] and 
+                    current_price <= zone.price_range[1] and 
+                    zone.strength >= 0.6):
+                    
+                    # Check for rejection pattern (price was higher, now lower)
+                    recent_high = data['high'].tail(5).max()
+                    if current_price < recent_high * 0.995:  # 0.5% rejection
+                        signals.iloc[-1, signals.columns.get_loc('signal')] = -1
+                        signals.iloc[-1, signals.columns.get_loc('resistance_level')] = zone.level
+                        signals.iloc[-1, signals.columns.get_loc('zone_strength')] = zone.strength
+                        signals.iloc[-1, signals.columns.get_loc('volume_confirmed')] = zone.volume_confirmed
+                        break
+                        
+        except Exception as e:
+            self.logger.error(f"Error in support/resistance signal generation: {e}")
+            
+        return signals
+
+    def calculate_position_size(self, signal: float, price: float, 
+                              portfolio_value: float) -> float:
+        if signal == 0:
+            return 0
+        base_size = portfolio_value * self.config.get('risk_per_trade', 0.02)
+        position_size = base_size * abs(signal)
+        max_position = portfolio_value * 0.10
+        position_size = min(position_size, max_position)
+        return position_size if signal > 0 else -position_size
+
+    def get_current_zones(self) -> Dict:
+        """Get current support and resistance zones"""
+        if self.detector is None:
+            return {'support_zones': [], 'resistance_zones': []}
+        
+        return {
+            'support_zones': self.detector.support_zones,
+            'resistance_zones': self.detector.resistance_zones
+        }
+
+
+class FibonacciStrategy(BaseStrategy):
+    """
+    Fibonacci Retracement and Extension Strategy
+    - Long when price bounces off Fibonacci support levels
+    - Short when price rejects from Fibonacci resistance levels
+    """
+    
+    def __init__(self, config: dict = None):
+        if config is None:
+            config = {
+                'buffer_percentage': 0.003,  # 0.3%
+                'min_swing_strength': 0.6,
+                'risk_per_trade': 0.02,
+                'enable_charts': False,
+                'enable_alerts': True
+            }
+        super().__init__('Fibonacci', config)
+        
+        # Initialize detector if available
+        if LiveFibonacciDetector:
+            self.detector = LiveFibonacciDetector(
+                buffer_percentage=config['buffer_percentage'],
+                min_swing_strength=config['min_swing_strength']
+            )
+        else:
+            self.detector = None
+            self.logger.warning("LiveFibonacciDetector not available")
+
+    def generate_signals(self, data: pd.DataFrame) -> pd.DataFrame:
+        signals = data.copy()
+        signals['signal'] = 0
+        signals['fibonacci_level'] = 0.0
+        signals['level_type'] = ''
+        signals['level_percentage'] = 0.0
+        signals['level_strength'] = 0.0
+        
+        if self.detector is None:
+            return signals
+            
+        try:
+            # Set data in detector
+            self.detector.data = data
+            self.detector.current_price = data['close'].iloc[-1]
+            
+            # Update Fibonacci levels
+            self.detector.update_fibonacci_levels(data)
+            
+            current_price = data['close'].iloc[-1]
+            
+            # Check for Fibonacci level interactions
+            for level in self.detector.fibonacci_levels:
+                if (current_price >= level.zone_low and 
+                    current_price <= level.zone_high and 
+                    level.strength >= 0.5):
+                    
+                    # Determine signal based on level type and price action
+                    if level.level_type == 'retracement':
+                        # Retracement levels act as support/resistance
+                        if level.percentage <= 61.8:  # Strong support levels
+                            # Check for bounce from support
+                            recent_low = data['low'].tail(3).min()
+                            if current_price > recent_low * 1.002:  # Small bounce
+                                signals.iloc[-1, signals.columns.get_loc('signal')] = 1
+                                signals.iloc[-1, signals.columns.get_loc('fibonacci_level')] = level.price
+                                signals.iloc[-1, signals.columns.get_loc('level_type')] = level.level_type
+                                signals.iloc[-1, signals.columns.get_loc('level_percentage')] = level.percentage
+                                signals.iloc[-1, signals.columns.get_loc('level_strength')] = level.strength
+                                break
+                        else:  # 78.6% - potential reversal
+                            # Check for rejection from deep retracement
+                            recent_high = data['high'].tail(3).max()
+                            if current_price < recent_high * 0.998:  # Small rejection
+                                signals.iloc[-1, signals.columns.get_loc('signal')] = -1
+                                signals.iloc[-1, signals.columns.get_loc('fibonacci_level')] = level.price
+                                signals.iloc[-1, signals.columns.get_loc('level_type')] = level.level_type
+                                signals.iloc[-1, signals.columns.get_loc('level_percentage')] = level.percentage
+                                signals.iloc[-1, signals.columns.get_loc('level_strength')] = level.strength
+                                break
+                    
+                    elif level.level_type == 'extension':
+                        # Extension levels act as targets
+                        if level.percentage >= 161.8:  # Strong extension
+                            # Check for rejection from extension
+                            recent_high = data['high'].tail(3).max()
+                            if current_price < recent_high * 0.998:  # Small rejection
+                                signals.iloc[-1, signals.columns.get_loc('signal')] = -1
+                                signals.iloc[-1, signals.columns.get_loc('fibonacci_level')] = level.price
+                                signals.iloc[-1, signals.columns.get_loc('level_type')] = level.level_type
+                                signals.iloc[-1, signals.columns.get_loc('level_percentage')] = level.percentage
+                                signals.iloc[-1, signals.columns.get_loc('level_strength')] = level.strength
+                                break
+                        
+        except Exception as e:
+            self.logger.error(f"Error in Fibonacci signal generation: {e}")
+            
+        return signals
+
+    def calculate_position_size(self, signal: float, price: float, 
+                              portfolio_value: float) -> float:
+        if signal == 0:
+            return 0
+        base_size = portfolio_value * self.config.get('risk_per_trade', 0.02)
+        position_size = base_size * abs(signal)
+        max_position = portfolio_value * 0.10
+        position_size = min(position_size, max_position)
+        return position_size if signal > 0 else -position_size
+
+    def get_fibonacci_levels(self) -> List[FibonacciLevel]:
+        """Get current Fibonacci levels"""
+        if self.detector is None:
+            return []
+        return self.detector.fibonacci_levels
+
+
 class StrategyManager:
     """Manages multiple trading strategies"""
     
@@ -470,4 +714,261 @@ class StrategyManager:
             summary = strategy.get_strategy_summary()
             summaries.append(summary)
         
-        return pd.DataFrame(summaries) 
+        return pd.DataFrame(summaries)
+    
+    def evaluate_trade_signal(self, live_data: Dict[str, pd.DataFrame]) -> Dict:
+        """
+        Unified signal evaluation combining all detection modules
+        
+        Args:
+            live_data: Dictionary with keys:
+                - 'price_data': OHLCV data for each symbol
+                - 'support_resistance': Support/resistance zones
+                - 'fibonacci': Fibonacci levels
+                - 'divergence': Divergence analysis
+                
+        Returns:
+            Dictionary with unified trading signals
+        """
+        unified_signals = {}
+        
+        try:
+            # Get signals from all strategies
+            all_strategy_signals = self.get_all_signals(live_data.get('price_data', {}))
+            
+            # Process each symbol
+            for symbol in live_data.get('price_data', {}).keys():
+                symbol_signals = {}
+                
+                # Collect signals from each strategy
+                for strategy_name, strategy_signals in all_strategy_signals.items():
+                    if symbol in strategy_signals:
+                        symbol_signals[strategy_name] = strategy_signals[symbol]
+                
+                # Evaluate combined signal
+                combined_signal = self._combine_strategy_signals(symbol_signals, live_data, symbol)
+                unified_signals[symbol] = combined_signal
+                
+        except Exception as e:
+            self.logger.error(f"Error in unified signal evaluation: {e}")
+            
+        return unified_signals
+    
+    def _combine_strategy_signals(self, strategy_signals: Dict, live_data: Dict, symbol: str) -> Dict:
+        """
+        Combine signals from multiple strategies with detection module confirmations
+        
+        Args:
+            strategy_signals: Signals from individual strategies
+            live_data: Complete live data including detection modules
+            symbol: Trading symbol
+            
+        Returns:
+            Combined signal with confidence and reasoning
+        """
+        combined_signal = {
+            'signal': 0,  # -1 (sell), 0 (hold), 1 (buy)
+            'confidence': 0.0,  # 0-1 confidence level
+            'reasoning': [],
+            'strategy_contributions': {},
+            'detection_confirmations': {}
+        }
+        
+        # Collect signals from strategies
+        buy_signals = 0
+        sell_signals = 0
+        total_confidence = 0.0
+        
+        for strategy_name, signals in strategy_signals.items():
+            if 'signal' in signals.columns and len(signals) > 0:
+                latest_signal = signals['signal'].iloc[-1]
+                strategy_signals[strategy_name] = latest_signal
+                
+                if latest_signal > 0:
+                    buy_signals += 1
+                    confidence = self._get_signal_confidence(signals, strategy_name)
+                    total_confidence += confidence
+                    combined_signal['reasoning'].append(f"{strategy_name}: BUY (confidence: {confidence:.2f})")
+                    
+                elif latest_signal < 0:
+                    sell_signals += 1
+                    confidence = self._get_signal_confidence(signals, strategy_name)
+                    total_confidence += confidence
+                    combined_signal['reasoning'].append(f"{strategy_name}: SELL (confidence: {confidence:.2f})")
+        
+        # Check detection module confirmations
+        detection_confirmations = self._check_detection_confirmations(live_data, symbol)
+        combined_signal['detection_confirmations'] = detection_confirmations
+        
+        # Determine final signal
+        if buy_signals > sell_signals and buy_signals >= 2:
+            combined_signal['signal'] = 1
+            combined_signal['confidence'] = min(1.0, total_confidence / buy_signals + 0.2)  # Bonus for multiple confirmations
+            combined_signal['reasoning'].append("Multiple BUY signals with detection confirmations")
+            
+        elif sell_signals > buy_signals and sell_signals >= 2:
+            combined_signal['signal'] = -1
+            combined_signal['confidence'] = min(1.0, total_confidence / sell_signals + 0.2)  # Bonus for multiple confirmations
+            combined_signal['reasoning'].append("Multiple SELL signals with detection confirmations")
+            
+        else:
+            # Check for strong single signals with detection confirmations
+            if buy_signals == 1 and detection_confirmations.get('support_resistance', False):
+                combined_signal['signal'] = 1
+                combined_signal['confidence'] = 0.7
+                combined_signal['reasoning'].append("Single BUY signal with support/resistance confirmation")
+                
+            elif sell_signals == 1 and detection_confirmations.get('resistance_rejection', False):
+                combined_signal['signal'] = -1
+                combined_signal['confidence'] = 0.7
+                combined_signal['reasoning'].append("Single SELL signal with resistance confirmation")
+        
+        combined_signal['strategy_contributions'] = strategy_signals
+        
+        return combined_signal
+    
+    def _get_signal_confidence(self, signals: pd.DataFrame, strategy_name: str) -> float:
+        """Calculate confidence level for a strategy signal"""
+        if len(signals) == 0:
+            return 0.0
+            
+        # Base confidence from signal strength
+        if 'signal_strength' in signals.columns:
+            confidence = abs(signals['signal_strength'].iloc[-1])
+        else:
+            confidence = 0.5  # Default confidence
+            
+        # Strategy-specific confidence adjustments
+        if strategy_name == 'Divergence':
+            if 'divergence_strength' in signals.columns:
+                confidence = max(confidence, signals['divergence_strength'].iloc[-1])
+                
+        elif strategy_name == 'SupportResistance':
+            if 'zone_strength' in signals.columns:
+                confidence = max(confidence, signals['zone_strength'].iloc[-1])
+                
+        elif strategy_name == 'Fibonacci':
+            if 'level_strength' in signals.columns:
+                confidence = max(confidence, signals['level_strength'].iloc[-1])
+        
+        return min(1.0, confidence)
+    
+    def _check_detection_confirmations(self, live_data: Dict, symbol: str) -> Dict:
+        """Check for confirmations from detection modules"""
+        confirmations = {
+            'support_resistance': False,
+            'fibonacci_support': False,
+            'fibonacci_resistance': False,
+            'divergence_bullish': False,
+            'divergence_bearish': False
+        }
+        
+        try:
+            # Check support/resistance confirmations
+            if 'support_resistance' in live_data:
+                sr_data = live_data['support_resistance']
+                if symbol in sr_data:
+                    zones = sr_data[symbol]
+                    current_price = live_data['price_data'][symbol]['close'].iloc[-1]
+                    
+                    # Check if price is at support
+                    for zone in zones.get('support_zones', []):
+                        if (current_price >= zone.price_range[0] and 
+                            current_price <= zone.price_range[1]):
+                            confirmations['support_resistance'] = True
+                            break
+                    
+                    # Check if price is at resistance
+                    for zone in zones.get('resistance_zones', []):
+                        if (current_price >= zone.price_range[0] and 
+                            current_price <= zone.price_range[1]):
+                            confirmations['resistance_rejection'] = True
+                            break
+            
+            # Check Fibonacci confirmations
+            if 'fibonacci' in live_data:
+                fib_data = live_data['fibonacci']
+                if symbol in fib_data:
+                    levels = fib_data[symbol]
+                    current_price = live_data['price_data'][symbol]['close'].iloc[-1]
+                    
+                    for level in levels:
+                        if (current_price >= level.zone_low and 
+                            current_price <= level.zone_high):
+                            if level.level_type == 'retracement' and level.percentage <= 61.8:
+                                confirmations['fibonacci_support'] = True
+                            elif level.level_type == 'retracement' and level.percentage >= 78.6:
+                                confirmations['fibonacci_resistance'] = True
+                            break
+            
+            # Check divergence confirmations
+            if 'divergence' in live_data:
+                div_data = live_data['divergence']
+                if symbol in div_data:
+                    divergence_info = div_data[symbol]
+                    if divergence_info.get('type') == 'bullish':
+                        confirmations['divergence_bullish'] = True
+                    elif divergence_info.get('type') == 'bearish':
+                        confirmations['divergence_bearish'] = True
+                        
+        except Exception as e:
+            self.logger.error(f"Error checking detection confirmations: {e}")
+            
+        return confirmations
+    
+    def _enhance_signals_with_detections(self, combined_result: Dict, detection_confirmations: Dict) -> Dict:
+        """
+        Enhance signals based on detection module confirmations
+        
+        Args:
+            combined_result: Combined signal result
+            detection_confirmations: Confirmations from detection modules
+            
+        Returns:
+            Enhanced signal result
+        """
+        enhanced_result = combined_result.copy()
+        
+        # Boost confidence for detection confirmations
+        detection_bonus = 0.0
+        
+        if detection_confirmations.get('support_resistance', False):
+            detection_bonus += 0.1
+            enhanced_result['reasoning'].append("Support/Resistance zone confirmation")
+            
+        if detection_confirmations.get('fibonacci_support', False):
+            detection_bonus += 0.1
+            enhanced_result['reasoning'].append("Fibonacci support level confirmation")
+            
+        if detection_confirmations.get('fibonacci_resistance', False):
+            detection_bonus += 0.1
+            enhanced_result['reasoning'].append("Fibonacci resistance level confirmation")
+            
+        if detection_confirmations.get('divergence_bullish', False):
+            detection_bonus += 0.15
+            enhanced_result['reasoning'].append("Bullish divergence confirmation")
+            
+        if detection_confirmations.get('divergence_bearish', False):
+            detection_bonus += 0.15
+            enhanced_result['reasoning'].append("Bearish divergence confirmation")
+        
+        # Apply detection bonus to confidence
+        enhanced_result['confidence'] = min(1.0, enhanced_result['confidence'] + detection_bonus)
+        
+        # Determine risk level based on confidence and confirmations
+        if enhanced_result['confidence'] >= 0.8:
+            enhanced_result['risk_level'] = 'low'
+        elif enhanced_result['confidence'] >= 0.6:
+            enhanced_result['risk_level'] = 'medium'
+        else:
+            enhanced_result['risk_level'] = 'high'
+        
+        # Determine recommended action
+        if enhanced_result['signal'] == 1 and enhanced_result['confidence'] >= 0.6:
+            enhanced_result['recommended_action'] = 'buy'
+        elif enhanced_result['signal'] == -1 and enhanced_result['confidence'] >= 0.6:
+            enhanced_result['recommended_action'] = 'sell'
+        else:
+            enhanced_result['recommended_action'] = 'hold'
+        
+        return enhanced_result 

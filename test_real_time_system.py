@@ -23,6 +23,8 @@ from strategies import (
     MeanReversionStrategy, 
     PairsTradingStrategy, 
     DivergenceStrategy,
+    SupportResistanceStrategy,
+    FibonacciStrategy,
     StrategyManager
 )
 from config import STRATEGY_CONFIG, TRADING_CONFIG
@@ -243,11 +245,15 @@ def test_strategy_manager():
         mean_reversion_strategy = MeanReversionStrategy(STRATEGY_CONFIG['mean_reversion'])
         pairs_strategy = PairsTradingStrategy(STRATEGY_CONFIG['pairs_trading'])
         divergence_strategy = DivergenceStrategy(STRATEGY_CONFIG['divergence'])
+        support_resistance_strategy = SupportResistanceStrategy(STRATEGY_CONFIG.get('support_resistance', {}))
+        fibonacci_strategy = FibonacciStrategy(STRATEGY_CONFIG.get('fibonacci', {}))
         
         strategy_manager.add_strategy(momentum_strategy)
         strategy_manager.add_strategy(mean_reversion_strategy)
         strategy_manager.add_strategy(pairs_strategy)
         strategy_manager.add_strategy(divergence_strategy)
+        strategy_manager.add_strategy(support_resistance_strategy)
+        strategy_manager.add_strategy(fibonacci_strategy)
         
         # Create sample data
         dates = pd.date_range(start='2024-01-01', end='2024-01-31', freq='5min')
@@ -321,11 +327,11 @@ def test_integrated_system():
         print("📊 Testing integrated analysis...")
         
         # 1. Support/Resistance
-        sr_detector = LiveSupportResistanceDetector('BTC/USDT', '5m', False, False)
+        sr_detector = LiveSupportResistanceDetector('binance', 'BTC/USDT', '5m')
         support_zones, resistance_zones = sr_detector.identify_zones(data)
         
         # 2. Fibonacci
-        fib_detector = LiveFibonacciDetector('BTC/USDT', '5m')
+        fib_detector = LiveFibonacciDetector('binance', 'BTC/USDT', '5m')
         fib_detector.update_fibonacci_levels(data)
         
         # 3. Divergence
@@ -335,7 +341,17 @@ def test_integrated_system():
         # 4. Strategies
         strategy_manager = StrategyManager()
         momentum_strategy = MomentumStrategy(STRATEGY_CONFIG['momentum'])
+        mean_reversion_strategy = MeanReversionStrategy(STRATEGY_CONFIG['mean_reversion'])
+        divergence_strategy = DivergenceStrategy(STRATEGY_CONFIG['divergence'])
+        support_resistance_strategy = SupportResistanceStrategy(STRATEGY_CONFIG.get('support_resistance', {}))
+        fibonacci_strategy = FibonacciStrategy(STRATEGY_CONFIG.get('fibonacci', {}))
+        
         strategy_manager.add_strategy(momentum_strategy)
+        strategy_manager.add_strategy(mean_reversion_strategy)
+        strategy_manager.add_strategy(divergence_strategy)
+        strategy_manager.add_strategy(support_resistance_strategy)
+        strategy_manager.add_strategy(fibonacci_strategy)
+        
         strategy_signals = strategy_manager.get_all_signals({'BTC/USDT': data})
         
         # Simulate signal generation
