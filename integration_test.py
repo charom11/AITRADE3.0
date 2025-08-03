@@ -87,6 +87,16 @@ def create_test_data(symbol: str = 'BTC/USDT', periods: int = 200) -> pd.DataFra
     df['macd'] = exp1 - exp2
     df['macd_signal'] = df['macd'].ewm(span=9).mean()
     
+    # Volume SMA
+    df['volume_sma'] = df['volume'].rolling(window=20).mean()
+    
+    # ATR (Average True Range)
+    high_low = df['high'] - df['low']
+    high_close = np.abs(df['high'] - df['close'].shift())
+    low_close = np.abs(df['low'] - df['close'].shift())
+    true_range = pd.concat([high_low, high_close, low_close], axis=1).max(axis=1)
+    df['atr'] = true_range.rolling(window=14).mean()
+    
     return df
 
 def test_detection_modules():
@@ -348,13 +358,13 @@ def run_performance_test():
     start_time = time.time()
     
     # Support/Resistance
-    sr_detector = LiveSupportResistanceDetector(symbol='BTC/USDT', timeframe='5m')
+    sr_detector = LiveSupportResistanceDetector(symbol='BTC/USDT', timeframe='15m')
     support_zones, resistance_zones = sr_detector.identify_zones(test_data)
     sr_time = time.time() - start_time
     
     # Fibonacci
     start_time = time.time()
-    fib_detector = LiveFibonacciDetector('BTC/USDT', '5m')
+    fib_detector = LiveFibonacciDetector(symbol='BTC/USDT', timeframe='5m')
     fib_detector.data = test_data
     fib_detector.current_price = test_data['close'].iloc[-1]
     fib_detector.update_fibonacci_levels(test_data)

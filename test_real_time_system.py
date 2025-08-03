@@ -327,7 +327,7 @@ def test_integrated_system():
         print("📊 Testing integrated analysis...")
         
         # 1. Support/Resistance
-        sr_detector = LiveSupportResistanceDetector('binance', 'BTC/USDT', '5m')
+        sr_detector = LiveSupportResistanceDetector('BTC/USDT', 'binance', '5m')
         support_zones, resistance_zones = sr_detector.identify_zones(data)
         
         # 2. Fibonacci

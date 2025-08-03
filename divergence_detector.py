@@ -457,6 +457,10 @@ class DivergenceDetector:
         if len(data) < 2:
             return 'Unknown'
         
+        # Check if index is datetime
+        if not isinstance(data.index, pd.DatetimeIndex):
+            return 'Unknown'
+        
         # Calculate time differences between consecutive rows
         time_diffs = data.index.to_series().diff().dropna()
         
@@ -465,6 +469,10 @@ class DivergenceDetector:
         
         # Get the most common time difference
         most_common_diff = time_diffs.mode().iloc[0]
+        
+        # Check if it's a timedelta object
+        if not hasattr(most_common_diff, 'total_seconds'):
+            return 'Unknown'
         
         # Convert to total seconds
         total_seconds = most_common_diff.total_seconds()

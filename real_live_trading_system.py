@@ -543,19 +543,121 @@ class RealLiveTradingSystem:
             end_date = signal.timestamp.strftime('%Y-%m-%d')
             start_date = (signal.timestamp - timedelta(days=30)).strftime('%Y-%m-%d')
             
-            # Run quick backtest
-            backtest_result = {
-                'signal_type': signal.signal_type,
-                'entry_price': signal.price,
-                'backtest_period': f"{start_date} to {end_date}",
-                'historical_performance': 'N/A'  # Would be calculated in full backtest
-            }
+            # Initialize backtest system
+            backtest_system = BacktestSystem(
+                initial_capital=10000,  # Small capital for signal testing
+                commission=0.001
+            )
             
-            return backtest_result
+            # Load historical data
+            if backtest_system.load_historical_data(start_date=start_date, end_date=end_date):
+                # Run focused backtest for this signal
+                backtest_result = self._run_signal_backtest(backtest_system, signal)
+                return backtest_result
+            else:
+                logger.warning(f"Could not load historical data for {symbol}")
+                return None
             
         except Exception as e:
             logger.error(f"Error backtesting signal: {e}")
             return None
+    
+    def _run_signal_backtest(self, backtest_system: BacktestSystem, signal: TradingSignal) -> Dict:
+        """Run focused backtest for a specific signal"""
+        try:
+            # Get historical data for the signal period
+            symbol = signal.symbol
+            if symbol not in backtest_system.historical_data:
+                return {'error': 'No historical data available'}
+            
+            data = backtest_system.historical_data[symbol]
+            
+            # Find signal date in historical data
+            signal_date = signal.timestamp
+            if signal_date not in data.index:
+                # Find closest date
+                closest_date = data.index[data.index.get_indexer([signal_date], method='nearest')[0]]
+                signal_date = closest_date
+            
+            # Get data up to signal date
+            historical_data = data[data.index <= signal_date]
+            
+            if len(historical_data) < 50:
+                return {'error': 'Insufficient historical data'}
+            
+            # Generate signals for the historical period
+            signals = backtest_system.generate_backtest_signals(symbol, signal_date)
+            
+            if not signals:
+                return {'error': 'Could not generate signals'}
+            
+            # Calculate performance metrics
+            performance_metrics = self._calculate_signal_performance(
+                historical_data, signals, signal
+            )
+            
+            return {
+                'signal_type': signal.signal_type,
+                'entry_price': signal.price,
+                'signal_strength': signal.strength,
+                'signal_confidence': signal.confidence,
+                'backtest_period': f"{historical_data.index[0].strftime('%Y-%m-%d')} to {signal_date.strftime('%Y-%m-%d')}",
+                'historical_performance': performance_metrics,
+                'data_points': len(historical_data),
+                'signal_conditions': signal.conditions
+            }
+            
+        except Exception as e:
+            logger.error(f"Error in signal backtest: {e}")
+            return {'error': str(e)}
+    
+    def _calculate_signal_performance(self, data: pd.DataFrame, signals: Dict, original_signal: TradingSignal) -> Dict:
+        """Calculate performance metrics for signal validation"""
+        try:
+            # Calculate basic metrics
+            returns = data['close'].pct_change().dropna()
+            
+            # Calculate volatility
+            volatility = returns.std() * np.sqrt(252)
+            
+            # Calculate Sharpe ratio (assuming 0% risk-free rate for simplicity)
+            sharpe_ratio = returns.mean() / returns.std() * np.sqrt(252) if returns.std() > 0 else 0
+            
+            # Calculate maximum drawdown
+            cumulative_returns = (1 + returns).cumprod()
+            rolling_max = cumulative_returns.expanding().max()
+            drawdown = (cumulative_returns - rolling_max) / rolling_max
+            max_drawdown = drawdown.min()
+            
+            # Calculate signal accuracy (if we have multiple signals)
+            signal_accuracy = 0.0
+            if 'composite_signal' in signals:
+                # Simple accuracy calculation based on signal direction vs price movement
+                signal_direction = np.sign(signals['composite_signal'])
+                price_movement = np.sign(data['close'].diff().shift(-1))  # Next period's movement
+                
+                # Calculate accuracy for non-zero signals
+                valid_signals = (signal_direction != 0) & (price_movement != 0)
+                if valid_signals.sum() > 0:
+                    accuracy = (signal_direction[valid_signals] == price_movement[valid_signals]).mean()
+                    signal_accuracy = accuracy
+            
+            return {
+                'volatility': volatility,
+                'sharpe_ratio': sharpe_ratio,
+                'max_drawdown': max_drawdown,
+                'total_return': (data['close'].iloc[-1] / data['close'].iloc[0]) - 1,
+                'signal_accuracy': signal_accuracy,
+                'price_range': {
+                    'min': data['close'].min(),
+                    'max': data['close'].max(),
+                    'current': data['close'].iloc[-1]
+                }
+            }
+            
+        except Exception as e:
+            logger.error(f"Error calculating signal performance: {e}")
+            return {'error': str(e)}
     
     def execute_trade(self, signal: TradingSignal):
         """Execute trade based on signal"""
