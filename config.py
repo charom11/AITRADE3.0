@@ -361,6 +361,7 @@ STRATEGY_CONFIG = {
     
     'pairs_trading': {
         'correlation_threshold': 0.85,  # Increased correlation requirement
+        'z_score_threshold': 2.5,       # More conservative z-score (fixed key name)
         'zscore_threshold': 2.5,        # More conservative z-score
         'lookback_period': 100,
         'min_spread': 0.005,    # Minimum spread for profit
@@ -377,6 +378,8 @@ STRATEGY_CONFIG = {
         'min_divergence_strength': 0.7,
         'volume_confirmation': True,
         'enhanced_confirmation': True,
+        'confirm_with_support_resistance': True,  # Added missing config
+        'confirm_with_candlestick': True,         # Added missing config
         'max_position': 0.1,
         'confidence_threshold': 0.75,
         'min_candles': 50,  # Minimum candles required for analysis

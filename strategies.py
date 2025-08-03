@@ -975,8 +975,48 @@ class StrategyManager:
                         symbol_signals[strategy_name] = strategy_signals[symbol]
                 
                 # Evaluate combined signal
-                combined_signal = self._combine_strategy_signals(symbol_signals)
-                unified_signals[symbol] = combined_signal
+                combined_signal_df = self._combine_strategy_signals(symbol_signals)
+                
+                # Convert DataFrame to dictionary format expected by real_live_trading_system
+                if not combined_signal_df.empty:
+                    latest_signal = combined_signal_df.iloc[-1]
+                    
+                    # Get detection confirmations
+                    detection_confirmations = self._check_detection_confirmations(live_data, symbol)
+                    
+                    # Create signal result dictionary
+                    signal_result = {
+                        'timestamp': datetime.now(),
+                        'signal': latest_signal.get('combined_signal', 0),
+                        'confidence': abs(latest_signal.get('signal_confidence', 0)),
+                        'current_price': live_data['price_data'][symbol]['close'].iloc[-1],
+                        'reasoning': [],
+                        'strategy_contributions': {}
+                    }
+                    
+                    # Add strategy contributions
+                    for strategy_name, strategy_df in symbol_signals.items():
+                        if not strategy_df.empty:
+                            latest_strategy_signal = strategy_df.iloc[-1]
+                            signal_result['strategy_contributions'][strategy_name] = {
+                                'signal': latest_strategy_signal.get('signal', 0),
+                                'strength': latest_strategy_signal.get('signal_strength', 0)
+                            }
+                    
+                    # Enhance with detection confirmations
+                    enhanced_result = self._enhance_signals_with_detections(signal_result, detection_confirmations)
+                    unified_signals[symbol] = enhanced_result
+                else:
+                    # No signals generated
+                    unified_signals[symbol] = {
+                        'timestamp': datetime.now(),
+                        'signal': 0,
+                        'confidence': 0.0,
+                        'current_price': live_data['price_data'][symbol]['close'].iloc[-1],
+                        'reasoning': ['No signals generated'],
+                        'strategy_contributions': {},
+                        'recommended_action': 'hold'
+                    }
                 
         except Exception as e:
             self.logger.error(f"Error in unified signal evaluation: {e}")
