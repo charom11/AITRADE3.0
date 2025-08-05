@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-08-05T13:57:18.779881",
+  "symbol": "ETHUSDT",
+  "signal_type": "sell",
+  "entry_price": 2188.5900101981138,
+  "position_size": 0.45691518070553505,
+  "stop_loss": 2260.034118303329,
+  "take_profit": 2081.4238480402914,
+  "confidence": 0.62,
+  "strength": 0.95,
+  "conditions": [
+    "MACD bullish crossover",
+    "Stochastic overbought",
+    "Williams %R overbought",
+    "CCI overbought",
+    "High volume",
+    "Strong uptrend"
+  ]
+}

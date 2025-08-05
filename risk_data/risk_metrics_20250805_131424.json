@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-08-05T13:14:24.737303",
+  "portfolio_value": 100000.0,
+  "total_exposure": 25000.0,
+  "total_pnl": 1500.0,
+  "var_95": 2500.0,
+  "drawdown": 0.02,
+  "risk_level": "medium",
+  "position_limits": {
+    "max_position_size": 10000.0,
+    "max_portfolio_risk": 0.05,
+    "current_utilization": 0.25
+  },
+  "correlation_matrix": {
+    "BTCUSDT_ETHUSDT": 0.85,
+    "BTCUSDT_BNBUSDT": 0.78,
+    "ETHUSDT_BNBUSDT": 0.92
+  }
+}

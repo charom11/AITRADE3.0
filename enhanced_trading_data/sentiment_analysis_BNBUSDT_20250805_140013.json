@@ -1,0 +1,11 @@
+{
+  "symbol": "BNBUSDT",
+  "timestamp": "2025-08-05T14:00:13.819173",
+  "overall_sentiment": 0.5582113359747222,
+  "confidence": 0.8948545236761132,
+  "twitter_sentiment": 0.5533087163910482,
+  "reddit_sentiment": 0.7877961571567444,
+  "news_sentiment": 0.3556282355940664,
+  "fear_greed_index": 65.78264183642328,
+  "market_mood": "bullish"
+}

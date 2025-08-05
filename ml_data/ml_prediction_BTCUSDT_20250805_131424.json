@@ -1,0 +1,14 @@
+{
+  "symbol": "BTCUSDT",
+  "timestamp": "2025-08-05T13:14:24.736299",
+  "prediction": -0.09514842719844158,
+  "confidence": 0.5309045959269622,
+  "features": {
+    "rsi": 23.6385092464925,
+    "macd": 0.8387448580093179,
+    "volume_ratio": 0.8353628913286423,
+    "price_momentum": -0.09562684340560479
+  },
+  "model_version": "v1.0",
+  "prediction_horizon": "1h"
+}

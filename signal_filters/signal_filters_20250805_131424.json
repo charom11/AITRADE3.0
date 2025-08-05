@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-08-05T13:14:24.741303",
+  "regime": "trending_bullish",
+  "confidence": 0.85,
+  "volatility": "medium",
+  "trend_strength": 0.72,
+  "volume_profile": "above_average",
+  "filters": {
+    "trend_filter": true,
+    "volatility_filter": true,
+    "volume_filter": true,
+    "correlation_filter": true,
+    "sentiment_filter": true
+  },
+  "signal_quality": "high",
+  "recommended_position_size": 0.05,
+  "filtered_signals": [
+    {
+      "symbol": "COIN0USDT",
+      "timestamp": "2025-08-05T13:14:24.741303",
+      "original_signal": "buy",
+      "filtered_signal": "buy",
+      "filter_reasons": [
+        "trend_aligned",
+        "volume_confirmed"
+      ],
+      "signal_strength": 0.7,
+      "market_regime_compatible": true
+    },
+    {
+      "symbol": "COIN1USDT",
+      "timestamp": "2025-08-05T13:14:24.741303",
+      "original_signal": "buy",
+      "filtered_signal": "buy",
+      "filter_reasons": [
+        "trend_aligned",
+        "volume_confirmed"
+      ],
+      "signal_strength": 0.75,
+      "market_regime_compatible": true
+    },
+    {
+      "symbol": "COIN2USDT",
+      "timestamp": "2025-08-05T13:14:24.741303",
+      "original_signal": "buy",
+      "filtered_signal": "buy",
+      "filter_reasons": [
+        "trend_aligned",
+        "volume_confirmed"
+      ],
+      "signal_strength": 0.7999999999999999,
+      "market_regime_compatible": true
+    },
+    {
+      "symbol": "COIN3USDT",
+      "timestamp": "2025-08-05T13:14:24.741303",
+      "original_signal": "buy",
+      "filtered_signal": "hold",
+      "filter_reasons": [
+        "low_confidence"
+      ],
+      "signal_strength": 0.85,
+      "market_regime_compatible": false
+    },
+    {
+      "symbol": "COIN4USDT",
+      "timestamp": "2025-08-05T13:14:24.741303",
+      "original_signal": "buy",
+      "filtered_signal": "hold",
+      "filter_reasons": [
+        "low_confidence"
+      ],
+      "signal_strength": 0.8999999999999999,
+      "market_regime_compatible": false
+    }
+  ]
+}

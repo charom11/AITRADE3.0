@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-08-05T13:57:49.565548",
+  "symbol": "BTCUSDT",
+  "signal_type": "buy",
+  "entry_price": 39875.10302183642,
+  "position_size": 0.025078305113152427,
+  "stop_loss": 38821.85526601175,
+  "take_profit": 41454.97465557342,
+  "confidence": 0.8699999999999999,
+  "strength": 1.0,
+  "conditions": [
+    "RSI oversold",
+    "MACD bearish crossover",
+    "Stochastic oversold",
+    "Williams %R oversold",
+    "CCI oversold",
+    "High volume",
+    "Strong downtrend",
+    "Price below lower Bollinger Band"
+  ]
+}

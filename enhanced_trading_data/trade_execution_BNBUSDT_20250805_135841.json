@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-08-05T13:58:41.140483",
+  "symbol": "BNBUSDT",
+  "signal_type": "buy",
+  "entry_price": 40.884987227204476,
+  "position_size": 24.4588556293986,
+  "stop_loss": 40.151080063001096,
+  "take_profit": 41.98584797350955,
+  "confidence": 0.7699999999999999,
+  "strength": 1.0,
+  "conditions": [
+    "RSI oversold",
+    "MACD bearish crossover",
+    "Stochastic oversold",
+    "Williams %R oversold",
+    "CCI oversold",
+    "Strong downtrend",
+    "Price below lower Bollinger Band"
+  ]
+}

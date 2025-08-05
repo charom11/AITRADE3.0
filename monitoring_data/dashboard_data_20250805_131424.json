@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-08-05T13:14:24.744812",
+  "system_status": "running",
+  "active_positions": 3,
+  "total_pnl": 1250.0,
+  "daily_pnl": 150.0,
+  "portfolio_value": 101250.0,
+  "risk_metrics": {
+    "current_drawdown": 0.015,
+    "var_95": 2500.0,
+    "sharpe_ratio": 1.85,
+    "beta": 0.92
+  },
+  "performance_metrics": {
+    "win_rate": 0.68,
+    "total_trades": 156,
+    "avg_trade_duration": "2h 15m",
+    "best_trade": 0.045,
+    "worst_trade": -0.018
+  },
+  "alerts": [
+    {
+      "type": "info",
+      "message": "New signal generated for ETHUSDT",
+      "timestamp": "2025-08-05T13:14:24.744812",
+      "priority": "low"
+    },
+    {
+      "type": "warning",
+      "message": "Portfolio drawdown approaching limit",
+      "timestamp": "2025-08-05T13:14:24.744812",
+      "priority": "medium"
+    }
+  ],
+  "recent_activity": [
+    "Order filled: BTCUSDT buy 0.1 @ $50,000",
+    "Signal generated: ETHUSDT buy signal",
+    "Risk check passed: Position size within limits"
+  ]
+}

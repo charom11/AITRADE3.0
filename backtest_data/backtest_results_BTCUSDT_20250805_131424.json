@@ -1,0 +1,35 @@
+{
+  "strategy_name": "Enhanced Multi-Factor Strategy",
+  "symbol": "BTCUSDT",
+  "period": "2024-01-01 to 2024-12-31",
+  "initial_capital": 10000.0,
+  "final_capital": 12500.0,
+  "total_return": 0.25,
+  "annualized_return": 0.28,
+  "sharpe_ratio": 1.85,
+  "max_drawdown": 0.08,
+  "win_rate": 0.68,
+  "total_trades": 156,
+  "winning_trades": 106,
+  "losing_trades": 50,
+  "avg_win": 0.025,
+  "avg_loss": -0.015,
+  "profit_factor": 2.12,
+  "parameters": {
+    "rsi_period": 14,
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "stop_loss_pct": 0.02,
+    "take_profit_pct": 0.04
+  },
+  "optimization_results": {
+    "best_parameters": {
+      "rsi_period": 12,
+      "macd_fast": 10,
+      "macd_slow": 24,
+      "stop_loss_pct": 0.018,
+      "take_profit_pct": 0.042
+    },
+    "improvement": 0.15
+  }
+}

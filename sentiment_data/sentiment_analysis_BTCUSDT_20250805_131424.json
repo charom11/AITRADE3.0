@@ -1,0 +1,33 @@
+{
+  "symbol": "BTCUSDT",
+  "timestamp": "2025-08-05T13:14:24.746819",
+  "overall_sentiment": 0.65,
+  "sentiment_breakdown": {
+    "twitter_sentiment": 0.72,
+    "reddit_sentiment": 0.58,
+    "news_sentiment": 0.61,
+    "technical_sentiment": 0.68
+  },
+  "sentiment_indicators": {
+    "fear_greed_index": 65,
+    "social_volume": 1250000,
+    "news_volume": 450,
+    "trending_topics": [
+      "bitcoin",
+      "crypto",
+      "bullrun"
+    ]
+  },
+  "market_mood": "bullish",
+  "confidence": 0.78,
+  "sentiment_score": {
+    "positive": 0.65,
+    "negative": 0.25,
+    "neutral": 0.1
+  },
+  "recommendations": [
+    "Strong positive sentiment across social media",
+    "News sentiment moderately bullish",
+    "Technical indicators align with sentiment"
+  ]
+}

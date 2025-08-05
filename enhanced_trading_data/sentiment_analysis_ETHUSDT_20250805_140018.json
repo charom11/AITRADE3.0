@@ -1,0 +1,11 @@
+{
+  "symbol": "ETHUSDT",
+  "timestamp": "2025-08-05T14:00:18.917495",
+  "overall_sentiment": 0.3354661928169701,
+  "confidence": 0.7812848595072018,
+  "twitter_sentiment": 0.4227661116213117,
+  "reddit_sentiment": 0.35701170092949003,
+  "news_sentiment": 0.3534749001725425,
+  "fear_greed_index": 81.08395388416942,
+  "market_mood": "bullish"
+}

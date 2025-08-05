@@ -1,0 +1,26 @@
+{
+  "system_running": false,
+  "active_positions": 3,
+  "trading_pairs": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT"
+  ],
+  "risk_metrics": {
+    "total_exposure": 0.0,
+    "portfolio_value": 10000.0,
+    "total_pnl": 0.0,
+    "var_95": 0.0,
+    "drawdown": 0.0,
+    "risk_level": "low"
+  },
+  "performance_metrics": {
+    "total_signals": 0,
+    "successful_signals": 0,
+    "failed_signals": 0,
+    "win_rate": 0.0,
+    "avg_return": 0.0,
+    "recent_signals": 0
+  },
+  "timestamp": "2025-08-05T14:00:24.123739"
+}

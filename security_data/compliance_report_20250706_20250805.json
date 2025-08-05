@@ -1,0 +1,95 @@
+{
+  "report_id": "compliance_report_20250805_131424",
+  "generated_at": "2025-08-05 13:14:24.832979",
+  "period_start": "2025-07-06 13:14:24.829976",
+  "period_end": "2025-08-05 13:14:24.829976",
+  "total_trades": 100,
+  "total_volume": 595000,
+  "total_fees": 0,
+  "regulatory_checks": {
+    "kyt_passed": 100,
+    "aml_passed": 100,
+    "position_limits_passed": 100,
+    "volume_limits_passed": 100
+  },
+  "risk_assessments": {
+    "overall_risk": "medium",
+    "compliance_rate": 0.91,
+    "violation_rate": 0.09,
+    "high_risk_transactions": 9
+  },
+  "violations": [
+    {
+      "transaction_id": "tx_91",
+      "timestamp": "2025-08-05T13:14:24.832979",
+      "violations": [
+        "SUSPICIOUS_AMOUNT"
+      ],
+      "amount": 10100
+    },
+    {
+      "transaction_id": "tx_92",
+      "timestamp": "2025-08-05T13:14:24.832979",
+      "violations": [
+        "SUSPICIOUS_AMOUNT"
+      ],
+      "amount": 10200
+    },
+    {
+      "transaction_id": "tx_93",
+      "timestamp": "2025-08-05T13:14:24.832979",
+      "violations": [
+        "SUSPICIOUS_AMOUNT"
+      ],
+      "amount": 10300
+    },
+    {
+      "transaction_id": "tx_94",
+      "timestamp": "2025-08-05T13:14:24.832979",
+      "violations": [
+        "SUSPICIOUS_AMOUNT"
+      ],
+      "amount": 10400
+    },
+    {
+      "transaction_id": "tx_95",
+      "timestamp": "2025-08-05T13:14:24.832979",
+      "violations": [
+        "SUSPICIOUS_AMOUNT"
+      ],
+      "amount": 10500
+    },
+    {
+      "transaction_id": "tx_96",
+      "timestamp": "2025-08-05T13:14:24.832979",
+      "violations": [
+        "SUSPICIOUS_AMOUNT"
+      ],
+      "amount": 10600
+    },
+    {
+      "transaction_id": "tx_97",
+      "timestamp": "2025-08-05T13:14:24.832979",
+      "violations": [
+        "SUSPICIOUS_AMOUNT"
+      ],
+      "amount": 10700
+    },
+    {
+      "transaction_id": "tx_98",
+      "timestamp": "2025-08-05T13:14:24.832979",
+      "violations": [
+        "SUSPICIOUS_AMOUNT"
+      ],
+      "amount": 10800
+    },
+    {
+      "transaction_id": "tx_99",
+      "timestamp": "2025-08-05T13:14:24.832979",
+      "violations": [
+        "SUSPICIOUS_AMOUNT"
+      ],
+      "amount": 10900
+    }
+  ]
+}

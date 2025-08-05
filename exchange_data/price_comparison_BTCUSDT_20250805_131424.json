@@ -1,0 +1,23 @@
+{
+  "symbol": "BTCUSDT",
+  "timestamp": "2025-08-05T13:14:24.739304",
+  "prices": {
+    "Binance": 49941.367135233864,
+    "Coinbase": 49883.16237757235,
+    "Kraken": 50153.1794319763,
+    "KuCoin": 49906.240589147405
+  },
+  "best_buy": {
+    "exchange": "Coinbase",
+    "price": 49883.16237757235
+  },
+  "best_sell": {
+    "exchange": "Kraken",
+    "price": 50153.1794319763
+  },
+  "arbitrage_opportunity": {
+    "spread": 270.01705440395017,
+    "spread_percentage": 0.5412989905494661,
+    "profitable": true
+  }
+}

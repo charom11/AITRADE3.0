@@ -1,0 +1,11 @@
+{
+  "symbol": "BTCUSDT",
+  "timestamp": "2025-08-05T13:57:44.454243",
+  "overall_sentiment": -0.16344669744425627,
+  "confidence": 0.5178898072358693,
+  "twitter_sentiment": -0.10593626387350707,
+  "reddit_sentiment": -0.14512509907794285,
+  "news_sentiment": -0.15235672450728288,
+  "fear_greed_index": 39.82096879374994,
+  "market_mood": "neutral"
+}

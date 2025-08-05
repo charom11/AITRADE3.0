@@ -112,7 +112,12 @@ class RealLiveTradingSystem:
                  enable_alerts: bool = True,
                  telegram_bot_token: str = None,
                  telegram_chat_id: str = None,
-                 database_path: str = 'trading_signals.db'):
+                 database_path: str = 'trading_signals.db',
+                 auto_analysis_interval: int = 300,  # 5 minutes
+                 auto_export_interval: int = 3600,   # 1 hour
+                 max_concurrent_trades: int = 5,
+                 risk_per_trade: float = 0.02,       # 2% per trade
+                 max_portfolio_risk: float = 0.10):  # 10% total portfolio
         """
         Initialize the real-time trading system
         """
@@ -121,11 +126,25 @@ class RealLiveTradingSystem:
         self.api_secret = api_secret or os.getenv('BINANCE_SECRET_KEY')
         
         # Trading configuration
-        self.symbols = symbols or ['BTC/USDT', 'ETH/USDT', 'BNB/USDT', 'ADA/USDT', 'SOL/USDT']
+        self.symbols = symbols or [
+            'BTC/USDT', 'ETH/USDT', 'XRP/USDT', 'BNB/USDT', 'SOL/USDT', 'USDC/USDT',
+            'DOGE/USDT', 'ADA/USDT', 'TRX/USDT', 'XLM/USDT', 'SUI/USDT', 'LINK/USDT',
+            'HBAR/USDT', 'AVAX/USDT', 'BCH/USDT', 'SHIB/USDT', 'LTC/USDT', 'TON/USDT',
+            'DOT/USDT', 'UNI/USDT', 'XMR/USDT', 'PEPE/USDT', 'DAI/USDT', 'AAVE/USDT',
+            'NEAR/USDT', 'ETC/USDT', 'APT/USDT', 'ONDO/USDT', 'ICP/USDT', 'BONK/USDT',
+            'KAS/USDT', 'POL/USDT'
+        ]
         self.timeframe = timeframe
         self.enable_live_trading = enable_live_trading
         self.enable_backtesting = enable_backtesting
         self.enable_alerts = enable_alerts
+        
+        # Automation settings
+        self.auto_analysis_interval = auto_analysis_interval
+        self.auto_export_interval = auto_export_interval
+        self.max_concurrent_trades = max_concurrent_trades
+        self.risk_per_trade = risk_per_trade
+        self.max_portfolio_risk = max_portfolio_risk
         
         # Telegram configuration
         self.telegram_bot_token = telegram_bot_token or os.getenv('TELEGRAM_BOT_TOKEN')
@@ -143,6 +162,9 @@ class RealLiveTradingSystem:
         self.signal_history = []
         self.condition_history = []
         self.current_positions = {}
+        self.analysis_history = []
+        self.last_analysis_time = None
+        self.last_export_time = None
         
         # Performance tracking
         self.performance_metrics = {
@@ -170,6 +192,8 @@ class RealLiveTradingSystem:
         # Threading and async
         self.running = False
         self.data_thread = None
+        self.analysis_thread = None
+        self.export_thread = None
         
         # Signal validation settings
         self.min_conditions = 2  # Minimum conditions required for signal
@@ -184,6 +208,9 @@ class RealLiveTradingSystem:
         print(f"📈 Backtesting: {'ENABLED' if self.enable_backtesting else 'DISABLED'}")
         print(f"🔔 Alerts: {'ENABLED' if self.enable_alerts else 'DISABLED'}")
         print(f"📱 Telegram: {'ENABLED' if self.telegram_bot_token else 'DISABLED'}")
+        print(f"🤖 Auto Analysis: {'ENABLED' if self.auto_analysis_interval > 0 else 'DISABLED'}")
+        print(f"📤 Auto Export: {'ENABLED' if self.auto_export_interval > 0 else 'DISABLED'}")
+        print(f"⚙️ Risk Management: {self.risk_per_trade:.1%} per trade, {self.max_portfolio_risk:.1%} max portfolio")
         print("=" * 70)
     
     def _setup_database(self):
@@ -420,7 +447,7 @@ class RealLiveTradingSystem:
         except Exception as e:
             logger.error(f"Error analyzing market conditions for {symbol}: {e}")
             return None
-    
+            
     def validate_signal_conditions(self, condition: MarketCondition) -> Tuple[bool, List[str], float, float]:
         """
         Validate if market conditions meet signal criteria
@@ -813,6 +840,38 @@ Time: {timestamp}
         # Send to Telegram
         self.send_telegram_alert(message)
     
+    def automated_analysis_loop(self):
+        """Automated market analysis loop"""
+        while self.running:
+            try:
+                # Run comprehensive market analysis
+                analysis_result = self.run_automated_market_analysis()
+                
+                if analysis_result:
+                    # Print analysis summary
+                    self.print_analysis_summary(analysis_result)
+                
+                # Sleep for analysis interval
+                time.sleep(self.auto_analysis_interval)
+                
+            except Exception as e:
+                logger.error(f"Error in automated analysis loop: {e}")
+                time.sleep(60)  # Wait 1 minute on error
+    
+    def automated_export_loop(self):
+        """Automated export loop"""
+        while self.running:
+            try:
+                # Export results periodically
+                self.export_results()
+                
+                # Sleep for export interval
+                time.sleep(self.auto_export_interval)
+                
+            except Exception as e:
+                logger.error(f"Error in automated export loop: {e}")
+                time.sleep(300)  # Wait 5 minutes on error
+    
     def data_processing_loop(self):
         """Main data processing loop with unified signal evaluation"""
         while self.running:
@@ -863,7 +922,7 @@ Time: {timestamp}
                             # Create trading signal
                             signal = TradingSignal(
                                 timestamp=signal_result['timestamp'],
-                                symbol=symbol,
+                    symbol=symbol,
                                 signal_type=signal_result['recommended_action'],
                                 strength=abs(signal_result['signal']),
                                 confidence=signal_result['confidence'],
@@ -916,6 +975,15 @@ Time: {timestamp}
         print(f"📈 Symbols: {len(self.symbols)}")
         print(f"⏱️ Timeframe: {self.timeframe}")
         
+        print(f"\n🤖 AUTOMATION STATUS:")
+        print(f"• Analysis Interval: {self.auto_analysis_interval}s")
+        print(f"• Export Interval: {self.auto_export_interval}s")
+        print(f"• Max Concurrent Trades: {self.max_concurrent_trades}")
+        print(f"• Risk Per Trade: {self.risk_per_trade:.1%}")
+        print(f"• Max Portfolio Risk: {self.max_portfolio_risk:.1%}")
+        print(f"• Last Analysis: {self.last_analysis_time.strftime('%H:%M:%S') if self.last_analysis_time else 'Never'}")
+        print(f"• Last Export: {self.last_export_time.strftime('%H:%M:%S') if self.last_export_time else 'Never'}")
+        
         print(f"\n📊 PERFORMANCE METRICS:")
         print(f"• Total Signals: {self.performance_metrics['total_signals']}")
         print(f"• Executed Trades: {self.performance_metrics['executed_trades']}")
@@ -926,6 +994,45 @@ Time: {timestamp}
         print(f"\n📋 RECENT SIGNALS:")
         for signal in self.signal_history[-5:]:
             print(f"• {signal.timestamp.strftime('%H:%M:%S')} | {signal.symbol} | {signal.signal_type.upper()} | ${signal.price:.4f} | S:{signal.strength:.2f}")
+        
+        print(f"{'='*70}")
+    
+    def print_analysis_summary(self, analysis_result: Dict):
+        """Print automated analysis summary"""
+        print(f"\n{'='*70}")
+        print(f"🤖 AUTOMATED MARKET ANALYSIS SUMMARY")
+        print(f"{'='*70}")
+        print(f"⏰ Time: {analysis_result['timestamp'].strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"📊 Symbols Analyzed: {analysis_result['symbols_analyzed']}")
+        print(f"🎯 Total Signals: {analysis_result['total_signals']}")
+        print(f"🟢 Buy Signals: {analysis_result['buy_signals']}")
+        print(f"🔴 Sell Signals: {analysis_result['sell_signals']}")
+        
+        if analysis_result['total_signals'] > 0:
+            print(f"\n📈 SIGNAL BREAKDOWN:")
+            for symbol, data in analysis_result['market_conditions'].items():
+                if data['signal_generated']:
+                    signal_icon = "🟢" if data['signal_type'] == 'buy' else "🔴"
+                    print(f"  {signal_icon} {symbol}: {data['signal_type'].upper()} | "
+                          f"Strength: {data['signal_strength']:.3f} | "
+                          f"Confidence: {data['signal_confidence']:.3f}")
+        
+        print(f"\n📊 MARKET CONDITIONS:")
+        bullish_count = 0
+        bearish_count = 0
+        neutral_count = 0
+        
+        for symbol, data in analysis_result['market_conditions'].items():
+            if data['signal_type'] == 'buy':
+                bullish_count += 1
+            elif data['signal_type'] == 'sell':
+                bearish_count += 1
+            else:
+                neutral_count += 1
+        
+        print(f"  🟢 Bullish: {bullish_count} symbols")
+        print(f"  🔴 Bearish: {bearish_count} symbols")
+        print(f"  🟡 Neutral: {neutral_count} symbols")
         
         print(f"{'='*70}")
     
@@ -941,7 +1048,15 @@ Time: {timestamp}
         self.data_thread = threading.Thread(target=self.data_processing_loop, daemon=True)
         self.data_thread.start()
         
-        logger.info("Real-time trading system started")
+        # Start automated analysis thread
+        self.analysis_thread = threading.Thread(target=self.automated_analysis_loop, daemon=True)
+        self.analysis_thread.start()
+        
+        # Start automated export thread
+        self.export_thread = threading.Thread(target=self.automated_export_loop, daemon=True)
+        self.export_thread.start()
+        
+        logger.info("Real-time trading system started with automated analysis")
         
         # Main loop for status updates
         try:
@@ -958,6 +1073,93 @@ Time: {timestamp}
         
         # Export final results
         self.export_results()
+    
+    def run_automated_market_analysis(self):
+        """Run comprehensive market analysis for all symbols"""
+        try:
+            logger.info("Starting automated market analysis...")
+            
+            analysis_results = {}
+            total_signals = 0
+            buy_signals = 0
+            sell_signals = 0
+            
+            for symbol in self.symbols:
+                try:
+                    # Fetch current data
+                    data = self.fetch_live_data(symbol)
+                    if data is None or data.empty:
+                        continue
+                    
+                    # Analyze market conditions
+                    condition = self.analyze_market_conditions(symbol, data)
+                    if condition is None:
+                        continue
+                    
+                    # Generate trading signal
+                    signal = self.generate_trading_signal(condition)
+                    
+                    # Store analysis results
+                    analysis_results[symbol] = {
+                        'current_price': condition.price,
+                        'volume': condition.volume,
+                        'volatility': condition.volatility,
+                        'support_zones': len(condition.support_zones),
+                        'resistance_zones': len(condition.resistance_zones),
+                        'fibonacci_levels': len(condition.fibonacci_levels),
+                        'divergence_signals': len(condition.divergence_signals),
+                        'signal_generated': signal is not None,
+                        'signal_type': signal.signal_type if signal else None,
+                        'signal_strength': signal.strength if signal else 0,
+                        'signal_confidence': signal.confidence if signal else 0,
+                        'conditions_met': signal.conditions if signal else []
+                    }
+                    
+                    # Count signals
+                    if signal:
+                        total_signals += 1
+                        if signal.signal_type == 'buy':
+                            buy_signals += 1
+                        elif signal.signal_type == 'sell':
+                            sell_signals += 1
+                        
+                        # Store signal
+                        self.signal_history.append(signal)
+                        self.save_signal_to_database(signal)
+                        
+                        # Send alerts for high-confidence signals
+                        if signal.confidence >= 0.7:
+                            self.send_signal_alert(signal)
+                        
+                        # Execute trade if live trading is enabled
+                        if self.enable_live_trading and signal.confidence >= 0.8:
+                            self.execute_trade(signal)
+                    
+                except Exception as e:
+                    logger.error(f"Error analyzing {symbol}: {e}")
+                    continue
+            
+            # Store analysis results
+            analysis_summary = {
+                'timestamp': datetime.now(),
+                'symbols_analyzed': len(analysis_results),
+                'total_signals': total_signals,
+                'buy_signals': buy_signals,
+                'sell_signals': sell_signals,
+                'market_conditions': analysis_results
+            }
+            
+            self.analysis_history.append(analysis_summary)
+            self.last_analysis_time = datetime.now()
+            
+            # Log analysis summary
+            logger.info(f"Market analysis completed: {total_signals} signals generated ({buy_signals} buy, {sell_signals} sell)")
+            
+            return analysis_summary
+            
+        except Exception as e:
+            logger.error(f"Error in automated market analysis: {e}")
+            return None
     
     def export_results(self, filename: str = None):
         """Export trading results"""
@@ -1002,11 +1204,25 @@ def main():
     print("=" * 70)
     
     # Configuration
-    symbols = ['BTC/USDT', 'ETH/USDT', 'BNB/USDT', 'ADA/USDT', 'SOL/USDT']
+    symbols = [
+        'BTC/USDT', 'ETH/USDT', 'XRP/USDT', 'BNB/USDT', 'SOL/USDT', 'USDC/USDT',
+        'DOGE/USDT', 'ADA/USDT', 'TRX/USDT', 'XLM/USDT', 'SUI/USDT', 'LINK/USDT',
+        'HBAR/USDT', 'AVAX/USDT', 'BCH/USDT', 'SHIB/USDT', 'LTC/USDT', 'TON/USDT',
+        'DOT/USDT', 'UNI/USDT', 'XMR/USDT', 'PEPE/USDT', 'DAI/USDT', 'AAVE/USDT',
+        'NEAR/USDT', 'ETC/USDT', 'APT/USDT', 'ONDO/USDT', 'ICP/USDT', 'BONK/USDT',
+        'KAS/USDT', 'POL/USDT'
+    ]
     timeframe = '5m'
     enable_live_trading = False  # Set to True for live trading
     enable_backtesting = True
     enable_alerts = True
+    
+    # Automation settings
+    auto_analysis_interval = 300  # 5 minutes
+    auto_export_interval = 3600   # 1 hour
+    max_concurrent_trades = 5
+    risk_per_trade = 0.02         # 2% per trade
+    max_portfolio_risk = 0.10     # 10% total portfolio
     
     # Telegram setup (optional)
     telegram_bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
@@ -1020,7 +1236,12 @@ def main():
         enable_backtesting=enable_backtesting,
         enable_alerts=enable_alerts,
         telegram_bot_token=telegram_bot_token,
-        telegram_chat_id=telegram_chat_id
+        telegram_chat_id=telegram_chat_id,
+        auto_analysis_interval=auto_analysis_interval,
+        auto_export_interval=auto_export_interval,
+        max_concurrent_trades=max_concurrent_trades,
+        risk_per_trade=risk_per_trade,
+        max_portfolio_risk=max_portfolio_risk
     )
     
     try:
@@ -1036,4 +1257,4 @@ def main():
             trading_system.export_results()
 
 if __name__ == "__main__":
-    main()
+    main() 

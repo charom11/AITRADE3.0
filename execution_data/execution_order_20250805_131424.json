@@ -1,0 +1,31 @@
+{
+  "order_id": "order_20250805_131424",
+  "symbol": "BTCUSDT",
+  "side": "buy",
+  "quantity": 0.1,
+  "price": 50000.0,
+  "timestamp": "2025-08-05T13:14:24.743307",
+  "execution_type": "market",
+  "status": "filled",
+  "fills": [
+    {
+      "price": 50000.0,
+      "quantity": 0.05,
+      "timestamp": "2025-08-05T13:14:24.743307"
+    },
+    {
+      "price": 50001.0,
+      "quantity": 0.05,
+      "timestamp": "2025-08-05T13:14:24.743307"
+    }
+  ],
+  "total_cost": 5000.05,
+  "fees": 2.5,
+  "slippage": 0.0002,
+  "execution_algorithm": "TWAP",
+  "performance_metrics": {
+    "execution_speed_ms": 45,
+    "price_improvement": 0.0001,
+    "fill_ratio": 1.0
+  }
+}

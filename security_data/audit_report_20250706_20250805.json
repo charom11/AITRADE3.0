@@ -1,0 +1,49 @@
+{
+  "report_id": "audit_report_20250805_131424",
+  "generated_at": "2025-08-05T13:14:24.830977",
+  "period_start": "2025-07-06T13:14:24.829976",
+  "period_end": "2025-08-05T13:14:24.829976",
+  "total_entries": 2,
+  "summary": {
+    "total_actions": 2,
+    "successful_actions": 2,
+    "failed_actions": 0,
+    "unique_users": 2,
+    "action_breakdown": {
+      "TRANSACTION_CHECKED": 1,
+      "API_KEY_STORED": 1
+    }
+  },
+  "logs": [
+    {
+      "id": 2,
+      "timestamp": "2025-08-05T13:14:24.825972",
+      "user_id": "user_123",
+      "action": "TRANSACTION_CHECKED",
+      "resource": "BTCUSDT",
+      "details": {
+        "transaction_id": "test_tx_001",
+        "amount": 5000,
+        "compliant": true,
+        "violations": []
+      },
+      "ip_address": null,
+      "session_id": null,
+      "success": true
+    },
+    {
+      "id": 1,
+      "timestamp": "2025-08-05T13:14:24.821460",
+      "user_id": "system",
+      "action": "API_KEY_STORED",
+      "resource": "binance",
+      "details": {
+        "exchange": "binance",
+        "key_encrypted": true
+      },
+      "ip_address": null,
+      "session_id": null,
+      "success": true
+    }
+  ]
+}

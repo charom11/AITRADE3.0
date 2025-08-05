@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-08-05 13:14:24.825972",
+  "user_id": "user_123",
+  "action": "TRANSACTION_CHECKED",
+  "resource": "BTCUSDT",
+  "details": {
+    "transaction_id": "test_tx_001",
+    "amount": 5000,
+    "compliant": true,
+    "violations": []
+  },
+  "ip_address": null,
+  "session_id": null,
+  "success": true
+}

@@ -1,0 +1,1211 @@
+2025-08-05 13:14:24,707 - file_manager - INFO - File test_signal.json doesn't exist, will create
+2025-08-05 13:14:24,707 - file_manager - INFO - File saved successfully: test_signal.json
+2025-08-05 13:14:24,708 - file_manager - INFO - File test_signal.json hash not found, will create
+2025-08-05 13:14:24,708 - file_manager - INFO - File saved successfully: test_signal.json
+2025-08-05 13:14:24,708 - file_manager - INFO - File test_signal.json content has changed, will update
+2025-08-05 13:14:24,709 - file_manager - INFO - File saved successfully: test_signal.json
+2025-08-05 13:14:24,732 - file_manager - INFO - File realtime_BTCUSDT_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,732 - file_manager - INFO - File saved successfully: realtime_BTCUSDT_20250805_131424.json
+2025-08-05 13:14:24,733 - file_manager - INFO - File realtime_ETHUSDT_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,734 - file_manager - INFO - File saved successfully: realtime_ETHUSDT_20250805_131424.json
+2025-08-05 13:14:24,734 - file_manager - INFO - File realtime_BNBUSDT_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,735 - file_manager - INFO - File saved successfully: realtime_BNBUSDT_20250805_131424.json
+2025-08-05 13:14:24,736 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,737 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_131424.json
+2025-08-05 13:14:24,737 - file_manager - INFO - File risk_metrics_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,738 - file_manager - INFO - File saved successfully: risk_metrics_20250805_131424.json
+2025-08-05 13:14:24,739 - file_manager - INFO - File price_comparison_BTCUSDT_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,739 - file_manager - INFO - File saved successfully: price_comparison_BTCUSDT_20250805_131424.json
+2025-08-05 13:14:24,740 - file_manager - INFO - File backtest_results_BTCUSDT_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,740 - file_manager - INFO - File saved successfully: backtest_results_BTCUSDT_20250805_131424.json
+2025-08-05 13:14:24,742 - file_manager - INFO - File signal_filters_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,742 - file_manager - INFO - File saved successfully: signal_filters_20250805_131424.json
+2025-08-05 13:14:24,743 - file_manager - INFO - File execution_order_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,743 - file_manager - INFO - File saved successfully: execution_order_20250805_131424.json
+2025-08-05 13:14:24,744 - file_manager - INFO - File dashboard_data_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,745 - file_manager - INFO - File saved successfully: dashboard_data_20250805_131424.json
+2025-08-05 13:14:24,746 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,747 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_131424.json
+2025-08-05 13:14:24,749 - security_compliance - INFO - Encryption system initialized
+2025-08-05 13:14:24,759 - security_compliance - INFO - Audit database initialized
+2025-08-05 13:14:24,760 - security_compliance - INFO - Security and Compliance System initialized
+2025-08-05 13:14:24,820 - file_manager - INFO - File secure_api_keys_binance_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,821 - file_manager - INFO - File saved successfully: secure_api_keys_binance_20250805_131424.json
+2025-08-05 13:14:24,824 - file_manager - INFO - File audit_log_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,824 - file_manager - INFO - File saved successfully: audit_log_20250805_131424.json
+2025-08-05 13:14:24,824 - security_compliance - INFO - Audit log created: API_KEY_STORED by system
+2025-08-05 13:14:24,824 - security_compliance - INFO - API keys securely stored for binance
+2025-08-05 13:14:24,828 - file_manager - INFO - File audit_log_20250805_131424.json hash not found, will create
+2025-08-05 13:14:24,829 - file_manager - INFO - File saved successfully: audit_log_20250805_131424.json
+2025-08-05 13:14:24,829 - security_compliance - INFO - Audit log created: TRANSACTION_CHECKED by user_123
+2025-08-05 13:14:24,830 - file_manager - INFO - File audit_report_20250706_20250805.json doesn't exist, will create
+2025-08-05 13:14:24,831 - file_manager - INFO - File saved successfully: audit_report_20250706_20250805.json
+2025-08-05 13:14:24,831 - security_compliance - INFO - Audit report exported: audit_report_20250706_20250805.json
+2025-08-05 13:14:24,832 - file_manager - INFO - File compliance_report_20250706_20250805.json doesn't exist, will create
+2025-08-05 13:14:24,834 - file_manager - INFO - File saved successfully: compliance_report_20250706_20250805.json
+2025-08-05 13:14:24,834 - security_compliance - INFO - Compliance report generated: compliance_report_20250805_131424
+2025-08-05 13:14:24,834 - file_manager - INFO - File security_report_20250706_20250805.json doesn't exist, will create
+2025-08-05 13:14:24,835 - file_manager - INFO - File saved successfully: security_report_20250706_20250805.json
+2025-08-05 13:14:24,835 - security_compliance - INFO - Security report generated: security_report_20250706_20250805.json
+2025-08-05 13:14:24,836 - enhanced_trading_system - INFO - Enhanced Trading System initialized
+2025-08-05 13:14:24,836 - file_manager - INFO - File risk_metrics_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,837 - file_manager - INFO - File saved successfully: risk_metrics_20250805_131424.json
+2025-08-05 13:14:24,837 - file_manager - INFO - File system_status_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,837 - file_manager - INFO - File saved successfully: system_status_20250805_131424.json
+2025-08-05 13:14:24,863 - file_manager - INFO - File backtest_results_20250805_131424.json doesn't exist, will create
+2025-08-05 13:14:24,886 - file_manager - INFO - File saved successfully: backtest_results_20250805_131424.json
+2025-08-05 13:14:24,886 - enhanced_trading_system - INFO - Backtest completed for BTCUSDT
+2025-08-05 13:14:24,887 - file_manager - INFO - File risk_metrics_20250805_131424.json hash not found, will create
+2025-08-05 13:14:24,887 - file_manager - INFO - File saved successfully: risk_metrics_20250805_131424.json
+2025-08-05 13:14:24,887 - file_manager - INFO - File system_status_20250805_131424.json hash not found, will create
+2025-08-05 13:14:24,888 - file_manager - INFO - File saved successfully: system_status_20250805_131424.json
+2025-08-05 13:16:32,909 - __main__ - INFO - Enhanced Trading System initialized
+2025-08-05 13:16:32,909 - __main__ - ERROR - Failed to start system: no running event loop
+2025-08-05 13:17:59,937 - __main__ - INFO - Enhanced Trading System initialized
+2025-08-05 13:17:59,938 - __main__ - ERROR - Failed to start system: no running event loop
+2025-08-05 13:19:48,151 - __main__ - INFO - Shutting down...
+2025-08-05 13:19:48,152 - __main__ - INFO - Stopped all data streams
+2025-08-05 13:19:48,152 - __main__ - INFO - Enhanced Trading System stopped
+2025-08-05 13:20:24,705 - __main__ - INFO - Enhanced Trading System initialized
+2025-08-05 13:20:24,706 - __main__ - INFO - Started simulated data stream for BTCUSDT
+2025-08-05 13:20:24,706 - __main__ - INFO - Started simulated data stream for ETHUSDT
+2025-08-05 13:20:24,706 - __main__ - INFO - Started simulated data stream for BNBUSDT
+2025-08-05 13:49:33,967 - enhanced_trading_system - INFO - Enhanced Trading System initialized
+2025-08-05 13:49:33,986 - file_manager - INFO - File backtest_results_20250805_134933.json doesn't exist, will create
+2025-08-05 13:49:34,003 - file_manager - INFO - File saved successfully: backtest_results_20250805_134933.json
+2025-08-05 13:49:34,003 - enhanced_trading_system - INFO - Backtest completed for BTCUSDT
+2025-08-05 13:49:34,024 - file_manager - INFO - File backtest_results_20250805_134934.json doesn't exist, will create
+2025-08-05 13:49:34,040 - file_manager - INFO - File saved successfully: backtest_results_20250805_134934.json
+2025-08-05 13:49:34,041 - enhanced_trading_system - INFO - Backtest completed for ETHUSDT
+2025-08-05 13:49:34,062 - file_manager - INFO - File backtest_results_20250805_134934.json hash not found, will create
+2025-08-05 13:49:34,078 - file_manager - INFO - File saved successfully: backtest_results_20250805_134934.json
+2025-08-05 13:49:34,079 - enhanced_trading_system - INFO - Backtest completed for BNBUSDT
+2025-08-05 13:49:34,079 - file_manager - INFO - File comprehensive_backtest_20250805_134934.json doesn't exist, will create
+2025-08-05 13:49:34,132 - file_manager - INFO - File saved successfully: comprehensive_backtest_20250805_134934.json
+2025-08-05 13:49:34,132 - file_manager - INFO - File risk_metrics_20250805_134934.json doesn't exist, will create
+2025-08-05 13:49:34,132 - file_manager - INFO - File saved successfully: risk_metrics_20250805_134934.json
+2025-08-05 13:49:34,133 - file_manager - INFO - File system_status_20250805_134934.json doesn't exist, will create
+2025-08-05 13:49:34,133 - file_manager - INFO - File saved successfully: system_status_20250805_134934.json
+2025-08-05 13:49:44,134 - file_manager - INFO - File risk_metrics_20250805_134944.json doesn't exist, will create
+2025-08-05 13:49:44,134 - file_manager - INFO - File saved successfully: risk_metrics_20250805_134944.json
+2025-08-05 13:49:44,135 - file_manager - INFO - File system_status_20250805_134944.json doesn't exist, will create
+2025-08-05 13:49:44,135 - file_manager - INFO - File saved successfully: system_status_20250805_134944.json
+2025-08-05 13:49:54,137 - file_manager - INFO - File risk_metrics_20250805_134954.json doesn't exist, will create
+2025-08-05 13:49:54,137 - file_manager - INFO - File saved successfully: risk_metrics_20250805_134954.json
+2025-08-05 13:49:54,138 - file_manager - INFO - File system_status_20250805_134954.json doesn't exist, will create
+2025-08-05 13:49:54,138 - file_manager - INFO - File saved successfully: system_status_20250805_134954.json
+2025-08-05 13:50:04,139 - file_manager - INFO - File risk_metrics_20250805_135004.json doesn't exist, will create
+2025-08-05 13:50:04,139 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135004.json
+2025-08-05 13:50:04,139 - file_manager - INFO - File system_status_20250805_135004.json doesn't exist, will create
+2025-08-05 13:50:04,140 - file_manager - INFO - File saved successfully: system_status_20250805_135004.json
+2025-08-05 13:50:14,141 - file_manager - INFO - File risk_metrics_20250805_135014.json doesn't exist, will create
+2025-08-05 13:50:14,141 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135014.json
+2025-08-05 13:50:14,142 - file_manager - INFO - File system_status_20250805_135014.json doesn't exist, will create
+2025-08-05 13:50:14,142 - file_manager - INFO - File saved successfully: system_status_20250805_135014.json
+2025-08-05 13:50:24,143 - file_manager - INFO - File risk_metrics_20250805_135024.json doesn't exist, will create
+2025-08-05 13:50:24,143 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135024.json
+2025-08-05 13:50:24,144 - file_manager - INFO - File system_status_20250805_135024.json doesn't exist, will create
+2025-08-05 13:50:24,144 - file_manager - INFO - File saved successfully: system_status_20250805_135024.json
+2025-08-05 13:51:57,783 - enhanced_trading_system - INFO - Enhanced Trading System initialized
+2025-08-05 13:51:57,783 - enhanced_trading_system - INFO - Started simulated data stream for BTCUSDT
+2025-08-05 13:51:57,784 - enhanced_trading_system - INFO - Started simulated data stream for ETHUSDT
+2025-08-05 13:51:57,784 - enhanced_trading_system - INFO - Started simulated data stream for BNBUSDT
+2025-08-05 13:52:08,953 - file_manager - INFO - File risk_metrics_20250805_135208.json doesn't exist, will create
+2025-08-05 13:52:08,953 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135208.json
+2025-08-05 13:52:08,954 - file_manager - INFO - File system_status_20250805_135208.json doesn't exist, will create
+2025-08-05 13:52:08,954 - file_manager - INFO - File saved successfully: system_status_20250805_135208.json
+2025-08-05 13:52:43,708 - enhanced_trading_system - INFO - Enhanced Trading System initialized
+2025-08-05 13:52:43,708 - enhanced_trading_system - INFO - Started simulated data stream for BTCUSDT
+2025-08-05 13:52:43,708 - enhanced_trading_system - INFO - Started simulated data stream for ETHUSDT
+2025-08-05 13:52:43,708 - enhanced_trading_system - INFO - Started simulated data stream for BNBUSDT
+2025-08-05 13:55:43,824 - file_manager - INFO - File risk_metrics_20250805_135543.json doesn't exist, will create
+2025-08-05 13:55:43,825 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135543.json
+2025-08-05 13:55:43,825 - file_manager - INFO - File system_status_20250805_135543.json doesn't exist, will create
+2025-08-05 13:55:43,825 - file_manager - INFO - File saved successfully: system_status_20250805_135543.json
+2025-08-05 13:56:34,187 - enhanced_trading_system - INFO - Enhanced Trading System initialized
+2025-08-05 13:56:34,199 - enhanced_trading_system - INFO - Started simulated data stream for BTCUSDT
+2025-08-05 13:56:34,199 - enhanced_trading_system - INFO - Started simulated data stream for ETHUSDT
+2025-08-05 13:56:34,199 - enhanced_trading_system - INFO - Started simulated data stream for BNBUSDT
+2025-08-05 13:56:48,021 - enhanced_trading_system - INFO - Enhanced Trading System initialized
+2025-08-05 13:56:48,032 - enhanced_trading_system - INFO - Started simulated data stream for BTCUSDT
+2025-08-05 13:56:48,032 - enhanced_trading_system - INFO - Started simulated data stream for ETHUSDT
+2025-08-05 13:56:48,032 - enhanced_trading_system - INFO - Started simulated data stream for BNBUSDT
+2025-08-05 13:56:58,274 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135658.json doesn't exist, will create
+2025-08-05 13:56:58,275 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135658.json
+2025-08-05 13:56:58,275 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135658.json doesn't exist, will create
+2025-08-05 13:56:58,276 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135658.json
+2025-08-05 13:56:58,276 - file_manager - INFO - File risk_metrics_20250805_135658.json doesn't exist, will create
+2025-08-05 13:56:58,277 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135658.json
+2025-08-05 13:56:58,277 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135658.json doesn't exist, will create
+2025-08-05 13:56:58,278 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135658.json
+2025-08-05 13:56:58,278 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 44.9037564754729
+2025-08-05 13:57:03,331 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135703.json doesn't exist, will create
+2025-08-05 13:57:03,332 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135703.json
+2025-08-05 13:57:03,332 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135703.json doesn't exist, will create
+2025-08-05 13:57:03,333 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135703.json
+2025-08-05 13:57:03,334 - file_manager - INFO - File risk_metrics_20250805_135703.json doesn't exist, will create
+2025-08-05 13:57:03,335 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135703.json
+2025-08-05 13:57:03,335 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135703.json doesn't exist, will create
+2025-08-05 13:57:03,336 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135703.json
+2025-08-05 13:57:03,336 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 43419.37104224241
+2025-08-05 13:57:03,445 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135703.json doesn't exist, will create
+2025-08-05 13:57:03,447 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135703.json
+2025-08-05 13:57:03,449 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135703.json doesn't exist, will create
+2025-08-05 13:57:03,451 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135703.json
+2025-08-05 13:57:03,453 - file_manager - INFO - File risk_metrics_20250805_135703.json hash not found, will create
+2025-08-05 13:57:03,454 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135703.json
+2025-08-05 13:57:03,454 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135703.json doesn't exist, will create
+2025-08-05 13:57:03,455 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135703.json
+2025-08-05 13:57:03,455 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 44.34709368268745
+2025-08-05 13:57:08,537 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135708.json doesn't exist, will create
+2025-08-05 13:57:08,537 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135708.json
+2025-08-05 13:57:08,538 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135708.json doesn't exist, will create
+2025-08-05 13:57:08,538 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135708.json
+2025-08-05 13:57:08,539 - file_manager - INFO - File risk_metrics_20250805_135708.json doesn't exist, will create
+2025-08-05 13:57:08,539 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135708.json
+2025-08-05 13:57:08,539 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135708.json doesn't exist, will create
+2025-08-05 13:57:08,540 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135708.json
+2025-08-05 13:57:08,540 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 44.383831060640944
+2025-08-05 13:57:08,540 - file_manager - INFO - File risk_metrics_20250805_135708.json hash not found, will create
+2025-08-05 13:57:08,541 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135708.json
+2025-08-05 13:57:08,541 - file_manager - INFO - File system_status_20250805_135708.json doesn't exist, will create
+2025-08-05 13:57:08,541 - file_manager - INFO - File saved successfully: system_status_20250805_135708.json
+2025-08-05 13:57:13,632 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135713.json doesn't exist, will create
+2025-08-05 13:57:13,633 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135713.json
+2025-08-05 13:57:13,633 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135713.json doesn't exist, will create
+2025-08-05 13:57:13,633 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135713.json
+2025-08-05 13:57:13,634 - file_manager - INFO - File risk_metrics_20250805_135713.json doesn't exist, will create
+2025-08-05 13:57:13,635 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135713.json
+2025-08-05 13:57:13,635 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135713.json doesn't exist, will create
+2025-08-05 13:57:13,636 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135713.json
+2025-08-05 13:57:13,636 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2159.2622323219953
+2025-08-05 13:57:13,679 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135713.json doesn't exist, will create
+2025-08-05 13:57:13,679 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135713.json
+2025-08-05 13:57:13,680 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135713.json doesn't exist, will create
+2025-08-05 13:57:13,683 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135713.json
+2025-08-05 13:57:13,684 - file_manager - INFO - File risk_metrics_20250805_135713.json hash not found, will create
+2025-08-05 13:57:13,684 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135713.json
+2025-08-05 13:57:13,685 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135713.json doesn't exist, will create
+2025-08-05 13:57:13,685 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135713.json
+2025-08-05 13:57:13,685 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 44.418292524572614
+2025-08-05 13:57:13,685 - file_manager - INFO - File risk_metrics_20250805_135713.json exists with same content, skipping creation
+2025-08-05 13:57:13,686 - file_manager - INFO - File system_status_20250805_135713.json doesn't exist, will create
+2025-08-05 13:57:13,686 - file_manager - INFO - File saved successfully: system_status_20250805_135713.json
+2025-08-05 13:57:18,728 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135718.json doesn't exist, will create
+2025-08-05 13:57:18,729 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135718.json
+2025-08-05 13:57:18,730 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135718.json doesn't exist, will create
+2025-08-05 13:57:18,730 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135718.json
+2025-08-05 13:57:18,731 - file_manager - INFO - File risk_metrics_20250805_135718.json doesn't exist, will create
+2025-08-05 13:57:18,732 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135718.json
+2025-08-05 13:57:18,732 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135718.json doesn't exist, will create
+2025-08-05 13:57:18,733 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135718.json
+2025-08-05 13:57:18,733 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 43036.09582906229
+2025-08-05 13:57:18,776 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135718.json doesn't exist, will create
+2025-08-05 13:57:18,777 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135718.json
+2025-08-05 13:57:18,777 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135718.json doesn't exist, will create
+2025-08-05 13:57:18,777 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135718.json
+2025-08-05 13:57:18,778 - file_manager - INFO - File risk_metrics_20250805_135718.json hash not found, will create
+2025-08-05 13:57:18,779 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135718.json
+2025-08-05 13:57:18,779 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135718.json doesn't exist, will create
+2025-08-05 13:57:18,780 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135718.json
+2025-08-05 13:57:18,781 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2188.5900101981138
+2025-08-05 13:57:18,823 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135718.json doesn't exist, will create
+2025-08-05 13:57:18,823 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135718.json
+2025-08-05 13:57:18,824 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135718.json doesn't exist, will create
+2025-08-05 13:57:18,824 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135718.json
+2025-08-05 13:57:18,825 - file_manager - INFO - File risk_metrics_20250805_135718.json exists with same content, skipping creation
+2025-08-05 13:57:18,825 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135718.json doesn't exist, will create
+2025-08-05 13:57:18,826 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135718.json
+2025-08-05 13:57:18,826 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 44.029095866314556
+2025-08-05 13:57:23,867 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,868 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135723.json
+2025-08-05 13:57:23,869 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,869 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135723.json
+2025-08-05 13:57:23,870 - file_manager - INFO - File risk_metrics_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,871 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135723.json
+2025-08-05 13:57:23,871 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,872 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135723.json
+2025-08-05 13:57:23,872 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 42478.70380086605
+2025-08-05 13:57:23,917 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,918 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135723.json
+2025-08-05 13:57:23,918 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,919 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135723.json
+2025-08-05 13:57:23,920 - file_manager - INFO - File risk_metrics_20250805_135723.json hash not found, will create
+2025-08-05 13:57:23,920 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135723.json
+2025-08-05 13:57:23,921 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,921 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135723.json
+2025-08-05 13:57:23,921 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2206.9580810043863
+2025-08-05 13:57:23,965 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,966 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135723.json
+2025-08-05 13:57:23,967 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,967 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135723.json
+2025-08-05 13:57:23,968 - file_manager - INFO - File risk_metrics_20250805_135723.json exists with same content, skipping creation
+2025-08-05 13:57:23,969 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,969 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135723.json
+2025-08-05 13:57:23,969 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 43.47702461625902
+2025-08-05 13:57:23,970 - file_manager - INFO - File risk_metrics_20250805_135723.json exists with same content, skipping creation
+2025-08-05 13:57:23,970 - file_manager - INFO - File system_status_20250805_135723.json doesn't exist, will create
+2025-08-05 13:57:23,971 - file_manager - INFO - File saved successfully: system_status_20250805_135723.json
+2025-08-05 13:57:29,012 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135729.json doesn't exist, will create
+2025-08-05 13:57:29,013 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135729.json
+2025-08-05 13:57:29,014 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135729.json doesn't exist, will create
+2025-08-05 13:57:29,015 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135729.json
+2025-08-05 13:57:29,016 - file_manager - INFO - File risk_metrics_20250805_135729.json doesn't exist, will create
+2025-08-05 13:57:29,016 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135729.json
+2025-08-05 13:57:29,017 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135729.json doesn't exist, will create
+2025-08-05 13:57:29,017 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135729.json
+2025-08-05 13:57:29,017 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 42380.49577421068
+2025-08-05 13:57:29,061 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135729.json doesn't exist, will create
+2025-08-05 13:57:29,064 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135729.json
+2025-08-05 13:57:29,064 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135729.json doesn't exist, will create
+2025-08-05 13:57:29,065 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135729.json
+2025-08-05 13:57:29,066 - file_manager - INFO - File risk_metrics_20250805_135729.json hash not found, will create
+2025-08-05 13:57:29,066 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135729.json
+2025-08-05 13:57:29,067 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135729.json doesn't exist, will create
+2025-08-05 13:57:29,067 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135729.json
+2025-08-05 13:57:29,067 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2217.7914090483837
+2025-08-05 13:57:29,110 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135729.json doesn't exist, will create
+2025-08-05 13:57:29,111 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135729.json
+2025-08-05 13:57:29,112 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135729.json doesn't exist, will create
+2025-08-05 13:57:29,112 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135729.json
+2025-08-05 13:57:29,113 - file_manager - INFO - File risk_metrics_20250805_135729.json exists with same content, skipping creation
+2025-08-05 13:57:29,114 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135729.json doesn't exist, will create
+2025-08-05 13:57:29,114 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135729.json
+2025-08-05 13:57:29,114 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 43.385328791429245
+2025-08-05 13:57:34,159 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,159 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135734.json
+2025-08-05 13:57:34,160 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,160 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135734.json
+2025-08-05 13:57:34,161 - file_manager - INFO - File risk_metrics_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,161 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135734.json
+2025-08-05 13:57:34,162 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,162 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135734.json
+2025-08-05 13:57:34,162 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 41928.599176998316
+2025-08-05 13:57:34,206 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,207 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135734.json
+2025-08-05 13:57:34,207 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,207 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135734.json
+2025-08-05 13:57:34,209 - file_manager - INFO - File risk_metrics_20250805_135734.json hash not found, will create
+2025-08-05 13:57:34,209 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135734.json
+2025-08-05 13:57:34,210 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,210 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135734.json
+2025-08-05 13:57:34,210 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2217.235132149361
+2025-08-05 13:57:34,253 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,253 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135734.json
+2025-08-05 13:57:34,254 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,254 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135734.json
+2025-08-05 13:57:34,255 - file_manager - INFO - File risk_metrics_20250805_135734.json exists with same content, skipping creation
+2025-08-05 13:57:34,255 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,256 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135734.json
+2025-08-05 13:57:34,256 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 43.16964648091367
+2025-08-05 13:57:34,256 - file_manager - INFO - File risk_metrics_20250805_135734.json exists with same content, skipping creation
+2025-08-05 13:57:34,256 - file_manager - INFO - File system_status_20250805_135734.json doesn't exist, will create
+2025-08-05 13:57:34,257 - file_manager - INFO - File saved successfully: system_status_20250805_135734.json
+2025-08-05 13:57:39,304 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135739.json doesn't exist, will create
+2025-08-05 13:57:39,305 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135739.json
+2025-08-05 13:57:39,305 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135739.json doesn't exist, will create
+2025-08-05 13:57:39,306 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135739.json
+2025-08-05 13:57:39,307 - file_manager - INFO - File risk_metrics_20250805_135739.json doesn't exist, will create
+2025-08-05 13:57:39,307 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135739.json
+2025-08-05 13:57:39,308 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135739.json doesn't exist, will create
+2025-08-05 13:57:39,309 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135739.json
+2025-08-05 13:57:39,309 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 41189.608785825156
+2025-08-05 13:57:39,354 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135739.json doesn't exist, will create
+2025-08-05 13:57:39,355 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135739.json
+2025-08-05 13:57:39,356 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135739.json doesn't exist, will create
+2025-08-05 13:57:39,356 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135739.json
+2025-08-05 13:57:39,358 - file_manager - INFO - File risk_metrics_20250805_135739.json hash not found, will create
+2025-08-05 13:57:39,358 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135739.json
+2025-08-05 13:57:39,358 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135739.json doesn't exist, will create
+2025-08-05 13:57:39,359 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135739.json
+2025-08-05 13:57:39,359 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2238.6576880839834
+2025-08-05 13:57:39,403 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135739.json doesn't exist, will create
+2025-08-05 13:57:39,404 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135739.json
+2025-08-05 13:57:39,404 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135739.json doesn't exist, will create
+2025-08-05 13:57:39,405 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135739.json
+2025-08-05 13:57:39,405 - file_manager - INFO - File risk_metrics_20250805_135739.json exists with same content, skipping creation
+2025-08-05 13:57:39,406 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135739.json doesn't exist, will create
+2025-08-05 13:57:39,406 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135739.json
+2025-08-05 13:57:39,406 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 43.32231997709255
+2025-08-05 13:57:44,453 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135744.json doesn't exist, will create
+2025-08-05 13:57:44,454 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135744.json
+2025-08-05 13:57:44,454 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135744.json doesn't exist, will create
+2025-08-05 13:57:44,455 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135744.json
+2025-08-05 13:57:44,455 - file_manager - INFO - File risk_metrics_20250805_135744.json doesn't exist, will create
+2025-08-05 13:57:44,456 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135744.json
+2025-08-05 13:57:44,456 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135744.json doesn't exist, will create
+2025-08-05 13:57:44,457 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135744.json
+2025-08-05 13:57:44,457 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 40713.86927226772
+2025-08-05 13:57:44,495 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135744.json doesn't exist, will create
+2025-08-05 13:57:44,496 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135744.json
+2025-08-05 13:57:44,496 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135744.json doesn't exist, will create
+2025-08-05 13:57:44,496 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135744.json
+2025-08-05 13:57:44,498 - file_manager - INFO - File risk_metrics_20250805_135744.json hash not found, will create
+2025-08-05 13:57:44,499 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135744.json
+2025-08-05 13:57:44,499 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135744.json doesn't exist, will create
+2025-08-05 13:57:44,500 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135744.json
+2025-08-05 13:57:44,500 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2274.9124203664064
+2025-08-05 13:57:49,561 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,562 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135749.json
+2025-08-05 13:57:49,562 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,563 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135749.json
+2025-08-05 13:57:49,564 - file_manager - INFO - File risk_metrics_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,564 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135749.json
+2025-08-05 13:57:49,565 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,565 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135749.json
+2025-08-05 13:57:49,565 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 39875.10302183642
+2025-08-05 13:57:49,608 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,609 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135749.json
+2025-08-05 13:57:49,609 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,610 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135749.json
+2025-08-05 13:57:49,611 - file_manager - INFO - File risk_metrics_20250805_135749.json hash not found, will create
+2025-08-05 13:57:49,611 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135749.json
+2025-08-05 13:57:49,611 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,612 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135749.json
+2025-08-05 13:57:49,612 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2288.049897486537
+2025-08-05 13:57:49,662 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,663 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135749.json
+2025-08-05 13:57:49,664 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,664 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135749.json
+2025-08-05 13:57:49,665 - file_manager - INFO - File risk_metrics_20250805_135749.json exists with same content, skipping creation
+2025-08-05 13:57:49,666 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,666 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135749.json
+2025-08-05 13:57:49,668 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 43.22791744654187
+2025-08-05 13:57:49,668 - file_manager - INFO - File risk_metrics_20250805_135749.json exists with same content, skipping creation
+2025-08-05 13:57:49,668 - file_manager - INFO - File system_status_20250805_135749.json doesn't exist, will create
+2025-08-05 13:57:49,669 - file_manager - INFO - File saved successfully: system_status_20250805_135749.json
+2025-08-05 13:57:54,715 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135754.json doesn't exist, will create
+2025-08-05 13:57:54,716 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135754.json
+2025-08-05 13:57:54,716 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135754.json doesn't exist, will create
+2025-08-05 13:57:54,718 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135754.json
+2025-08-05 13:57:54,719 - file_manager - INFO - File risk_metrics_20250805_135754.json doesn't exist, will create
+2025-08-05 13:57:54,719 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135754.json
+2025-08-05 13:57:54,720 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135754.json doesn't exist, will create
+2025-08-05 13:57:54,720 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135754.json
+2025-08-05 13:57:54,720 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 39310.80087722182
+2025-08-05 13:57:54,764 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135754.json doesn't exist, will create
+2025-08-05 13:57:54,765 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135754.json
+2025-08-05 13:57:54,765 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135754.json doesn't exist, will create
+2025-08-05 13:57:54,766 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135754.json
+2025-08-05 13:57:54,767 - file_manager - INFO - File risk_metrics_20250805_135754.json hash not found, will create
+2025-08-05 13:57:54,767 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135754.json
+2025-08-05 13:57:54,767 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135754.json doesn't exist, will create
+2025-08-05 13:57:54,768 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135754.json
+2025-08-05 13:57:54,768 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2302.306446200883
+2025-08-05 13:57:54,847 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135754.json doesn't exist, will create
+2025-08-05 13:57:54,850 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135754.json
+2025-08-05 13:57:54,851 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135754.json doesn't exist, will create
+2025-08-05 13:57:54,852 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135754.json
+2025-08-05 13:57:54,858 - file_manager - INFO - File risk_metrics_20250805_135754.json exists with same content, skipping creation
+2025-08-05 13:57:54,859 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135754.json doesn't exist, will create
+2025-08-05 13:57:54,860 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135754.json
+2025-08-05 13:57:54,860 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 43.464314132516606
+2025-08-05 13:57:59,903 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135759.json doesn't exist, will create
+2025-08-05 13:57:59,904 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135759.json
+2025-08-05 13:57:59,905 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135759.json doesn't exist, will create
+2025-08-05 13:57:59,905 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135759.json
+2025-08-05 13:57:59,906 - file_manager - INFO - File risk_metrics_20250805_135759.json doesn't exist, will create
+2025-08-05 13:57:59,907 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135759.json
+2025-08-05 13:57:59,907 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135759.json doesn't exist, will create
+2025-08-05 13:57:59,907 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135759.json
+2025-08-05 13:57:59,908 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 38934.15351250216
+2025-08-05 13:57:59,953 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135759.json doesn't exist, will create
+2025-08-05 13:57:59,954 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135759.json
+2025-08-05 13:57:59,954 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135759.json doesn't exist, will create
+2025-08-05 13:57:59,954 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135759.json
+2025-08-05 13:57:59,955 - file_manager - INFO - File risk_metrics_20250805_135759.json hash not found, will create
+2025-08-05 13:57:59,956 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135759.json
+2025-08-05 13:57:59,956 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135759.json doesn't exist, will create
+2025-08-05 13:57:59,956 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135759.json
+2025-08-05 13:57:59,956 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2333.8095422139195
+2025-08-05 13:57:59,998 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135759.json doesn't exist, will create
+2025-08-05 13:57:59,998 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135759.json
+2025-08-05 13:57:59,999 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135759.json doesn't exist, will create
+2025-08-05 13:57:59,999 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135759.json
+2025-08-05 13:58:00,001 - file_manager - INFO - File risk_metrics_20250805_135800.json doesn't exist, will create
+2025-08-05 13:58:00,001 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135800.json
+2025-08-05 13:58:00,002 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135800.json doesn't exist, will create
+2025-08-05 13:58:00,002 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135800.json
+2025-08-05 13:58:00,002 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 43.12036817615566
+2025-08-05 13:58:00,003 - file_manager - INFO - File risk_metrics_20250805_135800.json hash not found, will create
+2025-08-05 13:58:00,003 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135800.json
+2025-08-05 13:58:00,004 - file_manager - INFO - File system_status_20250805_135800.json doesn't exist, will create
+2025-08-05 13:58:00,004 - file_manager - INFO - File saved successfully: system_status_20250805_135800.json
+2025-08-05 13:58:05,049 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135805.json doesn't exist, will create
+2025-08-05 13:58:05,050 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135805.json
+2025-08-05 13:58:05,050 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135805.json doesn't exist, will create
+2025-08-05 13:58:05,051 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135805.json
+2025-08-05 13:58:05,052 - file_manager - INFO - File risk_metrics_20250805_135805.json doesn't exist, will create
+2025-08-05 13:58:05,052 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135805.json
+2025-08-05 13:58:05,052 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135805.json doesn't exist, will create
+2025-08-05 13:58:05,053 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135805.json
+2025-08-05 13:58:05,053 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 38064.88845857978
+2025-08-05 13:58:05,095 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135805.json doesn't exist, will create
+2025-08-05 13:58:05,096 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135805.json
+2025-08-05 13:58:05,096 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135805.json doesn't exist, will create
+2025-08-05 13:58:05,096 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135805.json
+2025-08-05 13:58:05,098 - file_manager - INFO - File risk_metrics_20250805_135805.json hash not found, will create
+2025-08-05 13:58:05,099 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135805.json
+2025-08-05 13:58:05,099 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135805.json doesn't exist, will create
+2025-08-05 13:58:05,100 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135805.json
+2025-08-05 13:58:05,100 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2345.3811968122227
+2025-08-05 13:58:05,146 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135805.json doesn't exist, will create
+2025-08-05 13:58:05,148 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135805.json
+2025-08-05 13:58:05,148 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135805.json doesn't exist, will create
+2025-08-05 13:58:05,148 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135805.json
+2025-08-05 13:58:05,149 - file_manager - INFO - File risk_metrics_20250805_135805.json exists with same content, skipping creation
+2025-08-05 13:58:05,150 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135805.json doesn't exist, will create
+2025-08-05 13:58:05,150 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135805.json
+2025-08-05 13:58:05,150 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 42.88520771876433
+2025-08-05 13:58:10,189 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,190 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135810.json
+2025-08-05 13:58:10,190 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,191 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135810.json
+2025-08-05 13:58:10,192 - file_manager - INFO - File risk_metrics_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,192 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135810.json
+2025-08-05 13:58:10,192 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,193 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135810.json
+2025-08-05 13:58:10,193 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 37091.37782520833
+2025-08-05 13:58:10,236 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,236 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135810.json
+2025-08-05 13:58:10,238 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,238 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135810.json
+2025-08-05 13:58:10,239 - file_manager - INFO - File risk_metrics_20250805_135810.json hash not found, will create
+2025-08-05 13:58:10,240 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135810.json
+2025-08-05 13:58:10,240 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,240 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135810.json
+2025-08-05 13:58:10,240 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2354.7775094341264
+2025-08-05 13:58:10,285 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,285 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135810.json
+2025-08-05 13:58:10,286 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,286 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135810.json
+2025-08-05 13:58:10,288 - file_manager - INFO - File risk_metrics_20250805_135810.json exists with same content, skipping creation
+2025-08-05 13:58:10,288 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,288 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135810.json
+2025-08-05 13:58:10,288 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 42.842651173020954
+2025-08-05 13:58:10,289 - file_manager - INFO - File risk_metrics_20250805_135810.json exists with same content, skipping creation
+2025-08-05 13:58:10,289 - file_manager - INFO - File system_status_20250805_135810.json doesn't exist, will create
+2025-08-05 13:58:10,289 - file_manager - INFO - File saved successfully: system_status_20250805_135810.json
+2025-08-05 13:58:15,331 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135815.json doesn't exist, will create
+2025-08-05 13:58:15,332 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135815.json
+2025-08-05 13:58:15,332 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135815.json doesn't exist, will create
+2025-08-05 13:58:15,333 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135815.json
+2025-08-05 13:58:15,334 - file_manager - INFO - File risk_metrics_20250805_135815.json doesn't exist, will create
+2025-08-05 13:58:15,335 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135815.json
+2025-08-05 13:58:15,335 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135815.json doesn't exist, will create
+2025-08-05 13:58:15,336 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135815.json
+2025-08-05 13:58:15,336 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 36227.39509272555
+2025-08-05 13:58:15,386 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135815.json doesn't exist, will create
+2025-08-05 13:58:15,388 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135815.json
+2025-08-05 13:58:15,388 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135815.json doesn't exist, will create
+2025-08-05 13:58:15,389 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135815.json
+2025-08-05 13:58:15,390 - file_manager - INFO - File risk_metrics_20250805_135815.json hash not found, will create
+2025-08-05 13:58:15,390 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135815.json
+2025-08-05 13:58:15,391 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135815.json doesn't exist, will create
+2025-08-05 13:58:15,391 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135815.json
+2025-08-05 13:58:15,392 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2371.0874310725444
+2025-08-05 13:58:15,436 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135815.json doesn't exist, will create
+2025-08-05 13:58:15,436 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135815.json
+2025-08-05 13:58:15,436 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135815.json doesn't exist, will create
+2025-08-05 13:58:15,438 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135815.json
+2025-08-05 13:58:15,439 - file_manager - INFO - File risk_metrics_20250805_135815.json exists with same content, skipping creation
+2025-08-05 13:58:15,439 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135815.json doesn't exist, will create
+2025-08-05 13:58:15,440 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135815.json
+2025-08-05 13:58:15,440 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 42.71634253158776
+2025-08-05 13:58:20,480 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,481 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135820.json
+2025-08-05 13:58:20,481 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,482 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135820.json
+2025-08-05 13:58:20,483 - file_manager - INFO - File risk_metrics_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,483 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135820.json
+2025-08-05 13:58:20,484 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,484 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135820.json
+2025-08-05 13:58:20,484 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 35578.99349774754
+2025-08-05 13:58:20,524 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,525 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135820.json
+2025-08-05 13:58:20,526 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,526 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135820.json
+2025-08-05 13:58:20,528 - file_manager - INFO - File risk_metrics_20250805_135820.json hash not found, will create
+2025-08-05 13:58:20,529 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135820.json
+2025-08-05 13:58:20,529 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,530 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135820.json
+2025-08-05 13:58:20,530 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2405.5135629179113
+2025-08-05 13:58:20,572 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,573 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135820.json
+2025-08-05 13:58:20,573 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,573 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135820.json
+2025-08-05 13:58:20,574 - file_manager - INFO - File risk_metrics_20250805_135820.json exists with same content, skipping creation
+2025-08-05 13:58:20,574 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,575 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135820.json
+2025-08-05 13:58:20,575 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 42.204985193622605
+2025-08-05 13:58:20,575 - file_manager - INFO - File risk_metrics_20250805_135820.json exists with same content, skipping creation
+2025-08-05 13:58:20,575 - file_manager - INFO - File system_status_20250805_135820.json doesn't exist, will create
+2025-08-05 13:58:20,576 - file_manager - INFO - File saved successfully: system_status_20250805_135820.json
+2025-08-05 13:58:25,617 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135825.json doesn't exist, will create
+2025-08-05 13:58:25,618 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135825.json
+2025-08-05 13:58:25,618 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135825.json doesn't exist, will create
+2025-08-05 13:58:25,619 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135825.json
+2025-08-05 13:58:25,620 - file_manager - INFO - File risk_metrics_20250805_135825.json doesn't exist, will create
+2025-08-05 13:58:25,620 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135825.json
+2025-08-05 13:58:25,620 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135825.json doesn't exist, will create
+2025-08-05 13:58:25,621 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135825.json
+2025-08-05 13:58:25,621 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 34591.50808312141
+2025-08-05 13:58:25,668 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135825.json doesn't exist, will create
+2025-08-05 13:58:25,669 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135825.json
+2025-08-05 13:58:25,669 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135825.json doesn't exist, will create
+2025-08-05 13:58:25,670 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135825.json
+2025-08-05 13:58:25,670 - file_manager - INFO - File risk_metrics_20250805_135825.json hash not found, will create
+2025-08-05 13:58:25,671 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135825.json
+2025-08-05 13:58:25,671 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135825.json doesn't exist, will create
+2025-08-05 13:58:25,672 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135825.json
+2025-08-05 13:58:25,672 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2412.381079965141
+2025-08-05 13:58:25,712 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135825.json doesn't exist, will create
+2025-08-05 13:58:25,712 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135825.json
+2025-08-05 13:58:25,713 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135825.json doesn't exist, will create
+2025-08-05 13:58:25,713 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135825.json
+2025-08-05 13:58:25,714 - file_manager - INFO - File risk_metrics_20250805_135825.json exists with same content, skipping creation
+2025-08-05 13:58:25,714 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135825.json doesn't exist, will create
+2025-08-05 13:58:25,715 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135825.json
+2025-08-05 13:58:25,715 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 41.67927801116323
+2025-08-05 13:58:30,760 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,761 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135830.json
+2025-08-05 13:58:30,761 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,762 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135830.json
+2025-08-05 13:58:30,763 - file_manager - INFO - File risk_metrics_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,763 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135830.json
+2025-08-05 13:58:30,764 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,764 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135830.json
+2025-08-05 13:58:30,764 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 33989.22157151872
+2025-08-05 13:58:30,809 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,810 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135830.json
+2025-08-05 13:58:30,810 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,811 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135830.json
+2025-08-05 13:58:30,812 - file_manager - INFO - File risk_metrics_20250805_135830.json hash not found, will create
+2025-08-05 13:58:30,812 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135830.json
+2025-08-05 13:58:30,813 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,813 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135830.json
+2025-08-05 13:58:30,813 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2406.788912626141
+2025-08-05 13:58:30,858 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,859 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135830.json
+2025-08-05 13:58:30,859 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,860 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135830.json
+2025-08-05 13:58:30,861 - file_manager - INFO - File risk_metrics_20250805_135830.json exists with same content, skipping creation
+2025-08-05 13:58:30,861 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,862 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135830.json
+2025-08-05 13:58:30,862 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 41.45123394697936
+2025-08-05 13:58:30,863 - file_manager - INFO - File risk_metrics_20250805_135830.json exists with same content, skipping creation
+2025-08-05 13:58:30,863 - file_manager - INFO - File system_status_20250805_135830.json doesn't exist, will create
+2025-08-05 13:58:30,863 - file_manager - INFO - File saved successfully: system_status_20250805_135830.json
+2025-08-05 13:58:35,902 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135835.json doesn't exist, will create
+2025-08-05 13:58:35,903 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135835.json
+2025-08-05 13:58:35,903 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135835.json doesn't exist, will create
+2025-08-05 13:58:35,904 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135835.json
+2025-08-05 13:58:35,905 - file_manager - INFO - File risk_metrics_20250805_135835.json doesn't exist, will create
+2025-08-05 13:58:35,906 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135835.json
+2025-08-05 13:58:35,906 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135835.json doesn't exist, will create
+2025-08-05 13:58:35,906 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135835.json
+2025-08-05 13:58:35,906 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 33322.20677839532
+2025-08-05 13:58:35,952 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135835.json doesn't exist, will create
+2025-08-05 13:58:35,953 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135835.json
+2025-08-05 13:58:35,953 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135835.json doesn't exist, will create
+2025-08-05 13:58:35,954 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135835.json
+2025-08-05 13:58:35,954 - file_manager - INFO - File risk_metrics_20250805_135835.json hash not found, will create
+2025-08-05 13:58:35,955 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135835.json
+2025-08-05 13:58:35,955 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135835.json doesn't exist, will create
+2025-08-05 13:58:35,956 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135835.json
+2025-08-05 13:58:35,956 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2404.637401238365
+2025-08-05 13:58:36,000 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135835.json doesn't exist, will create
+2025-08-05 13:58:36,000 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135835.json
+2025-08-05 13:58:36,001 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135836.json doesn't exist, will create
+2025-08-05 13:58:36,001 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135836.json
+2025-08-05 13:58:36,002 - file_manager - INFO - File risk_metrics_20250805_135836.json doesn't exist, will create
+2025-08-05 13:58:36,003 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135836.json
+2025-08-05 13:58:36,003 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135836.json doesn't exist, will create
+2025-08-05 13:58:36,004 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135836.json
+2025-08-05 13:58:36,004 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 41.2932721417332
+2025-08-05 13:58:41,044 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,044 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135841.json
+2025-08-05 13:58:41,044 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,045 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135841.json
+2025-08-05 13:58:41,046 - file_manager - INFO - File risk_metrics_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,046 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135841.json
+2025-08-05 13:58:41,046 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,047 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135841.json
+2025-08-05 13:58:41,047 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 32874.502959313526
+2025-08-05 13:58:41,088 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,088 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135841.json
+2025-08-05 13:58:41,090 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,090 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135841.json
+2025-08-05 13:58:41,091 - file_manager - INFO - File risk_metrics_20250805_135841.json hash not found, will create
+2025-08-05 13:58:41,092 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135841.json
+2025-08-05 13:58:41,092 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,093 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135841.json
+2025-08-05 13:58:41,093 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2434.560362059597
+2025-08-05 13:58:41,136 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,138 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135841.json
+2025-08-05 13:58:41,138 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,139 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135841.json
+2025-08-05 13:58:41,140 - file_manager - INFO - File risk_metrics_20250805_135841.json exists with same content, skipping creation
+2025-08-05 13:58:41,140 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,141 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135841.json
+2025-08-05 13:58:41,141 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 40.884987227204476
+2025-08-05 13:58:41,141 - file_manager - INFO - File risk_metrics_20250805_135841.json exists with same content, skipping creation
+2025-08-05 13:58:41,142 - file_manager - INFO - File system_status_20250805_135841.json doesn't exist, will create
+2025-08-05 13:58:41,142 - file_manager - INFO - File saved successfully: system_status_20250805_135841.json
+2025-08-05 13:58:46,188 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135846.json doesn't exist, will create
+2025-08-05 13:58:46,189 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135846.json
+2025-08-05 13:58:46,189 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135846.json doesn't exist, will create
+2025-08-05 13:58:46,190 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135846.json
+2025-08-05 13:58:46,191 - file_manager - INFO - File risk_metrics_20250805_135846.json doesn't exist, will create
+2025-08-05 13:58:46,191 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135846.json
+2025-08-05 13:58:46,191 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135846.json doesn't exist, will create
+2025-08-05 13:58:46,192 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135846.json
+2025-08-05 13:58:46,192 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 31958.625411835405
+2025-08-05 13:58:46,242 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135846.json doesn't exist, will create
+2025-08-05 13:58:46,243 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135846.json
+2025-08-05 13:58:46,243 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135846.json doesn't exist, will create
+2025-08-05 13:58:46,244 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135846.json
+2025-08-05 13:58:46,245 - file_manager - INFO - File risk_metrics_20250805_135846.json hash not found, will create
+2025-08-05 13:58:46,245 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135846.json
+2025-08-05 13:58:46,245 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135846.json doesn't exist, will create
+2025-08-05 13:58:46,246 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135846.json
+2025-08-05 13:58:46,246 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2453.1700924597008
+2025-08-05 13:58:46,292 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135846.json doesn't exist, will create
+2025-08-05 13:58:46,293 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135846.json
+2025-08-05 13:58:46,293 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135846.json doesn't exist, will create
+2025-08-05 13:58:46,294 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135846.json
+2025-08-05 13:58:46,295 - file_manager - INFO - File risk_metrics_20250805_135846.json exists with same content, skipping creation
+2025-08-05 13:58:46,295 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135846.json doesn't exist, will create
+2025-08-05 13:58:46,296 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135846.json
+2025-08-05 13:58:46,296 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 40.62065768582156
+2025-08-05 13:58:51,346 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,346 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135851.json
+2025-08-05 13:58:51,346 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,348 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135851.json
+2025-08-05 13:58:51,349 - file_manager - INFO - File risk_metrics_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,349 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135851.json
+2025-08-05 13:58:51,350 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,350 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135851.json
+2025-08-05 13:58:51,350 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 31421.6733647571
+2025-08-05 13:58:51,401 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,402 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135851.json
+2025-08-05 13:58:51,403 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,403 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135851.json
+2025-08-05 13:58:51,404 - file_manager - INFO - File risk_metrics_20250805_135851.json hash not found, will create
+2025-08-05 13:58:51,405 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135851.json
+2025-08-05 13:58:51,405 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,406 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135851.json
+2025-08-05 13:58:51,406 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2475.140011739743
+2025-08-05 13:58:51,450 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,451 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135851.json
+2025-08-05 13:58:51,451 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,452 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135851.json
+2025-08-05 13:58:51,453 - file_manager - INFO - File risk_metrics_20250805_135851.json exists with same content, skipping creation
+2025-08-05 13:58:51,453 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,453 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135851.json
+2025-08-05 13:58:51,454 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 40.29490791777738
+2025-08-05 13:58:51,454 - file_manager - INFO - File risk_metrics_20250805_135851.json exists with same content, skipping creation
+2025-08-05 13:58:51,454 - file_manager - INFO - File system_status_20250805_135851.json doesn't exist, will create
+2025-08-05 13:58:51,455 - file_manager - INFO - File saved successfully: system_status_20250805_135851.json
+2025-08-05 13:58:56,497 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135856.json doesn't exist, will create
+2025-08-05 13:58:56,498 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135856.json
+2025-08-05 13:58:56,498 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135856.json doesn't exist, will create
+2025-08-05 13:58:56,499 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135856.json
+2025-08-05 13:58:56,499 - file_manager - INFO - File risk_metrics_20250805_135856.json doesn't exist, will create
+2025-08-05 13:58:56,500 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135856.json
+2025-08-05 13:58:56,501 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135856.json doesn't exist, will create
+2025-08-05 13:58:56,501 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135856.json
+2025-08-05 13:58:56,501 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 30986.784881659194
+2025-08-05 13:58:56,545 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135856.json doesn't exist, will create
+2025-08-05 13:58:56,562 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135856.json
+2025-08-05 13:58:56,562 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135856.json doesn't exist, will create
+2025-08-05 13:58:56,563 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135856.json
+2025-08-05 13:58:56,564 - file_manager - INFO - File risk_metrics_20250805_135856.json hash not found, will create
+2025-08-05 13:58:56,564 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135856.json
+2025-08-05 13:58:56,564 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135856.json doesn't exist, will create
+2025-08-05 13:58:56,565 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135856.json
+2025-08-05 13:58:56,565 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2493.6343179636356
+2025-08-05 13:58:56,615 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135856.json doesn't exist, will create
+2025-08-05 13:58:56,616 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135856.json
+2025-08-05 13:58:56,616 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135856.json doesn't exist, will create
+2025-08-05 13:58:56,617 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135856.json
+2025-08-05 13:58:56,618 - file_manager - INFO - File risk_metrics_20250805_135856.json exists with same content, skipping creation
+2025-08-05 13:58:56,618 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135856.json doesn't exist, will create
+2025-08-05 13:58:56,619 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135856.json
+2025-08-05 13:58:56,619 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 40.14758799045026
+2025-08-05 13:59:01,659 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,660 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135901.json
+2025-08-05 13:59:01,660 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,661 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135901.json
+2025-08-05 13:59:01,662 - file_manager - INFO - File risk_metrics_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,662 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135901.json
+2025-08-05 13:59:01,662 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,663 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135901.json
+2025-08-05 13:59:01,663 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 30705.15876010097
+2025-08-05 13:59:01,710 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,711 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135901.json
+2025-08-05 13:59:01,711 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,712 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135901.json
+2025-08-05 13:59:01,713 - file_manager - INFO - File risk_metrics_20250805_135901.json hash not found, will create
+2025-08-05 13:59:01,713 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135901.json
+2025-08-05 13:59:01,713 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,714 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135901.json
+2025-08-05 13:59:01,714 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2523.143988806971
+2025-08-05 13:59:01,760 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,761 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135901.json
+2025-08-05 13:59:01,761 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,762 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135901.json
+2025-08-05 13:59:01,763 - file_manager - INFO - File risk_metrics_20250805_135901.json exists with same content, skipping creation
+2025-08-05 13:59:01,764 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,765 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135901.json
+2025-08-05 13:59:01,765 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 40.25797448751392
+2025-08-05 13:59:01,765 - file_manager - INFO - File risk_metrics_20250805_135901.json exists with same content, skipping creation
+2025-08-05 13:59:01,765 - file_manager - INFO - File system_status_20250805_135901.json doesn't exist, will create
+2025-08-05 13:59:01,766 - file_manager - INFO - File saved successfully: system_status_20250805_135901.json
+2025-08-05 13:59:06,806 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135906.json doesn't exist, will create
+2025-08-05 13:59:06,807 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135906.json
+2025-08-05 13:59:06,807 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135906.json doesn't exist, will create
+2025-08-05 13:59:06,808 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135906.json
+2025-08-05 13:59:06,809 - file_manager - INFO - File risk_metrics_20250805_135906.json doesn't exist, will create
+2025-08-05 13:59:06,809 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135906.json
+2025-08-05 13:59:06,809 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135906.json doesn't exist, will create
+2025-08-05 13:59:06,810 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135906.json
+2025-08-05 13:59:06,810 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 30171.8817467108
+2025-08-05 13:59:06,854 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135906.json doesn't exist, will create
+2025-08-05 13:59:06,855 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135906.json
+2025-08-05 13:59:06,855 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135906.json doesn't exist, will create
+2025-08-05 13:59:06,856 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135906.json
+2025-08-05 13:59:06,856 - file_manager - INFO - File risk_metrics_20250805_135906.json hash not found, will create
+2025-08-05 13:59:06,857 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135906.json
+2025-08-05 13:59:06,857 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135906.json doesn't exist, will create
+2025-08-05 13:59:06,858 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135906.json
+2025-08-05 13:59:06,858 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2528.499956747707
+2025-08-05 13:59:06,898 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135906.json doesn't exist, will create
+2025-08-05 13:59:06,899 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135906.json
+2025-08-05 13:59:06,899 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135906.json doesn't exist, will create
+2025-08-05 13:59:06,899 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135906.json
+2025-08-05 13:59:06,900 - file_manager - INFO - File risk_metrics_20250805_135906.json exists with same content, skipping creation
+2025-08-05 13:59:06,901 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135906.json doesn't exist, will create
+2025-08-05 13:59:06,901 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135906.json
+2025-08-05 13:59:06,901 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 40.35220422734904
+2025-08-05 13:59:11,945 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135911.json doesn't exist, will create
+2025-08-05 13:59:11,946 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135911.json
+2025-08-05 13:59:11,946 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135911.json doesn't exist, will create
+2025-08-05 13:59:11,947 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135911.json
+2025-08-05 13:59:11,947 - file_manager - INFO - File risk_metrics_20250805_135911.json doesn't exist, will create
+2025-08-05 13:59:11,947 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135911.json
+2025-08-05 13:59:11,948 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135911.json doesn't exist, will create
+2025-08-05 13:59:11,948 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135911.json
+2025-08-05 13:59:11,948 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 29441.14253929035
+2025-08-05 13:59:11,995 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135911.json doesn't exist, will create
+2025-08-05 13:59:11,996 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135911.json
+2025-08-05 13:59:11,996 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135911.json doesn't exist, will create
+2025-08-05 13:59:11,997 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135911.json
+2025-08-05 13:59:11,997 - file_manager - INFO - File risk_metrics_20250805_135911.json hash not found, will create
+2025-08-05 13:59:11,997 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135911.json
+2025-08-05 13:59:11,999 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135911.json doesn't exist, will create
+2025-08-05 13:59:11,999 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135911.json
+2025-08-05 13:59:11,999 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2544.668128887494
+2025-08-05 13:59:12,045 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135912.json doesn't exist, will create
+2025-08-05 13:59:12,046 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135912.json
+2025-08-05 13:59:12,046 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135912.json doesn't exist, will create
+2025-08-05 13:59:12,047 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135912.json
+2025-08-05 13:59:12,048 - file_manager - INFO - File risk_metrics_20250805_135912.json doesn't exist, will create
+2025-08-05 13:59:12,049 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135912.json
+2025-08-05 13:59:12,049 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135912.json doesn't exist, will create
+2025-08-05 13:59:12,050 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135912.json
+2025-08-05 13:59:12,050 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 39.94974183775025
+2025-08-05 13:59:12,051 - file_manager - INFO - File risk_metrics_20250805_135912.json hash not found, will create
+2025-08-05 13:59:12,051 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135912.json
+2025-08-05 13:59:12,051 - file_manager - INFO - File system_status_20250805_135912.json doesn't exist, will create
+2025-08-05 13:59:12,052 - file_manager - INFO - File saved successfully: system_status_20250805_135912.json
+2025-08-05 13:59:17,092 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135917.json doesn't exist, will create
+2025-08-05 13:59:17,094 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135917.json
+2025-08-05 13:59:17,094 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135917.json doesn't exist, will create
+2025-08-05 13:59:17,094 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135917.json
+2025-08-05 13:59:17,095 - file_manager - INFO - File risk_metrics_20250805_135917.json doesn't exist, will create
+2025-08-05 13:59:17,096 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135917.json
+2025-08-05 13:59:17,096 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135917.json doesn't exist, will create
+2025-08-05 13:59:17,096 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135917.json
+2025-08-05 13:59:17,096 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 29115.679836807132
+2025-08-05 13:59:17,136 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135917.json doesn't exist, will create
+2025-08-05 13:59:17,137 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135917.json
+2025-08-05 13:59:17,137 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135917.json doesn't exist, will create
+2025-08-05 13:59:17,138 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135917.json
+2025-08-05 13:59:17,139 - file_manager - INFO - File risk_metrics_20250805_135917.json hash not found, will create
+2025-08-05 13:59:17,139 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135917.json
+2025-08-05 13:59:17,140 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135917.json doesn't exist, will create
+2025-08-05 13:59:17,140 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135917.json
+2025-08-05 13:59:17,140 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2578.3673330783768
+2025-08-05 13:59:17,183 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135917.json doesn't exist, will create
+2025-08-05 13:59:17,184 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135917.json
+2025-08-05 13:59:17,184 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135917.json doesn't exist, will create
+2025-08-05 13:59:17,184 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135917.json
+2025-08-05 13:59:17,185 - file_manager - INFO - File risk_metrics_20250805_135917.json exists with same content, skipping creation
+2025-08-05 13:59:17,185 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135917.json doesn't exist, will create
+2025-08-05 13:59:17,187 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135917.json
+2025-08-05 13:59:17,187 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 39.680467627093854
+2025-08-05 13:59:22,227 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,228 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135922.json
+2025-08-05 13:59:22,228 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,229 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135922.json
+2025-08-05 13:59:22,230 - file_manager - INFO - File risk_metrics_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,230 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135922.json
+2025-08-05 13:59:22,230 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,231 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135922.json
+2025-08-05 13:59:22,231 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 28406.977377755546
+2025-08-05 13:59:22,270 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,270 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135922.json
+2025-08-05 13:59:22,271 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,271 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135922.json
+2025-08-05 13:59:22,272 - file_manager - INFO - File risk_metrics_20250805_135922.json hash not found, will create
+2025-08-05 13:59:22,272 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135922.json
+2025-08-05 13:59:22,272 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,273 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135922.json
+2025-08-05 13:59:22,273 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2593.654003717643
+2025-08-05 13:59:22,315 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,316 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135922.json
+2025-08-05 13:59:22,316 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,316 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135922.json
+2025-08-05 13:59:22,317 - file_manager - INFO - File risk_metrics_20250805_135922.json exists with same content, skipping creation
+2025-08-05 13:59:22,318 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,318 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135922.json
+2025-08-05 13:59:22,318 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 39.46885941027999
+2025-08-05 13:59:22,319 - file_manager - INFO - File risk_metrics_20250805_135922.json exists with same content, skipping creation
+2025-08-05 13:59:22,319 - file_manager - INFO - File system_status_20250805_135922.json doesn't exist, will create
+2025-08-05 13:59:22,320 - file_manager - INFO - File saved successfully: system_status_20250805_135922.json
+2025-08-05 13:59:27,364 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135927.json doesn't exist, will create
+2025-08-05 13:59:27,364 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135927.json
+2025-08-05 13:59:27,365 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135927.json doesn't exist, will create
+2025-08-05 13:59:27,365 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135927.json
+2025-08-05 13:59:27,367 - file_manager - INFO - File risk_metrics_20250805_135927.json doesn't exist, will create
+2025-08-05 13:59:27,367 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135927.json
+2025-08-05 13:59:27,368 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135927.json doesn't exist, will create
+2025-08-05 13:59:27,368 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135927.json
+2025-08-05 13:59:27,368 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 27767.346268029487
+2025-08-05 13:59:27,413 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135927.json doesn't exist, will create
+2025-08-05 13:59:27,413 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135927.json
+2025-08-05 13:59:27,414 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135927.json doesn't exist, will create
+2025-08-05 13:59:27,415 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135927.json
+2025-08-05 13:59:27,416 - file_manager - INFO - File risk_metrics_20250805_135927.json hash not found, will create
+2025-08-05 13:59:27,416 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135927.json
+2025-08-05 13:59:27,416 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135927.json doesn't exist, will create
+2025-08-05 13:59:27,417 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135927.json
+2025-08-05 13:59:27,417 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2589.994824986246
+2025-08-05 13:59:27,460 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135927.json doesn't exist, will create
+2025-08-05 13:59:27,461 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135927.json
+2025-08-05 13:59:27,461 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135927.json doesn't exist, will create
+2025-08-05 13:59:27,462 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135927.json
+2025-08-05 13:59:27,463 - file_manager - INFO - File risk_metrics_20250805_135927.json exists with same content, skipping creation
+2025-08-05 13:59:27,463 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135927.json doesn't exist, will create
+2025-08-05 13:59:27,463 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135927.json
+2025-08-05 13:59:27,464 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 39.0941206782355
+2025-08-05 13:59:32,508 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,509 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135932.json
+2025-08-05 13:59:32,509 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,509 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135932.json
+2025-08-05 13:59:32,510 - file_manager - INFO - File risk_metrics_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,511 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135932.json
+2025-08-05 13:59:32,511 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,512 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135932.json
+2025-08-05 13:59:32,512 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 27107.706069896696
+2025-08-05 13:59:32,558 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,559 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135932.json
+2025-08-05 13:59:32,559 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,560 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135932.json
+2025-08-05 13:59:32,562 - file_manager - INFO - File risk_metrics_20250805_135932.json hash not found, will create
+2025-08-05 13:59:32,562 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135932.json
+2025-08-05 13:59:32,562 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,563 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135932.json
+2025-08-05 13:59:32,563 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2622.9071729906213
+2025-08-05 13:59:32,609 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,610 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135932.json
+2025-08-05 13:59:32,610 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,611 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135932.json
+2025-08-05 13:59:32,612 - file_manager - INFO - File risk_metrics_20250805_135932.json exists with same content, skipping creation
+2025-08-05 13:59:32,612 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,612 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135932.json
+2025-08-05 13:59:32,613 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 38.751603769167964
+2025-08-05 13:59:32,613 - file_manager - INFO - File risk_metrics_20250805_135932.json exists with same content, skipping creation
+2025-08-05 13:59:32,613 - file_manager - INFO - File system_status_20250805_135932.json doesn't exist, will create
+2025-08-05 13:59:32,614 - file_manager - INFO - File saved successfully: system_status_20250805_135932.json
+2025-08-05 13:59:37,657 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135937.json doesn't exist, will create
+2025-08-05 13:59:37,658 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135937.json
+2025-08-05 13:59:37,658 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135937.json doesn't exist, will create
+2025-08-05 13:59:37,659 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135937.json
+2025-08-05 13:59:37,660 - file_manager - INFO - File risk_metrics_20250805_135937.json doesn't exist, will create
+2025-08-05 13:59:37,660 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135937.json
+2025-08-05 13:59:37,660 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135937.json doesn't exist, will create
+2025-08-05 13:59:37,661 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135937.json
+2025-08-05 13:59:37,661 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 26640.549949701417
+2025-08-05 13:59:37,708 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135937.json doesn't exist, will create
+2025-08-05 13:59:37,708 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135937.json
+2025-08-05 13:59:37,709 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135937.json doesn't exist, will create
+2025-08-05 13:59:37,709 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135937.json
+2025-08-05 13:59:37,710 - file_manager - INFO - File risk_metrics_20250805_135937.json hash not found, will create
+2025-08-05 13:59:37,711 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135937.json
+2025-08-05 13:59:37,711 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135937.json doesn't exist, will create
+2025-08-05 13:59:37,712 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135937.json
+2025-08-05 13:59:37,712 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2647.1287707713086
+2025-08-05 13:59:37,758 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135937.json doesn't exist, will create
+2025-08-05 13:59:37,759 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135937.json
+2025-08-05 13:59:37,759 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135937.json doesn't exist, will create
+2025-08-05 13:59:37,760 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135937.json
+2025-08-05 13:59:37,761 - file_manager - INFO - File risk_metrics_20250805_135937.json exists with same content, skipping creation
+2025-08-05 13:59:37,761 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135937.json doesn't exist, will create
+2025-08-05 13:59:37,762 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135937.json
+2025-08-05 13:59:37,762 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 38.255614529612956
+2025-08-05 13:59:42,806 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,807 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135942.json
+2025-08-05 13:59:42,807 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,808 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135942.json
+2025-08-05 13:59:42,809 - file_manager - INFO - File risk_metrics_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,809 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135942.json
+2025-08-05 13:59:42,810 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,810 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135942.json
+2025-08-05 13:59:42,810 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 26266.918956811343
+2025-08-05 13:59:42,857 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,858 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135942.json
+2025-08-05 13:59:42,859 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,859 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135942.json
+2025-08-05 13:59:42,860 - file_manager - INFO - File risk_metrics_20250805_135942.json hash not found, will create
+2025-08-05 13:59:42,861 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135942.json
+2025-08-05 13:59:42,861 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,861 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135942.json
+2025-08-05 13:59:42,861 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2659.0128931046775
+2025-08-05 13:59:42,907 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,908 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135942.json
+2025-08-05 13:59:42,908 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,909 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135942.json
+2025-08-05 13:59:42,910 - file_manager - INFO - File risk_metrics_20250805_135942.json exists with same content, skipping creation
+2025-08-05 13:59:42,910 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,911 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135942.json
+2025-08-05 13:59:42,911 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 37.624682125665984
+2025-08-05 13:59:42,911 - file_manager - INFO - File risk_metrics_20250805_135942.json exists with same content, skipping creation
+2025-08-05 13:59:42,911 - file_manager - INFO - File system_status_20250805_135942.json doesn't exist, will create
+2025-08-05 13:59:42,912 - file_manager - INFO - File saved successfully: system_status_20250805_135942.json
+2025-08-05 13:59:47,959 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135947.json doesn't exist, will create
+2025-08-05 13:59:47,960 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135947.json
+2025-08-05 13:59:47,960 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135947.json doesn't exist, will create
+2025-08-05 13:59:47,961 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135947.json
+2025-08-05 13:59:47,962 - file_manager - INFO - File risk_metrics_20250805_135947.json doesn't exist, will create
+2025-08-05 13:59:47,963 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135947.json
+2025-08-05 13:59:47,963 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135947.json doesn't exist, will create
+2025-08-05 13:59:47,964 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135947.json
+2025-08-05 13:59:47,964 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 25512.488387802307
+2025-08-05 13:59:48,014 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135948.json doesn't exist, will create
+2025-08-05 13:59:48,015 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135948.json
+2025-08-05 13:59:48,016 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135948.json doesn't exist, will create
+2025-08-05 13:59:48,016 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135948.json
+2025-08-05 13:59:48,017 - file_manager - INFO - File risk_metrics_20250805_135948.json doesn't exist, will create
+2025-08-05 13:59:48,017 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135948.json
+2025-08-05 13:59:48,017 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135948.json doesn't exist, will create
+2025-08-05 13:59:48,018 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135948.json
+2025-08-05 13:59:48,018 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2669.6708545994647
+2025-08-05 13:59:48,067 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135948.json doesn't exist, will create
+2025-08-05 13:59:48,067 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135948.json
+2025-08-05 13:59:48,068 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135948.json doesn't exist, will create
+2025-08-05 13:59:48,068 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135948.json
+2025-08-05 13:59:48,069 - file_manager - INFO - File risk_metrics_20250805_135948.json hash not found, will create
+2025-08-05 13:59:48,070 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135948.json
+2025-08-05 13:59:48,070 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135948.json doesn't exist, will create
+2025-08-05 13:59:48,071 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135948.json
+2025-08-05 13:59:48,071 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 37.533248671114805
+2025-08-05 13:59:53,114 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,114 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135953.json
+2025-08-05 13:59:53,115 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,115 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135953.json
+2025-08-05 13:59:53,116 - file_manager - INFO - File risk_metrics_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,116 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135953.json
+2025-08-05 13:59:53,117 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,117 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135953.json
+2025-08-05 13:59:53,117 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 25085.66773097197
+2025-08-05 13:59:53,164 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,165 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135953.json
+2025-08-05 13:59:53,165 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,166 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135953.json
+2025-08-05 13:59:53,167 - file_manager - INFO - File risk_metrics_20250805_135953.json hash not found, will create
+2025-08-05 13:59:53,167 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135953.json
+2025-08-05 13:59:53,167 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,168 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135953.json
+2025-08-05 13:59:53,168 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2695.105580970341
+2025-08-05 13:59:53,214 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,214 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135953.json
+2025-08-05 13:59:53,215 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,217 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135953.json
+2025-08-05 13:59:53,218 - file_manager - INFO - File risk_metrics_20250805_135953.json exists with same content, skipping creation
+2025-08-05 13:59:53,218 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,219 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135953.json
+2025-08-05 13:59:53,219 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 37.04990152184847
+2025-08-05 13:59:53,220 - file_manager - INFO - File risk_metrics_20250805_135953.json exists with same content, skipping creation
+2025-08-05 13:59:53,220 - file_manager - INFO - File system_status_20250805_135953.json doesn't exist, will create
+2025-08-05 13:59:53,221 - file_manager - INFO - File saved successfully: system_status_20250805_135953.json
+2025-08-05 13:59:58,266 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_135958.json doesn't exist, will create
+2025-08-05 13:59:58,267 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_135958.json
+2025-08-05 13:59:58,268 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_135958.json doesn't exist, will create
+2025-08-05 13:59:58,268 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_135958.json
+2025-08-05 13:59:58,269 - file_manager - INFO - File risk_metrics_20250805_135958.json doesn't exist, will create
+2025-08-05 13:59:58,270 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135958.json
+2025-08-05 13:59:58,270 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_135958.json doesn't exist, will create
+2025-08-05 13:59:58,271 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_135958.json
+2025-08-05 13:59:58,271 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 24368.270427258383
+2025-08-05 13:59:58,320 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_135958.json doesn't exist, will create
+2025-08-05 13:59:58,321 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_135958.json
+2025-08-05 13:59:58,321 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_135958.json doesn't exist, will create
+2025-08-05 13:59:58,322 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_135958.json
+2025-08-05 13:59:58,323 - file_manager - INFO - File risk_metrics_20250805_135958.json hash not found, will create
+2025-08-05 13:59:58,323 - file_manager - INFO - File saved successfully: risk_metrics_20250805_135958.json
+2025-08-05 13:59:58,324 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_135958.json doesn't exist, will create
+2025-08-05 13:59:58,324 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_135958.json
+2025-08-05 13:59:58,324 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2707.883873427927
+2025-08-05 13:59:58,369 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_135958.json doesn't exist, will create
+2025-08-05 13:59:58,370 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_135958.json
+2025-08-05 13:59:58,370 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_135958.json doesn't exist, will create
+2025-08-05 13:59:58,371 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_135958.json
+2025-08-05 13:59:58,372 - file_manager - INFO - File risk_metrics_20250805_135958.json exists with same content, skipping creation
+2025-08-05 13:59:58,372 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_135958.json doesn't exist, will create
+2025-08-05 13:59:58,373 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_135958.json
+2025-08-05 13:59:58,373 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 36.72184225555732
+2025-08-05 14:00:03,418 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,419 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_140003.json
+2025-08-05 14:00:03,419 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,419 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_140003.json
+2025-08-05 14:00:03,420 - file_manager - INFO - File risk_metrics_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,420 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140003.json
+2025-08-05 14:00:03,422 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,422 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_140003.json
+2025-08-05 14:00:03,423 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 23613.896750407275
+2025-08-05 14:00:03,468 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,469 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_140003.json
+2025-08-05 14:00:03,469 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,470 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_140003.json
+2025-08-05 14:00:03,471 - file_manager - INFO - File risk_metrics_20250805_140003.json hash not found, will create
+2025-08-05 14:00:03,471 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140003.json
+2025-08-05 14:00:03,471 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,472 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_140003.json
+2025-08-05 14:00:03,472 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2737.5392265984956
+2025-08-05 14:00:03,518 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,519 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_140003.json
+2025-08-05 14:00:03,519 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,520 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_140003.json
+2025-08-05 14:00:03,521 - file_manager - INFO - File risk_metrics_20250805_140003.json exists with same content, skipping creation
+2025-08-05 14:00:03,521 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,521 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_140003.json
+2025-08-05 14:00:03,522 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 36.626715092695235
+2025-08-05 14:00:03,522 - file_manager - INFO - File risk_metrics_20250805_140003.json exists with same content, skipping creation
+2025-08-05 14:00:03,522 - file_manager - INFO - File system_status_20250805_140003.json doesn't exist, will create
+2025-08-05 14:00:03,523 - file_manager - INFO - File saved successfully: system_status_20250805_140003.json
+2025-08-05 14:00:08,574 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_140008.json doesn't exist, will create
+2025-08-05 14:00:08,574 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_140008.json
+2025-08-05 14:00:08,575 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_140008.json doesn't exist, will create
+2025-08-05 14:00:08,575 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_140008.json
+2025-08-05 14:00:08,577 - file_manager - INFO - File risk_metrics_20250805_140008.json doesn't exist, will create
+2025-08-05 14:00:08,577 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140008.json
+2025-08-05 14:00:08,578 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_140008.json doesn't exist, will create
+2025-08-05 14:00:08,578 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_140008.json
+2025-08-05 14:00:08,578 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 23012.079555761342
+2025-08-05 14:00:08,626 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_140008.json doesn't exist, will create
+2025-08-05 14:00:08,627 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_140008.json
+2025-08-05 14:00:08,627 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_140008.json doesn't exist, will create
+2025-08-05 14:00:08,627 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_140008.json
+2025-08-05 14:00:08,628 - file_manager - INFO - File risk_metrics_20250805_140008.json hash not found, will create
+2025-08-05 14:00:08,629 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140008.json
+2025-08-05 14:00:08,629 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_140008.json doesn't exist, will create
+2025-08-05 14:00:08,630 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_140008.json
+2025-08-05 14:00:08,630 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2770.0492927225205
+2025-08-05 14:00:08,673 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_140008.json doesn't exist, will create
+2025-08-05 14:00:08,674 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_140008.json
+2025-08-05 14:00:08,674 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_140008.json doesn't exist, will create
+2025-08-05 14:00:08,675 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_140008.json
+2025-08-05 14:00:08,675 - file_manager - INFO - File risk_metrics_20250805_140008.json exists with same content, skipping creation
+2025-08-05 14:00:08,676 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_140008.json doesn't exist, will create
+2025-08-05 14:00:08,676 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_140008.json
+2025-08-05 14:00:08,676 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 36.03662362236383
+2025-08-05 14:00:13,719 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,720 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_140013.json
+2025-08-05 14:00:13,720 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,721 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_140013.json
+2025-08-05 14:00:13,722 - file_manager - INFO - File risk_metrics_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,722 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140013.json
+2025-08-05 14:00:13,723 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,723 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_140013.json
+2025-08-05 14:00:13,723 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 22398.308522695534
+2025-08-05 14:00:13,769 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,770 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_140013.json
+2025-08-05 14:00:13,770 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,770 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_140013.json
+2025-08-05 14:00:13,771 - file_manager - INFO - File risk_metrics_20250805_140013.json hash not found, will create
+2025-08-05 14:00:13,772 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140013.json
+2025-08-05 14:00:13,772 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,773 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_140013.json
+2025-08-05 14:00:13,773 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2798.9726123331493
+2025-08-05 14:00:13,818 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,819 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_140013.json
+2025-08-05 14:00:13,819 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,820 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_140013.json
+2025-08-05 14:00:13,821 - file_manager - INFO - File risk_metrics_20250805_140013.json exists with same content, skipping creation
+2025-08-05 14:00:13,821 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,822 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_140013.json
+2025-08-05 14:00:13,822 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 35.44487980119317
+2025-08-05 14:00:13,822 - file_manager - INFO - File risk_metrics_20250805_140013.json exists with same content, skipping creation
+2025-08-05 14:00:13,823 - file_manager - INFO - File system_status_20250805_140013.json doesn't exist, will create
+2025-08-05 14:00:13,823 - file_manager - INFO - File saved successfully: system_status_20250805_140013.json
+2025-08-05 14:00:18,864 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_140018.json doesn't exist, will create
+2025-08-05 14:00:18,866 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_140018.json
+2025-08-05 14:00:18,866 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_140018.json doesn't exist, will create
+2025-08-05 14:00:18,867 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_140018.json
+2025-08-05 14:00:18,868 - file_manager - INFO - File risk_metrics_20250805_140018.json doesn't exist, will create
+2025-08-05 14:00:18,868 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140018.json
+2025-08-05 14:00:18,869 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_140018.json doesn't exist, will create
+2025-08-05 14:00:18,869 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_140018.json
+2025-08-05 14:00:18,869 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 21634.47860681691
+2025-08-05 14:00:18,916 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_140018.json doesn't exist, will create
+2025-08-05 14:00:18,917 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_140018.json
+2025-08-05 14:00:18,917 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_140018.json doesn't exist, will create
+2025-08-05 14:00:18,918 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_140018.json
+2025-08-05 14:00:18,919 - file_manager - INFO - File risk_metrics_20250805_140018.json hash not found, will create
+2025-08-05 14:00:18,919 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140018.json
+2025-08-05 14:00:18,920 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_140018.json doesn't exist, will create
+2025-08-05 14:00:18,920 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_140018.json
+2025-08-05 14:00:18,921 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2816.6034333166813
+2025-08-05 14:00:18,967 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_140018.json doesn't exist, will create
+2025-08-05 14:00:18,968 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_140018.json
+2025-08-05 14:00:18,968 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_140018.json doesn't exist, will create
+2025-08-05 14:00:18,969 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_140018.json
+2025-08-05 14:00:18,970 - file_manager - INFO - File risk_metrics_20250805_140018.json exists with same content, skipping creation
+2025-08-05 14:00:18,970 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_140018.json doesn't exist, will create
+2025-08-05 14:00:18,971 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_140018.json
+2025-08-05 14:00:18,971 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 35.3856239087885
+2025-08-05 14:00:24,017 - file_manager - INFO - File ml_prediction_BTCUSDT_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,017 - file_manager - INFO - File saved successfully: ml_prediction_BTCUSDT_20250805_140024.json
+2025-08-05 14:00:24,018 - file_manager - INFO - File sentiment_analysis_BTCUSDT_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,018 - file_manager - INFO - File saved successfully: sentiment_analysis_BTCUSDT_20250805_140024.json
+2025-08-05 14:00:24,019 - file_manager - INFO - File risk_metrics_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,020 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140024.json
+2025-08-05 14:00:24,020 - file_manager - INFO - File trade_execution_BTCUSDT_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,021 - file_manager - INFO - File saved successfully: trade_execution_BTCUSDT_20250805_140024.json
+2025-08-05 14:00:24,021 - enhanced_trading_system - INFO - Trade executed: BTCUSDT buy at 21024.37901807454
+2025-08-05 14:00:24,067 - file_manager - INFO - File ml_prediction_ETHUSDT_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,068 - file_manager - INFO - File saved successfully: ml_prediction_ETHUSDT_20250805_140024.json
+2025-08-05 14:00:24,069 - file_manager - INFO - File sentiment_analysis_ETHUSDT_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,069 - file_manager - INFO - File saved successfully: sentiment_analysis_ETHUSDT_20250805_140024.json
+2025-08-05 14:00:24,070 - file_manager - INFO - File risk_metrics_20250805_140024.json hash not found, will create
+2025-08-05 14:00:24,070 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140024.json
+2025-08-05 14:00:24,071 - file_manager - INFO - File trade_execution_ETHUSDT_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,071 - file_manager - INFO - File saved successfully: trade_execution_ETHUSDT_20250805_140024.json
+2025-08-05 14:00:24,071 - enhanced_trading_system - INFO - Trade executed: ETHUSDT sell at 2857.6733900924028
+2025-08-05 14:00:24,119 - file_manager - INFO - File ml_prediction_BNBUSDT_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,119 - file_manager - INFO - File saved successfully: ml_prediction_BNBUSDT_20250805_140024.json
+2025-08-05 14:00:24,120 - file_manager - INFO - File sentiment_analysis_BNBUSDT_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,120 - file_manager - INFO - File saved successfully: sentiment_analysis_BNBUSDT_20250805_140024.json
+2025-08-05 14:00:24,121 - file_manager - INFO - File risk_metrics_20250805_140024.json exists with same content, skipping creation
+2025-08-05 14:00:24,122 - file_manager - INFO - File trade_execution_BNBUSDT_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,122 - file_manager - INFO - File saved successfully: trade_execution_BNBUSDT_20250805_140024.json
+2025-08-05 14:00:24,123 - enhanced_trading_system - INFO - Trade executed: BNBUSDT buy at 35.366691086962355
+2025-08-05 14:00:24,123 - file_manager - INFO - File risk_metrics_20250805_140024.json exists with same content, skipping creation
+2025-08-05 14:00:24,123 - file_manager - INFO - File system_status_20250805_140024.json doesn't exist, will create
+2025-08-05 14:00:24,124 - file_manager - INFO - File saved successfully: system_status_20250805_140024.json
+2025-08-05 14:00:28,891 - file_manager - INFO - File risk_metrics_20250805_140028.json doesn't exist, will create
+2025-08-05 14:00:28,891 - file_manager - INFO - File saved successfully: risk_metrics_20250805_140028.json
+2025-08-05 14:00:28,892 - file_manager - INFO - File system_status_20250805_140028.json doesn't exist, will create
+2025-08-05 14:00:28,893 - file_manager - INFO - File saved successfully: system_status_20250805_140028.json

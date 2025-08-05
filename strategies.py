@@ -70,6 +70,13 @@ class MomentumStrategy(BaseStrategy):
         """Generate enhanced momentum signals with multiple confirmations"""
         signals = data.copy()
         
+        # Fix timestamp issues if present
+        if not isinstance(signals.index, pd.DatetimeIndex):
+            try:
+                signals.index = pd.to_datetime(signals.index)
+            except:
+                pass
+        
         # Calculate required indicators if not present
         if 'sma_20' not in signals.columns:
             signals['sma_20'] = signals['close'].rolling(window=self.config['sma_short']).mean()
@@ -597,6 +604,13 @@ class DivergenceStrategy(BaseStrategy):
         """Generate divergence signals"""
         signals = data.copy()
         
+        # Fix timestamp issues if present
+        if not isinstance(signals.index, pd.DatetimeIndex):
+            try:
+                signals.index = pd.to_datetime(signals.index)
+            except:
+                pass
+        
         # Initialize signal columns
         signals['signal'] = 0
         signals['divergence_type'] = ''
@@ -818,6 +832,14 @@ class FibonacciStrategy(BaseStrategy):
 
     def generate_signals(self, data: pd.DataFrame) -> pd.DataFrame:
         signals = data.copy()
+        
+        # Fix timestamp issues if present
+        if not isinstance(signals.index, pd.DatetimeIndex):
+            try:
+                signals.index = pd.to_datetime(signals.index)
+            except:
+                pass
+        
         signals['signal'] = 0
         signals['fibonacci_level'] = 0.0
         signals['level_type'] = ''
