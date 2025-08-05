@@ -1710,68 +1710,95 @@ Monitor your positions carefully!
             return False
 
 def main():
-    """Main function to run the unified trading system"""
-    try:
-        print("🚀 UNIFIED COMPREHENSIVE TRADING SYSTEM")
-        print("="*60)
-        print("🎯 Combining comprehensive analysis, futures execution, and visual dashboard")
-        print("📊 Real-time market monitoring with 100+ trading pairs")
-        print("💰 Live Binance Futures trading with risk management")
-        print("📈 Interactive visual dashboard with charts and metrics")
-        print("🔔 Telegram alerts and notifications")
-        print("="*60)
-        
-        # Create unified system
-        system = UnifiedComprehensiveTradingSystem()
-        
-        # Automated choices for faster execution
-        print("\n🤖 Automated Mode: Using optimized settings")
-        print("📊 Trading Mode: Paper Trading (Safe)")
-        print("🎯 ML Training: Full training for all symbols")
-        print("="*60)
-        
-        # Set paper trading mode
+    """Main function to run the Unified Comprehensive Trading System"""
+    print("🚀 Unified Comprehensive Trading System")
+    print("="*50)
+    
+    # Initialize the system
+    system = UnifiedComprehensiveTradingSystem()
+    
+    # Get user input for trading mode
+    print("\n📊 Select Trading Mode:")
+    print("1. Paper Trading (Safe)")
+    print("2. Live Trading (Real Money)")
+    print("3. Demo Mode (No Trading)")
+    
+    while True:
+        try:
+            mode_choice = input("Enter your choice (1-3): ").strip()
+            if mode_choice in ['1', '2', '3']:
+                break
+            else:
+                print("❌ Invalid choice. Please enter 1, 2, or 3.")
+        except (EOFError, KeyboardInterrupt):
+            print("\n⏹️ Exiting...")
+            return
+    
+    # Get user input for ML training
+    print("\n🎯 Select ML Training Option:")
+    print("1. Skip ML Training")
+    print("2. Train Top 10 Symbols")
+    print("3. Full Training for All Symbols")
+    
+    while True:
+        try:
+            ml_choice = input("Enter your choice (1-3): ").strip()
+            if ml_choice in ['1', '2', '3']:
+                break
+            else:
+                print("❌ Invalid choice. Please enter 1, 2, or 3.")
+        except (EOFError, KeyboardInterrupt):
+            print("\n⏹️ Exiting...")
+            return
+    
+    # Set trading mode based on choice
+    if mode_choice == '1':
         system.enable_live_trading = False
         system.paper_trading = True
         system.futures_system.enable_live_trading = False
         system.futures_system.paper_trading = True
-        
-        # Full ML training for all symbols
-        print("\n🎯 Training ML models for all symbols...")
-        print("⏳ This may take several minutes...")
-        
-        try:
-            training_results = system.train_ml_models(system.symbols)
-            trained_count = training_results.get('total_symbols', 0)
-            print(f"✅ ML training complete: {trained_count} symbols trained")
-            
-            if trained_count > 0:
-                # Show best performing models
-                best_models = training_results.get('summary', {}).get('best_performing_models', [])[:5]
-                if best_models:
-                    print("\n🏆 Top Performing Models:")
-                    for i, model in enumerate(best_models, 1):
-                        print(f"{i}. {model['symbol']} - {model['model']} (F1: {model['f1_score']:.3f})")
-            
-        except Exception as e:
-            print(f"⚠️ ML training error: {e}")
-            print("🔄 Continuing with existing models...")
-        
-        # Start system
-        print("\n🚀 Starting unified trading system...")
-        print("📊 Dashboard will open in a new window")
-        print("⏹️ Press Ctrl+C to stop the system")
-        print("="*60)
-        
+        print("📊 Mode: Paper Trading (Safe)")
+    elif mode_choice == '2':
+        system.enable_live_trading = True
+        system.paper_trading = False
+        system.futures_system.enable_live_trading = True
+        system.futures_system.paper_trading = False
+        print("📊 Mode: Live Trading (Real Money)")
+    else:
+        system.enable_live_trading = False
+        system.paper_trading = False
+        system.futures_system.enable_live_trading = False
+        system.futures_system.paper_trading = False
+        print("📊 Mode: Demo Mode (No Trading)")
+    
+    # Set ML training option
+    if ml_choice == '1':
+        print("🎯 ML Training: Skipped")
+    elif ml_choice == '2':
+        print("🎯 ML Training: Top 10 Symbols")
+        # Prioritize BTCUSDT and ETHUSDT
+        priority_symbols = ['BTCUSDT', 'ETHUSDT']
+        other_symbols = [s for s in system.symbols[:8] if s not in priority_symbols]
+        training_symbols = priority_symbols + other_symbols
+        system.symbols = training_symbols[:10]
+    else:
+        print("🎯 ML Training: All Symbols")
+        # Prioritize BTCUSDT and ETHUSDT in the full list
+        priority_symbols = ['BTCUSDT', 'ETHUSDT']
+        other_symbols = [s for s in system.symbols if s not in priority_symbols]
+        system.symbols = priority_symbols + other_symbols
+    
+    print("⏳ Starting system...")
+    
+    try:
         system.start_system()
-        
     except KeyboardInterrupt:
         print("\n⏹️ Stopping system...")
         if 'system' in locals():
             system.stop_system()
     except Exception as e:
         print(f"❌ Error: {e}")
-        logger.error(f"Main error: {e}")
+        logger.error(f"System error: {e}")
 
 if __name__ == "__main__":
     main() 
