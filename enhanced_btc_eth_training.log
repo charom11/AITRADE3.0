@@ -1,0 +1,25 @@
+2025-08-05 11:57:53,763 - INFO - Enhanced BTC/ETH Trainer initialized for symbols: ['BTCUSDT', 'ETHUSDT']
+2025-08-05 11:57:53,763 - INFO - Starting enhanced training for priority symbols: ['BTCUSDT', 'ETHUSDT']
+2025-08-05 11:57:53,763 - INFO - Training enhanced models for BTCUSDT
+2025-08-05 11:57:53,763 - INFO - Fetching enhanced data for BTCUSDT (2000 candles)
+2025-08-05 11:57:53,841 - ERROR - Error fetching enhanced data for BTCUSDT: binance GET https://api.binance.com/api/v3/exchangeInfo 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2025-08-05 11:57:53,841 - WARNING - No data fetched for BTCUSDT
+2025-08-05 11:57:53,841 - INFO - Training enhanced models for ETHUSDT
+2025-08-05 11:57:53,841 - INFO - Fetching enhanced data for ETHUSDT (2000 candles)
+2025-08-05 11:57:53,971 - ERROR - Error fetching enhanced data for ETHUSDT: binance GET https://api.binance.com/api/v3/exchangeInfo 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2025-08-05 11:57:53,971 - WARNING - No data fetched for ETHUSDT
+2025-08-05 11:57:53,971 - INFO - 
+🎯 Enhanced Training Overall Summary
+📊 Total Symbols: 0
+🤖 Total Models: 0
+📈 Average F1 Score: 0.000
+🏆 Max F1 Score: 0.000
+📊 High Performing Models: 0
+⏰ Training Completed: 2025-08-05T11:57:53.971379
+

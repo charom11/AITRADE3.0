@@ -1,0 +1,13 @@
+{
+  "accuracy": 0.35278514588859416,
+  "precision": 0.35404507380221856,
+  "recall": 0.35278514588859416,
+  "f1_score": 0.3501659307850904,
+  "cv_score": 0.3477445176867543,
+  "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 5,
+    "n_estimators": 200,
+    "subsample": 0.8
+  }
+}

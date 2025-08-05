@@ -1,0 +1,106 @@
+2025-08-05 11:59:41,127 - INFO - Mock Enhanced BTC/ETH Trainer initialized for symbols: ['BTCUSDT', 'ETHUSDT']
+2025-08-05 11:59:41,128 - INFO - Starting enhanced training for priority symbols: ['BTCUSDT', 'ETHUSDT']
+2025-08-05 11:59:41,128 - INFO - Training enhanced models for BTCUSDT
+2025-08-05 11:59:41,128 - INFO - Generating mock data for BTCUSDT (2000 candles)
+2025-08-05 11:59:41,143 - INFO - Mock data generated for BTCUSDT: 1931 samples
+2025-08-05 11:59:41,545 - INFO - Enhanced features calculated: 81 features
+2025-08-05 11:59:41,545 - INFO - Training enhanced models for BTCUSDT
+2025-08-05 11:59:41,550 - INFO - Enhanced training data prepared for BTCUSDT: 1882 samples, 74 features
+2025-08-05 11:59:41,554 - ERROR - Error training enhanced models for BTCUSDT: could not convert string to float: 'ranging'
+2025-08-05 11:59:41,555 - WARNING - No models trained for BTCUSDT
+2025-08-05 11:59:41,555 - INFO - Training enhanced models for ETHUSDT
+2025-08-05 11:59:41,555 - INFO - Generating mock data for ETHUSDT (2000 candles)
+2025-08-05 11:59:41,567 - INFO - Mock data generated for ETHUSDT: 1931 samples
+2025-08-05 11:59:41,964 - INFO - Enhanced features calculated: 81 features
+2025-08-05 11:59:41,965 - INFO - Training enhanced models for ETHUSDT
+2025-08-05 11:59:41,968 - INFO - Enhanced training data prepared for ETHUSDT: 1882 samples, 74 features
+2025-08-05 11:59:41,971 - ERROR - Error training enhanced models for ETHUSDT: could not convert string to float: 'ranging'
+2025-08-05 11:59:41,971 - WARNING - No models trained for ETHUSDT
+2025-08-05 11:59:41,971 - INFO - 
+🎯 Enhanced Training Overall Summary
+📊 Total Symbols: 0
+🤖 Total Models: 0
+📈 Average F1 Score: 0.000
+🏆 Max F1 Score: 0.000
+📊 High Performing Models: 0
+⏰ Training Completed: 2025-08-05T11:59:41.971798
+
+2025-08-05 11:59:51,006 - INFO - Mock Enhanced BTC/ETH Trainer initialized for symbols: ['BTCUSDT', 'ETHUSDT']
+2025-08-05 11:59:51,006 - INFO - Starting enhanced training for priority symbols: ['BTCUSDT', 'ETHUSDT']
+2025-08-05 11:59:51,006 - INFO - Training enhanced models for BTCUSDT
+2025-08-05 11:59:51,006 - INFO - Generating mock data for BTCUSDT (2000 candles)
+2025-08-05 11:59:51,023 - INFO - Mock data generated for BTCUSDT: 1931 samples
+2025-08-05 11:59:51,483 - INFO - Enhanced features calculated: 81 features
+2025-08-05 11:59:51,484 - INFO - Training enhanced models for BTCUSDT
+2025-08-05 11:59:51,488 - INFO - Enhanced training data prepared for BTCUSDT: 1882 samples, 74 features
+2025-08-05 11:59:51,498 - INFO - Training random_forest for BTCUSDT
+2025-08-05 12:00:21,143 - INFO - random_forest trained for BTCUSDT: F1=0.316, CV=0.367
+2025-08-05 12:00:21,144 - INFO - Training gradient_boosting for BTCUSDT
+2025-08-05 12:04:05,723 - INFO - gradient_boosting trained for BTCUSDT: F1=0.327, CV=0.342
+2025-08-05 12:04:05,723 - INFO - Training xgboost for BTCUSDT
+2025-08-05 12:04:05,988 - ERROR - Error training xgboost for BTCUSDT: 
+All the 160 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+160 fits failed with the following error:
+Traceback (most recent call last):
+  File "/workspace/trading_env/lib/python3.13/site-packages/sklearn/model_selection/_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/trading_env/lib/python3.13/site-packages/xgboost/core.py", line 729, in inner_f
+    return func(**kwargs)
+  File "/workspace/trading_env/lib/python3.13/site-packages/xgboost/sklearn.py", line 1641, in fit
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Invalid classes inferred from unique values of `y`.  Expected: [0 1 2], got [-1  0  1]
+
+2025-08-05 12:04:05,988 - INFO - Training lightgbm for BTCUSDT
+2025-08-05 12:14:59,051 - INFO - Mock Enhanced BTC/ETH Trainer initialized for symbols: ['BTCUSDT', 'ETHUSDT']
+2025-08-05 12:14:59,051 - INFO - Starting enhanced training for priority symbols: ['BTCUSDT', 'ETHUSDT']
+2025-08-05 12:14:59,051 - INFO - Training enhanced models for BTCUSDT
+2025-08-05 12:14:59,051 - INFO - Generating mock data for BTCUSDT (2000 candles)
+2025-08-05 12:14:59,067 - INFO - Mock data generated for BTCUSDT: 1931 samples
+2025-08-05 12:14:59,456 - INFO - Enhanced features calculated: 81 features
+2025-08-05 12:14:59,456 - INFO - Training enhanced models for BTCUSDT
+2025-08-05 12:14:59,463 - INFO - Enhanced training data prepared for BTCUSDT: 1882 samples, 74 features
+2025-08-05 12:14:59,472 - INFO - Training random_forest for BTCUSDT
+2025-08-05 12:15:24,779 - INFO - random_forest trained for BTCUSDT: F1=0.319, CV=0.369
+2025-08-05 12:15:24,779 - INFO - Training gradient_boosting for BTCUSDT
+2025-08-05 12:19:31,722 - INFO - gradient_boosting trained for BTCUSDT: F1=0.350, CV=0.348
+2025-08-05 12:19:31,722 - INFO - Training xgboost for BTCUSDT
+2025-08-05 12:19:32,008 - ERROR - Error training xgboost for BTCUSDT: 
+All the 160 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+160 fits failed with the following error:
+Traceback (most recent call last):
+  File "/workspace/trading_env/lib/python3.13/site-packages/sklearn/model_selection/_validation.py", line 859, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/trading_env/lib/python3.13/site-packages/xgboost/core.py", line 729, in inner_f
+    return func(**kwargs)
+  File "/workspace/trading_env/lib/python3.13/site-packages/xgboost/sklearn.py", line 1641, in fit
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Invalid classes inferred from unique values of `y`.  Expected: [0 1 2], got [-1  0  1]
+
+2025-08-05 12:19:32,008 - INFO - Training lightgbm for BTCUSDT
+2025-08-05 12:20:25,220 - INFO - Mock Enhanced BTC/ETH Trainer initialized for symbols: ['BTCUSDT', 'ETHUSDT']
+2025-08-05 12:20:25,221 - INFO - Starting enhanced training for priority symbols: ['BTCUSDT', 'ETHUSDT']
+2025-08-05 12:20:25,221 - INFO - Training enhanced models for BTCUSDT
+2025-08-05 12:20:25,221 - INFO - Generating mock data for BTCUSDT (2000 candles)
+2025-08-05 12:20:25,238 - INFO - Mock data generated for BTCUSDT: 1931 samples
+2025-08-05 12:20:25,634 - INFO - Enhanced features calculated: 81 features
+2025-08-05 12:20:25,634 - INFO - Training enhanced models for BTCUSDT
+2025-08-05 12:20:25,640 - INFO - Enhanced training data prepared for BTCUSDT: 1882 samples, 74 features
+2025-08-05 12:20:25,649 - INFO - Training random_forest for BTCUSDT
+2025-08-05 12:20:47,717 - INFO - random_forest trained for BTCUSDT: F1=0.844, CV=0.836
+2025-08-05 12:20:47,718 - INFO - Training gradient_boosting for BTCUSDT

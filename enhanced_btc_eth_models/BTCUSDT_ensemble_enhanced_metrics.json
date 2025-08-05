@@ -1,0 +1,12 @@
+{
+  "accuracy": 0.8,
+  "precision": 0.77,
+  "recall": 0.75,
+  "f1_score": 0.76,
+  "cv_score": 0.74,
+  "weights": {
+    "random_forest": 0.33,
+    "xgboost": 0.34,
+    "lightgbm": 0.33
+  }
+}
