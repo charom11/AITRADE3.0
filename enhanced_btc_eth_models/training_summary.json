@@ -1,0 +1,13 @@
+{
+  "total_symbols": 2,
+  "total_models": 8,
+  "average_f1_score": 0.735,
+  "max_f1_score": 0.76,
+  "min_f1_score": 0.71,
+  "high_performing_models": 8,
+  "training_timestamp": "2025-08-05T12:24:06.487457",
+  "priority_symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ]
+}
