@@ -1,0 +1,14 @@
+{
+  "accuracy": 0.925,
+  "precision": 0.9019607843137255,
+  "recall": 0.8214285714285714,
+  "f1_score": 0.8598130841121495,
+  "cv_mean": 0.7846695857334155,
+  "cv_std": 0.04164146991297954,
+  "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 7,
+    "n_estimators": 100
+  },
+  "feature_importance": {
+    "rsi": 

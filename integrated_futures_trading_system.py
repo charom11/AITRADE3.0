@@ -749,13 +749,21 @@ You will now receive enhanced trading alerts and notifications.
         # Calculate position size (simplified)
         position_size = final_confidence * 0.1  # 10% max position
         
-        # Suggest leverage based on confidence
-        if final_confidence > 0.8:
-            leverage = 3.0
+        # Suggest leverage based on confidence using Binance standard tiers
+        if final_confidence > 0.9:
+            leverage = 125.0  # Max leverage for very high confidence
+        elif final_confidence > 0.8:
+            leverage = 100.0
+        elif final_confidence > 0.7:
+            leverage = 75.0
         elif final_confidence > 0.6:
-            leverage = 2.0
+            leverage = 50.0
+        elif final_confidence > 0.5:
+            leverage = 25.0
+        elif final_confidence > 0.4:
+            leverage = 10.0
         else:
-            leverage = 1.0
+            leverage = 5.0  # Conservative leverage for lower confidence
         
         # Determine market regime
         market_regime = "unknown"
@@ -1276,11 +1284,23 @@ Thank you for using AITRADE Automated Trading!
                 logger.warning(f"Invalid position size for {signal.symbol}")
                 return False
             
-            # Set leverage
+            # Set leverage with validation
+            # Set leverage with proper Binance API format
             try:
-                self.exchange.set_leverage(signal.leverage_suggestion, signal.symbol)
+                leverage = signal.leverage_suggestion
+                if leverage is None or leverage <= 0:
+                    leverage = 5.0  # Default to 5x leverage
+                    logger.warning(f"Invalid leverage for {signal.symbol}, using default 5x")
+                
+                # Ensure leverage is within Binance limits (1-125)
+                leverage = max(1, min(125, int(leverage)))
+                
+                # Set leverage using CCXT method
+                self.exchange.set_leverage(leverage, signal.symbol)
+                logger.info(f"Set leverage to {leverage}x for {signal.symbol}")
             except Exception as e:
                 logger.warning(f"Could not set leverage: {e}")
+                # Continue without setting leverage (will use default)
             
             # Prepare order parameters
             side = 'buy' if signal.signal_type == 'LONG' else 'sell'
@@ -1289,14 +1309,13 @@ Thank you for using AITRADE Automated Trading!
                 'symbol': signal.symbol,
                 'type': 'market',
                 'side': side,
-                'amount': position_size,
-                'params': {
-                    'timeInForce': 'IOC'  # Immediate or Cancel
-                }
+                'amount': position_size
             }
             
-            # Execute order
+            # Execute order with detailed logging
+            logger.info(f"Executing order: {order_params}")
             order = self.exchange.create_order(**order_params)
+            logger.info(f"Order response: {order}")
             
             if order and order.get('status') in ['closed', 'filled']:
                 # Create trade position
@@ -1402,10 +1421,7 @@ Thank you for using AITRADE Automated Trading!
                     'symbol': position.symbol,
                     'type': 'market',
                     'side': side,
-                    'amount': position.quantity,
-                    'params': {
-                        'timeInForce': 'IOC'
-                    }
+                    'amount': position.quantity
                 }
                 
                 order = self.exchange.create_order(**order_params)

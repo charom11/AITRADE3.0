@@ -1,0 +1,42 @@
+{
+  "accuracy": 0.71,
+  "precision": 0.6994219653179191,
+  "recall": 0.952755905511811,
+  "f1_score": 0.8066666666666668,
+  "cv_mean": 0.7958498083626853,
+  "cv_std": 0.014171997230732735,
+  "best_params": {
+    "C": "1.0",
+    "penalty": "l1",
+    "solver": "saga"
+  },
+  "feature_importance": {
+    "rsi": 0.0,
+    "macd": 0.0,
+    "macd_signal": 1.1881970585359931,
+    "bb_upper": 0.0,
+    "bb_lower": 0.0,
+    "atr": 0.30580981972601634,
+    "volume_ratio": 0.21209970427473512,
+    "price_momentum": 0.030233517919404027,
+    "stoch_k": 0.591786660797318,
+    "stoch_d": 0.3928679870772608,
+    "williams_r": 0.8461175084452677,
+    "cci": 0.5360106695337666,
+    "sma_20": 0.0,
+    "sma_50": 2.721034645549858,
+    "ema_12": 0.9422528517036772,
+    "ema_26": 1.6864302584096376,
+    "price_change_1h": 0.22323935314150875,
+    "price_change_4h": 0.0,
+    "price_change_24h": 0.0,
+    "volume_change_1h": 0.17997947540416437,
+    "volume_change_4h": 0.122197600262688,
+    "volume_change_24h": 0.0,
+    "volatility": 0.0,
+    "trend_strength": 0.029887603413446855,
+    "support_distance": 0.7119683398922748,
+    "resistance_distance": 1.057413441185965
+  },
+  "training_date": "2025-08-05T19:25:45.154503"
+}

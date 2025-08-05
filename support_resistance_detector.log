@@ -5199,3 +5199,91 @@
 2025-08-05 17:27:32,296 - INFO - Generated signals for strategy: SupportResistance
 2025-08-05 17:27:32,296 - INFO - Generated signals for strategy: PairsTrading
 2025-08-05 17:27:35,628 - INFO - Integrated futures trading system stopped
+2025-08-05 17:58:12,726 - INFO - Environment variable overrides applied
+2025-08-05 17:58:12,726 - INFO - All configurations validated successfully
+2025-08-05 17:58:12,726 - INFO - Configuration manager initialized successfully
+2025-08-05 17:58:12,832 - INFO - Database setup completed
+2025-08-05 17:58:12,833 - INFO - Directory already exists: integrated_signals
+2025-08-05 17:58:12,837 - INFO - Live trading enabled with CCXT
+2025-08-05 17:58:12,838 - INFO - Added strategy: Momentum
+2025-08-05 17:58:12,838 - INFO - Added strategy: MeanReversion
+2025-08-05 17:58:12,838 - INFO - Added strategy: Divergence
+2025-08-05 17:58:12,844 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-05 17:58:12,844 - INFO - Added strategy: SupportResistance
+2025-08-05 17:58:12,844 - INFO - Added strategy: PairsTrading
+2025-08-05 17:58:12,845 - INFO - Initialized trading strategies
+2025-08-05 17:58:12,845 - INFO - Initialized integrated futures trading system for 5 symbols
+2025-08-05 17:58:12,845 - INFO - Trading mode: Live Trading
+2025-08-05 17:58:12,845 - INFO - Backtesting: Disabled
+2025-08-05 17:58:12,845 - INFO - Alerts: Enabled
+2025-08-05 17:58:36,247 - INFO - Environment variable overrides applied
+2025-08-05 17:58:36,247 - INFO - All configurations validated successfully
+2025-08-05 17:58:36,247 - INFO - Configuration manager initialized successfully
+2025-08-05 17:58:36,359 - INFO - Database setup completed
+2025-08-05 17:58:36,360 - INFO - Directory already exists: integrated_signals
+2025-08-05 17:58:36,364 - INFO - Live trading enabled with CCXT
+2025-08-05 17:58:36,365 - INFO - Added strategy: Momentum
+2025-08-05 17:58:36,365 - INFO - Added strategy: MeanReversion
+2025-08-05 17:58:36,365 - INFO - Added strategy: Divergence
+2025-08-05 17:58:36,371 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-05 17:58:36,371 - INFO - Added strategy: SupportResistance
+2025-08-05 17:58:36,371 - INFO - Added strategy: PairsTrading
+2025-08-05 17:58:36,371 - INFO - Initialized trading strategies
+2025-08-05 17:58:36,371 - INFO - Initialized integrated futures trading system for 5 symbols
+2025-08-05 17:58:36,372 - INFO - Trading mode: Live Trading
+2025-08-05 17:58:36,372 - INFO - Backtesting: Disabled
+2025-08-05 17:58:36,372 - INFO - Alerts: Enabled
+2025-08-05 17:59:02,744 - INFO - Environment variable overrides applied
+2025-08-05 17:59:02,744 - INFO - All configurations validated successfully
+2025-08-05 17:59:02,744 - INFO - Configuration manager initialized successfully
+2025-08-05 17:59:03,138 - INFO - Database setup completed
+2025-08-05 17:59:03,139 - INFO - Directory already exists: integrated_signals
+2025-08-05 17:59:03,144 - INFO - Live trading enabled with CCXT
+2025-08-05 17:59:03,144 - INFO - Added strategy: Momentum
+2025-08-05 17:59:03,145 - INFO - Added strategy: MeanReversion
+2025-08-05 17:59:03,145 - INFO - Added strategy: Divergence
+2025-08-05 17:59:03,150 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-05 17:59:03,150 - INFO - Added strategy: SupportResistance
+2025-08-05 17:59:03,150 - INFO - Added strategy: PairsTrading
+2025-08-05 17:59:03,150 - INFO - Initialized trading strategies
+2025-08-05 17:59:03,150 - INFO - Initialized integrated futures trading system for 5 symbols
+2025-08-05 17:59:03,150 - INFO - Trading mode: Live Trading
+2025-08-05 17:59:03,151 - INFO - Backtesting: Disabled
+2025-08-05 17:59:03,151 - INFO - Alerts: Enabled
+2025-08-05 18:38:13,177 - INFO - Environment variable overrides applied
+2025-08-05 18:38:13,177 - INFO - All configurations validated successfully
+2025-08-05 18:38:13,177 - INFO - Configuration manager initialized successfully
+2025-08-05 18:38:32,302 - INFO - Environment variable overrides applied
+2025-08-05 18:38:32,302 - INFO - All configurations validated successfully
+2025-08-05 18:38:32,302 - INFO - Configuration manager initialized successfully
+2025-08-05 18:38:32,637 - INFO - Database setup completed
+2025-08-05 18:38:32,637 - INFO - Directory already exists: integrated_signals
+2025-08-05 18:38:32,643 - INFO - Live trading enabled with CCXT
+2025-08-05 18:38:32,643 - INFO - Added strategy: Momentum
+2025-08-05 18:38:32,643 - INFO - Added strategy: MeanReversion
+2025-08-05 18:38:32,644 - INFO - Added strategy: Divergence
+2025-08-05 18:38:32,649 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-05 18:38:32,649 - INFO - Added strategy: SupportResistance
+2025-08-05 18:38:32,649 - INFO - Added strategy: PairsTrading
+2025-08-05 18:38:32,649 - INFO - Initialized trading strategies
+2025-08-05 18:38:32,649 - INFO - Initialized integrated futures trading system for 5 symbols
+2025-08-05 18:38:32,649 - INFO - Trading mode: Live Trading
+2025-08-05 18:38:32,649 - INFO - Backtesting: Disabled
+2025-08-05 18:38:32,650 - INFO - Alerts: Enabled
+2025-08-05 18:39:42,039 - INFO - Environment variable overrides applied
+2025-08-05 18:39:42,039 - INFO - All configurations validated successfully
+2025-08-05 18:39:42,039 - INFO - Configuration manager initialized successfully
+2025-08-05 18:39:42,265 - INFO - Database setup completed
+2025-08-05 18:39:42,265 - INFO - Directory already exists: integrated_signals
+2025-08-05 18:39:42,270 - INFO - Live trading enabled with CCXT
+2025-08-05 18:39:42,270 - INFO - Added strategy: Momentum
+2025-08-05 18:39:42,270 - INFO - Added strategy: MeanReversion
+2025-08-05 18:39:42,270 - INFO - Added strategy: Divergence
+2025-08-05 18:39:42,276 - INFO - Initialized detector for BTC/USDT on binance (5m)
+2025-08-05 18:39:42,276 - INFO - Added strategy: SupportResistance
+2025-08-05 18:39:42,276 - INFO - Added strategy: PairsTrading
+2025-08-05 18:39:42,276 - INFO - Initialized trading strategies
+2025-08-05 18:39:42,276 - INFO - Initialized integrated futures trading system for 5 symbols
+2025-08-05 18:39:42,276 - INFO - Trading mode: Live Trading
+2025-08-05 18:39:42,277 - INFO - Backtesting: Disabled
+2025-08-05 18:39:42,277 - INFO - Alerts: Enabled

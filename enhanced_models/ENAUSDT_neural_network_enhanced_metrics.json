@@ -1,0 +1,18 @@
+{
+  "accuracy": 0.89,
+  "precision": 0.9047619047619048,
+  "recall": 0.6785714285714286,
+  "f1_score": 0.7755102040816326,
+  "cv_mean": 0.7541362820699354,
+  "cv_std": 0.041804737227166384,
+  "best_params": {
+    "alpha": 0.01,
+    "hidden_layer_sizes": [
+      50,
+      25
+    ],
+    "learning_rate": "constant"
+  },
+  "feature_importance": {},
+  "training_date": "2025-08-05T19:06:13.534786"
+}

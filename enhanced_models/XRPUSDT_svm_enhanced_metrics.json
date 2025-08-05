@@ -1,0 +1,15 @@
+{
+  "accuracy": 0.855,
+  "precision": 0.6470588235294118,
+  "recall": 0.3235294117647059,
+  "f1_score": 0.4313725490196078,
+  "cv_mean": 0.4533910533910534,
+  "cv_std": 0.045101124945403616,
+  "best_params": {
+    "C": "10.0",
+    "gamma": "scale",
+    "kernel": "rbf"
+  },
+  "feature_importance": {},
+  "training_date": "2025-08-05T19:32:39.611595"
+}
