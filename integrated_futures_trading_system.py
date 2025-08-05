@@ -1634,7 +1634,7 @@ def get_top_100_futures_pairs():
     import requests
     import pandas as pd
     
-    print("🔍 Fetching top 100 non-stablecoin futures pairs from Binance...")
+    print("Fetching top 100 non-stablecoin futures pairs from Binance...")
     
     try:
         # Get 24hr ticker statistics for all futures pairs
@@ -1671,11 +1671,11 @@ def get_top_100_futures_pairs():
         # Get top 100
         top_100 = df_sorted.head(100)
         
-        print(f"✅ Found {len(top_100)} top non-stablecoin futures pairs")
-        print(f"📊 Total volume: ${top_100['quoteVolume'].sum():,.0f}")
+        print(f"Found {len(top_100)} top non-stablecoin futures pairs")
+        print(f"Total volume: ${top_100['quoteVolume'].sum():,.0f}")
         
         # Display top 20 for reference
-        print("\n📈 TOP 20 BY VOLUME:")
+        print("\nTOP 20 BY VOLUME:")
         print("=" * 80)
         for i, (_, row) in enumerate(top_100.head(20).iterrows(), 1):
             volume_usd = float(row['quoteVolume'])
@@ -1685,19 +1685,19 @@ def get_top_100_futures_pairs():
         # Get just the symbols
         symbols = top_100['symbol'].tolist()
         
-        print(f"\n📋 Total pairs: {len(symbols)}")
+        print(f"\nTotal pairs: {len(symbols)}")
         
         return symbols
         
     except Exception as e:
-        print(f"❌ Error fetching futures pairs: {e}")
+        print(f"Error fetching futures pairs: {e}")
         return ['BTCUSDT', 'ETHUSDT', 'BNBUSDT']  # Fallback to default
 
 def main():
     """Main function"""
-    print("🎯 INTEGRATED FUTURES TRADING SYSTEM - TOP 100 PAIRS")
+    print("INTEGRATED FUTURES TRADING SYSTEM - TOP 100 PAIRS")
     print("="*80)
-    print("⚠️  WARNING: FUTURES TRADING IS HIGH RISK!")
+    print("WARNING: FUTURES TRADING IS HIGH RISK!")
     print("   - Leverage can amplify both profits AND losses")
     print("   - Risk of liquidation if price moves against you")
     print("   - Only trade with money you can afford to lose")
@@ -1710,22 +1710,22 @@ def main():
     BINANCE_SECRET_KEY = "9A8hpWaTRvnaEApeCCwl7in0FvTBPIdFqXO4zidYugJgXXA9FO6TWMU3kn4JKgb0"
     DEFAULT_CHAT_ID = "1166227057"  # Pre-configured Chat ID
     
-    print("🔑 Pre-configured credentials loaded:")
-    print(f"   📱 Telegram Bot: {TELEGRAM_BOT_TOKEN[:20]}...")
-    print(f"   📊 Binance API: {BINANCE_API_KEY[:20]}...")
-    print(f"   📱 Default Chat ID: {DEFAULT_CHAT_ID}")
-    print("   💡 To get your Telegram Chat ID, message @userinfobot on Telegram")
+    print("Pre-configured credentials loaded:")
+    print(f"   Telegram Bot: {TELEGRAM_BOT_TOKEN[:20]}...")
+    print(f"   Binance API: {BINANCE_API_KEY[:20]}...")
+    print(f"   Default Chat ID: {DEFAULT_CHAT_ID}")
+    print("   To get your Telegram Chat ID, message @userinfobot on Telegram")
     
     # Get top 100 futures pairs
-    print("\n🚀 Loading top 100 non-stablecoin futures pairs...")
+    print("\nLoading top 100 non-stablecoin futures pairs...")
     symbols = get_top_100_futures_pairs()
     
     if not symbols:
-        print("❌ Failed to fetch futures pairs, using defaults")
+        print("Failed to fetch futures pairs, using defaults")
         symbols = ['BTCUSDT', 'ETHUSDT', 'BNBUSDT']
     
     # Ask user if they want to use all 100 pairs or select specific ones
-    print(f"\n📊 Found {len(symbols)} pairs")
+    print(f"\nFound {len(symbols)} pairs")
     use_all = input("Use all pairs? (y/n, default: y): ").strip().lower() != 'n'
     
     if not use_all:

@@ -64,10 +64,10 @@ class BacktestSystem:
         self.take_profit_pct = TRADING_CONFIG.get('take_profit', 0.04)
         self.risk_per_trade = TRADING_CONFIG['risk_per_trade']
         
-        print("🚀 BACKTESTING SYSTEM INITIALIZED")
-        print(f"💰 Initial Capital: ${initial_capital:,.2f}")
-        print(f"💸 Commission: {commission*100:.2f}%")
-        print(f"📊 Trading Pairs: {len(self.trading_pairs)} pairs")
+        print("BACKTESTING SYSTEM INITIALIZED")
+        print(f"Initial Capital: ${initial_capital:,.2f}")
+        print(f"Commission: {commission*100:.2f}%")
+        print(f"Trading Pairs: {len(self.trading_pairs)} pairs")
     
     def _initialize_strategies(self):
         """Initialize all trading strategies"""
@@ -101,20 +101,20 @@ class BacktestSystem:
     
     def load_historical_data(self, data_dir: str = 'DATA', start_date: str = None, end_date: str = None):
         """Load historical data for backtesting"""
-        print(f"📊 Loading historical data from {data_dir}...")
+        print(f"Loading historical data from {data_dir}...")
         
         data_path = Path(data_dir)
         if not data_path.exists():
-            print(f"❌ Data directory {data_dir} not found!")
+            print(f"Data directory {data_dir} not found!")
             return False
         
         # Find CSV files
         csv_files = list(data_path.glob('*_binance_historical_data.csv'))
         if not csv_files:
-            print(f"❌ No CSV files found in {data_dir}")
+            print(f"No CSV files found in {data_dir}")
             return False
         
-        print(f"📁 Found {len(csv_files)} data files")
+        print(f"Found {len(csv_files)} data files")
         
         # Load data for each trading pair
         for symbol in self.trading_pairs:
@@ -383,7 +383,7 @@ class BacktestSystem:
     
     def run_backtest(self, start_date: str = None, end_date: str = None):
         """Run comprehensive backtest"""
-        print(f"\n🚀 STARTING BACKTEST")
+        print(f"\nSTARTING BACKTEST")
         print("=" * 50)
         print(f"📅 Start Date: {start_date or 'Beginning of data'}")
         print(f"📅 End Date: {end_date or 'End of data'}")
@@ -721,12 +721,12 @@ class BacktestSystem:
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
             filename = f'backtest_results_{timestamp}.png'
             plt.savefig(filename, dpi=300, bbox_inches='tight')
-            print(f"📊 Charts saved to: {filename}")
+            print(f"Charts saved to: {filename}")
             
             plt.show()
             
         except Exception as e:
-            print(f"❌ Error generating charts: {e}")
+            print(f"Error generating charts: {e}")
     
     def save_backtest_results(self, filename: str = None):
         """Save backtest results to file"""
@@ -773,11 +773,11 @@ class BacktestSystem:
         with open(filename, 'w') as f:
             json.dump(results, f, indent=2)
         
-        print(f"💾 Backtest results saved to: {filename}")
+        print(f"Backtest results saved to: {filename}")
 
 def main():
     """Main function to run backtesting"""
-    print("🚀 ENHANCED BACKTESTING SYSTEM")
+    print("ENHANCED BACKTESTING SYSTEM")
     print("=" * 70)
     
     # Initialize backtest system
@@ -795,10 +795,10 @@ def main():
     # Save results
     backtest.save_backtest_results()
     
-    print(f"\n🎉 BACKTESTING COMPLETED!")
+    print(f"\nBACKTESTING COMPLETED!")
     print("=" * 70)
-    print("📊 Check the generated charts and JSON file for detailed results")
-    print("📈 Use these results to optimize your strategies before live trading")
+    print("Check the generated charts and JSON file for detailed results")
+    print("Use these results to optimize your strategies before live trading")
 
 if __name__ == "__main__":
     main()
