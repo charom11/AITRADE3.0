@@ -71,6 +71,259 @@ from integrated_futures_trading_system import (
     get_top_100_futures_pairs
 )
 
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Import missing core system components
+try:
+    from optimized_signal_generator import OptimizedSignalGenerator, OptimizedTradingSignal
+    OPTIMIZED_SIGNALS_AVAILABLE = True
+except ImportError:
+    OPTIMIZED_SIGNALS_AVAILABLE = False
+    logger.warning("OptimizedSignalGenerator not available")
+
+try:
+    from file_manager import FileManager
+    FILE_MANAGER_AVAILABLE = True
+except ImportError:
+    FILE_MANAGER_AVAILABLE = False
+    logger.warning("FileManager not available")
+
+try:
+    from security_compliance import SecurityComplianceSystem
+    SECURITY_COMPLIANCE_AVAILABLE = True
+except ImportError:
+    SECURITY_COMPLIANCE_AVAILABLE = False
+    logger.warning("SecurityComplianceSystem not available")
+
+try:
+    from dashboard_monitor import DashboardMonitor
+    DASHBOARD_MONITOR_AVAILABLE = True
+except ImportError:
+    DASHBOARD_MONITOR_AVAILABLE = False
+    logger.warning("DashboardMonitor not available")
+
+try:
+    from backtest_system import BacktestSystem
+    BACKTEST_SYSTEM_AVAILABLE = True
+except ImportError:
+    BACKTEST_SYSTEM_AVAILABLE = False
+    logger.warning("BacktestSystem not available")
+
+# Import advanced trading systems
+try:
+    from enhanced_trading_system import EnhancedTradingSystem
+    ENHANCED_TRADING_AVAILABLE = True
+except ImportError:
+    ENHANCED_TRADING_AVAILABLE = False
+    logger.warning("EnhancedTradingSystem not available")
+
+try:
+    from real_live_trading_system import RealLiveTradingSystem
+    REAL_LIVE_TRADING_AVAILABLE = True
+except ImportError:
+    REAL_LIVE_TRADING_AVAILABLE = False
+    logger.warning("RealLiveTradingSystem not available")
+
+try:
+    from strategy_optimizer import StrategyOptimizer
+    STRATEGY_OPTIMIZER_AVAILABLE = True
+except ImportError:
+    STRATEGY_OPTIMIZER_AVAILABLE = False
+    logger.warning("StrategyOptimizer not available")
+
+# Import data extraction and analysis
+try:
+    from binance_data_extractor_enhanced import BinanceDataExtractorEnhanced
+    BINANCE_EXTRACTOR_AVAILABLE = True
+except ImportError:
+    BINANCE_EXTRACTOR_AVAILABLE = False
+    logger.warning("BinanceDataExtractorEnhanced not available")
+
+try:
+    from check_market_analysis import MarketAnalysisChecker
+    MARKET_ANALYSIS_AVAILABLE = True
+except ImportError:
+    MARKET_ANALYSIS_AVAILABLE = False
+    logger.warning("MarketAnalysisChecker not available")
+
+try:
+    from get_valid_binance_pairs import BinancePairValidator
+    BINANCE_PAIRS_AVAILABLE = True
+except ImportError:
+    BINANCE_PAIRS_AVAILABLE = False
+    logger.warning("BinancePairValidator not available")
+
+# Import signal generation systems
+try:
+    from aggressive_signals import AggressiveSignalGenerator
+    AGGRESSIVE_SIGNALS_AVAILABLE = True
+except ImportError:
+    AGGRESSIVE_SIGNALS_AVAILABLE = False
+    logger.warning("AggressiveSignalGenerator not available")
+
+try:
+    from real_binance_signals import RealBinanceSignalGenerator
+    REAL_BINANCE_SIGNALS_AVAILABLE = True
+except ImportError:
+    REAL_BINANCE_SIGNALS_AVAILABLE = False
+    logger.warning("RealBinanceSignalGenerator not available")
+
+try:
+    from demo_live_signals import DemoLiveSignalGenerator
+    DEMO_LIVE_SIGNALS_AVAILABLE = True
+except ImportError:
+    DEMO_LIVE_SIGNALS_AVAILABLE = False
+    logger.warning("DemoLiveSignalGenerator not available")
+
+try:
+    from show_live_signals import LiveSignalDisplay
+    LIVE_SIGNAL_DISPLAY_AVAILABLE = True
+except ImportError:
+    LIVE_SIGNAL_DISPLAY_AVAILABLE = False
+    logger.warning("LiveSignalDisplay not available")
+
+# Import testing and validation
+try:
+    from test_all_features import TestAllFeatures
+    TEST_ALL_FEATURES_AVAILABLE = True
+except ImportError:
+    TEST_ALL_FEATURES_AVAILABLE = False
+    logger.warning("TestAllFeatures not available")
+
+try:
+    from test_integrated_system import TestIntegratedSystem
+    TEST_INTEGRATED_SYSTEM_AVAILABLE = True
+except ImportError:
+    TEST_INTEGRATED_SYSTEM_AVAILABLE = False
+    logger.warning("TestIntegratedSystem not available")
+
+try:
+    from test_binance_live import TestBinanceLive
+    TEST_BINANCE_LIVE_AVAILABLE = True
+except ImportError:
+    TEST_BINANCE_LIVE_AVAILABLE = False
+    logger.warning("TestBinanceLive not available")
+
+# Import utility and management
+try:
+    from auto_run import AutoRunManager
+    AUTO_RUN_AVAILABLE = True
+except ImportError:
+    AUTO_RUN_AVAILABLE = False
+    logger.warning("AutoRunManager not available")
+
+try:
+    from execute_one_trade import SingleTradeExecutor
+    SINGLE_TRADE_EXECUTOR_AVAILABLE = True
+except ImportError:
+    SINGLE_TRADE_EXECUTOR_AVAILABLE = False
+    logger.warning("SingleTradeExecutor not available")
+
+try:
+    from live_trading import LiveTradingInterface
+    LIVE_TRADING_INTERFACE_AVAILABLE = True
+except ImportError:
+    LIVE_TRADING_INTERFACE_AVAILABLE = False
+    logger.warning("LiveTradingInterface not available")
+
+# Import advanced ML libraries (optional)
+try:
+    import tensorflow as tf
+    TENSORFLOW_AVAILABLE = True
+except ImportError:
+    TENSORFLOW_AVAILABLE = False
+    logger.warning("TensorFlow not available - deep learning features disabled")
+
+try:
+    import torch
+    import torch.nn as nn
+    PYTORCH_AVAILABLE = True
+except ImportError:
+    PYTORCH_AVAILABLE = False
+    logger.warning("PyTorch not available - deep learning features disabled")
+
+try:
+    import optuna
+    OPTUNA_AVAILABLE = True
+except ImportError:
+    OPTUNA_AVAILABLE = False
+    logger.warning("Optuna not available - hyperparameter optimization disabled")
+
+try:
+    import shap
+    SHAP_AVAILABLE = True
+except ImportError:
+    SHAP_AVAILABLE = False
+    logger.warning("SHAP not available - model explainability disabled")
+
+try:
+    import mlflow
+    MLFLOW_AVAILABLE = True
+except ImportError:
+    MLFLOW_AVAILABLE = False
+    logger.warning("MLflow not available - experiment tracking disabled")
+
+# Import sentiment and news analysis
+try:
+    import nltk
+    from textblob import TextBlob
+    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+    SENTIMENT_ANALYSIS_AVAILABLE = True
+except ImportError:
+    SENTIMENT_ANALYSIS_AVAILABLE = False
+    logger.warning("Sentiment analysis libraries not available")
+
+try:
+    from alpha_vantage.timeseries import TimeSeries
+    from newsapi import NewsApiClient
+    NEWS_ANALYSIS_AVAILABLE = True
+except ImportError:
+    NEWS_ANALYSIS_AVAILABLE = False
+    logger.warning("News analysis libraries not available")
+
+try:
+    import tweepy
+    import praw
+    SOCIAL_MEDIA_AVAILABLE = True
+except ImportError:
+    SOCIAL_MEDIA_AVAILABLE = False
+    logger.warning("Social media libraries not available")
+
+# Import advanced visualization
+try:
+    import plotly.graph_objects as go
+    import plotly.express as px
+    from dash import Dash, html, dcc
+    import dash_bootstrap_components as dbc
+    PLOTLY_DASH_AVAILABLE = True
+except ImportError:
+    PLOTLY_DASH_AVAILABLE = False
+    logger.warning("Plotly/Dash not available - advanced visualization disabled")
+
+try:
+    import seaborn as sns
+    SEABORN_AVAILABLE = True
+except ImportError:
+    SEABORN_AVAILABLE = False
+    logger.warning("Seaborn not available - advanced plotting disabled")
+
+try:
+    import vectorbt as vbt
+    VECTORBT_AVAILABLE = True
+except ImportError:
+    VECTORBT_AVAILABLE = False
+    logger.warning("VectorBT not available - financial visualization disabled")
+
+# Import technical analysis library
+try:
+    import ta
+    TA_LIBRARY_AVAILABLE = True
+except ImportError:
+    TA_LIBRARY_AVAILABLE = False
+    logger.warning("TA library not available - advanced technical indicators disabled")
+
 # Load environment variables
 try:
     from dotenv import load_dotenv
@@ -162,6 +415,79 @@ class MLTrainingData:
     market_condition: str
     success: bool = False
     pnl: float = 0.0
+
+@dataclass
+class SentimentData:
+    """Sentiment analysis data structure"""
+    symbol: str
+    timestamp: datetime
+    news_sentiment: float  # -1 to 1
+    social_sentiment: float  # -1 to 1
+    overall_sentiment: float  # -1 to 1
+    news_count: int = 0
+    social_mentions: int = 0
+    sentiment_confidence: float = 0.0
+
+@dataclass
+class NewsData:
+    """News analysis data structure"""
+    symbol: str
+    timestamp: datetime
+    headlines: List[str]
+    sentiment_scores: List[float]
+    impact_score: float  # 0-1 scale
+    relevance_score: float  # 0-1 scale
+    source_credibility: float  # 0-1 scale
+
+@dataclass
+class SocialMediaData:
+    """Social media sentiment data structure"""
+    symbol: str
+    timestamp: datetime
+    twitter_sentiment: float
+    reddit_sentiment: float
+    mention_count: int
+    trending_score: float
+    influencer_mentions: int
+
+@dataclass
+class EnhancedSignal:
+    """Enhanced signal with additional analysis"""
+    base_signal: UnifiedTradingSignal
+    sentiment_score: float = 0.0
+    news_impact: float = 0.0
+    social_impact: float = 0.0
+    technical_confidence: float = 0.0
+    fundamental_score: float = 0.0
+    market_regime: str = "unknown"
+    volatility_regime: str = "normal"
+    correlation_score: float = 0.0
+
+@dataclass
+class BacktestResult:
+    """Backtesting result structure"""
+    symbol: str
+    start_date: datetime
+    end_date: datetime
+    total_return: float
+    sharpe_ratio: float
+    max_drawdown: float
+    win_rate: float
+    total_trades: int
+    profitable_trades: int
+    avg_trade_duration: float
+    strategy_performance: Dict[str, float]
+
+@dataclass
+class SecurityAudit:
+    """Security audit data structure"""
+    timestamp: datetime
+    audit_type: str
+    risk_score: float
+    compliance_status: str
+    vulnerabilities: List[str]
+    recommendations: List[str]
+    action_required: bool = False
 
 class MLModelTrainer:
     """Advanced Machine Learning model trainer for trading signals"""
@@ -642,6 +968,272 @@ class MLModelTrainer:
             logger.error(f"Error getting training summary: {e}")
             return {}
 
+class SentimentAnalyzer:
+    """Sentiment analysis for trading signals"""
+    
+    def __init__(self):
+        self.sentiment_analyzer = None
+        self.news_api = None
+        self.twitter_api = None
+        self.reddit_api = None
+        
+        if SENTIMENT_ANALYSIS_AVAILABLE:
+            try:
+                self.sentiment_analyzer = SentimentIntensityAnalyzer()
+                logger.info("Sentiment analyzer initialized")
+            except Exception as e:
+                logger.error(f"Error initializing sentiment analyzer: {e}")
+        
+        if NEWS_ANALYSIS_AVAILABLE:
+            try:
+                # Initialize news API (requires API keys)
+                pass
+            except Exception as e:
+                logger.error(f"Error initializing news API: {e}")
+    
+    def analyze_text_sentiment(self, text: str) -> float:
+        """Analyze sentiment of text"""
+        try:
+            if self.sentiment_analyzer:
+                scores = self.sentiment_analyzer.polarity_scores(text)
+                return scores['compound']  # -1 to 1
+            return 0.0
+        except Exception as e:
+            logger.error(f"Error analyzing text sentiment: {e}")
+            return 0.0
+    
+    def get_news_sentiment(self, symbol: str) -> NewsData:
+        """Get news sentiment for symbol"""
+        try:
+            # Placeholder for news sentiment analysis
+            return NewsData(
+                symbol=symbol,
+                timestamp=datetime.now(),
+                headlines=[],
+                sentiment_scores=[],
+                impact_score=0.0,
+                relevance_score=0.0,
+                source_credibility=0.0
+            )
+        except Exception as e:
+            logger.error(f"Error getting news sentiment: {e}")
+            return None
+    
+    def get_social_sentiment(self, symbol: str) -> SocialMediaData:
+        """Get social media sentiment for symbol"""
+        try:
+            # Placeholder for social media sentiment analysis
+            return SocialMediaData(
+                symbol=symbol,
+                timestamp=datetime.now(),
+                twitter_sentiment=0.0,
+                reddit_sentiment=0.0,
+                mention_count=0,
+                trending_score=0.0,
+                influencer_mentions=0
+            )
+        except Exception as e:
+            logger.error(f"Error getting social sentiment: {e}")
+            return None
+
+class AdvancedBacktester:
+    """Advanced backtesting system"""
+    
+    def __init__(self):
+        self.backtest_system = None
+        if BACKTEST_SYSTEM_AVAILABLE:
+            try:
+                self.backtest_system = BacktestSystem()
+                logger.info("Advanced backtester initialized")
+            except Exception as e:
+                logger.error(f"Error initializing backtester: {e}")
+    
+    def run_comprehensive_backtest(self, symbol: str, start_date: str, end_date: str, 
+                                 strategies: List[str] = None) -> BacktestResult:
+        """Run comprehensive backtest"""
+        try:
+            if self.backtest_system:
+                # Run backtest using the backtest system
+                result = self.backtest_system.run_backtest(symbol, start_date, end_date, strategies)
+                return BacktestResult(
+                    symbol=symbol,
+                    start_date=datetime.strptime(start_date, '%Y-%m-%d'),
+                    end_date=datetime.strptime(end_date, '%Y-%m-%d'),
+                    total_return=result.get('total_return', 0.0),
+                    sharpe_ratio=result.get('sharpe_ratio', 0.0),
+                    max_drawdown=result.get('max_drawdown', 0.0),
+                    win_rate=result.get('win_rate', 0.0),
+                    total_trades=result.get('total_trades', 0),
+                    profitable_trades=result.get('profitable_trades', 0),
+                    avg_trade_duration=result.get('avg_duration', 0.0),
+                    strategy_performance=result.get('strategy_performance', {})
+                )
+            else:
+                logger.warning("Backtest system not available")
+                return None
+        except Exception as e:
+            logger.error(f"Error running backtest: {e}")
+            return None
+
+class SecurityManager:
+    """Security and compliance management"""
+    
+    def __init__(self):
+        self.security_compliance = None
+        if SECURITY_COMPLIANCE_AVAILABLE:
+            try:
+                self.security_compliance = SecurityComplianceSystem()
+                logger.info("Security manager initialized")
+            except Exception as e:
+                logger.error(f"Error initializing security manager: {e}")
+    
+    def run_security_audit(self) -> SecurityAudit:
+        """Run security audit"""
+        try:
+            if self.security_compliance:
+                audit_result = self.security_compliance.run_audit()
+                return SecurityAudit(
+                    timestamp=datetime.now(),
+                    audit_type="comprehensive",
+                    risk_score=audit_result.get('risk_score', 0.0),
+                    compliance_status=audit_result.get('status', 'unknown'),
+                    vulnerabilities=audit_result.get('vulnerabilities', []),
+                    recommendations=audit_result.get('recommendations', []),
+                    action_required=audit_result.get('action_required', False)
+                )
+            else:
+                logger.warning("Security compliance not available")
+                return None
+        except Exception as e:
+            logger.error(f"Error running security audit: {e}")
+            return None
+
+class StrategyOptimizer:
+    """Strategy optimization and tuning"""
+    
+    def __init__(self):
+        self.optimizer = None
+        if STRATEGY_OPTIMIZER_AVAILABLE:
+            try:
+                self.optimizer = StrategyOptimizer()
+                logger.info("Strategy optimizer initialized")
+            except Exception as e:
+                logger.error(f"Error initializing strategy optimizer: {e}")
+    
+    def optimize_strategy_parameters(self, strategy_name: str, historical_data: pd.DataFrame) -> Dict:
+        """Optimize strategy parameters"""
+        try:
+            if self.optimizer and OPTUNA_AVAILABLE:
+                # Use Optuna for hyperparameter optimization
+                optimized_params = self.optimizer.optimize(strategy_name, historical_data)
+                return optimized_params
+            else:
+                logger.warning("Strategy optimizer or Optuna not available")
+                return {}
+        except Exception as e:
+            logger.error(f"Error optimizing strategy: {e}")
+            return {}
+
+class EnhancedDataExtractor:
+    """Enhanced data extraction capabilities"""
+    
+    def __init__(self):
+        self.extractor = None
+        if BINANCE_EXTRACTOR_AVAILABLE:
+            try:
+                self.extractor = BinanceDataExtractorEnhanced()
+                logger.info("Enhanced data extractor initialized")
+            except Exception as e:
+                logger.error(f"Error initializing data extractor: {e}")
+    
+    def extract_comprehensive_data(self, symbol: str, timeframe: str = '1h', limit: int = 1000) -> pd.DataFrame:
+        """Extract comprehensive market data"""
+        try:
+            if self.extractor:
+                return self.extractor.extract_data(symbol, timeframe, limit)
+            else:
+                logger.warning("Enhanced data extractor not available")
+                return pd.DataFrame()
+        except Exception as e:
+            logger.error(f"Error extracting data: {e}")
+            return pd.DataFrame()
+
+class AdvancedVisualizer:
+    """Advanced visualization capabilities"""
+    
+    def __init__(self):
+        self.plotly_available = PLOTLY_DASH_AVAILABLE
+        self.seaborn_available = SEABORN_AVAILABLE
+        self.vectorbt_available = VECTORBT_AVAILABLE
+    
+    def create_interactive_chart(self, data: pd.DataFrame, symbol: str) -> go.Figure:
+        """Create interactive Plotly chart"""
+        try:
+            if self.plotly_available:
+                fig = go.Figure()
+                
+                # Candlestick chart
+                fig.add_trace(go.Candlestick(
+                    x=data.index,
+                    open=data['open'],
+                    high=data['high'],
+                    low=data['low'],
+                    close=data['close'],
+                    name='OHLC'
+                ))
+                
+                fig.update_layout(
+                    title=f'{symbol} Price Chart',
+                    yaxis_title='Price',
+                    xaxis_title='Date'
+                )
+                
+                return fig
+            else:
+                logger.warning("Plotly not available for interactive charts")
+                return None
+        except Exception as e:
+            logger.error(f"Error creating interactive chart: {e}")
+            return None
+    
+    def create_advanced_analysis_chart(self, data: pd.DataFrame, symbol: str) -> go.Figure:
+        """Create advanced analysis chart with multiple indicators"""
+        try:
+            if self.plotly_available and TA_LIBRARY_AVAILABLE:
+                fig = go.Figure()
+                
+                # Add price data
+                fig.add_trace(go.Scatter(
+                    x=data.index,
+                    y=data['close'],
+                    name='Price',
+                    line=dict(color='blue')
+                ))
+                
+                # Add technical indicators if available
+                if 'rsi' in data.columns:
+                    fig.add_trace(go.Scatter(
+                        x=data.index,
+                        y=data['rsi'],
+                        name='RSI',
+                        yaxis='y2'
+                    ))
+                
+                fig.update_layout(
+                    title=f'{symbol} Advanced Analysis',
+                    yaxis2=dict(overlaying='y', side='right'),
+                    yaxis_title='Price',
+                    xaxis_title='Date'
+                )
+                
+                return fig
+            else:
+                logger.warning("Plotly or TA library not available")
+                return None
+        except Exception as e:
+            logger.error(f"Error creating advanced chart: {e}")
+            return None
+
 class RealTimeDashboard:
     """Real-time visual dashboard for trading system"""
     
@@ -1038,13 +1630,41 @@ class UnifiedComprehensiveTradingSystem:
         self.root = None
         self.ml_trainer = None
         
+        # Enhanced components
+        self.sentiment_analyzer = None
+        self.advanced_backtester = None
+        self.security_manager = None
+        self.strategy_optimizer = None
+        self.enhanced_data_extractor = None
+        self.advanced_visualizer = None
+        self.file_manager = None
+        
+        # Enhanced system state
+        self.enhanced_signals = []
+        self.sentiment_data = []
+        self.news_data = []
+        self.social_data = []
+        self.backtest_results = []
+        self.security_audits = []
+        self.strategy_optimizations = []
+        
         # System state
         self.running = False
         self.signals = []
-        self.positions = []
+        self.positions = {}  # Changed from list to dict
         self.performance_data = []
         self.logs = []
         self.ml_training_data = []
+        
+        # Enhanced feature flags
+        self.enhanced_features_enabled = False
+        self.sentiment_analysis_enabled = False
+        self.news_analysis_enabled = False
+        self.social_media_enabled = False
+        self.advanced_backtesting_enabled = False
+        self.security_auditing_enabled = False
+        self.strategy_optimization_enabled = False
+        self.advanced_visualization_enabled = False
         
         # Initialize systems
         self.initialize_systems()
@@ -1077,6 +1697,22 @@ class UnifiedComprehensiveTradingSystem:
             
             # Initialize ML trainer
             self.ml_trainer = MLModelTrainer()
+            
+            # Initialize enhanced components
+            self.sentiment_analyzer = SentimentAnalyzer()
+            self.advanced_backtester = AdvancedBacktester()
+            self.security_manager = SecurityManager()
+            self.strategy_optimizer = StrategyOptimizer()
+            self.enhanced_data_extractor = EnhancedDataExtractor()
+            self.advanced_visualizer = AdvancedVisualizer()
+            
+            # Initialize file manager if available
+            if FILE_MANAGER_AVAILABLE:
+                try:
+                    self.file_manager = FileManager()
+                    logger.info("File manager initialized")
+                except Exception as e:
+                    logger.error(f"Error initializing file manager: {e}")
             
             logger.info("Trading systems initialized successfully")
             
@@ -1796,16 +2432,324 @@ Monitor your positions carefully!
             logger.error(f"Error switching to live trading: {e}")
             return False
 
+    # Enhanced Methods for Additional Features
+    
+    def generate_enhanced_signals(self) -> List[EnhancedSignal]:
+        """Generate enhanced signals with sentiment and news analysis"""
+        try:
+            enhanced_signals = []
+            
+            for symbol in self.symbols[:10]:  # Limit to top 10 for performance
+                try:
+                    # Get base signal
+                    market_data = self.comprehensive_system.fetch_market_data(symbol, limit=100)
+                    if market_data.empty:
+                        continue
+                    
+                    # Generate base signal
+                    base_signals = self.generate_unified_signals()
+                    base_signal = next((s for s in base_signals if s.symbol == symbol), None)
+                    
+                    if base_signal:
+                        # Get sentiment analysis
+                        sentiment_score = 0.0
+                        news_impact = 0.0
+                        social_impact = 0.0
+                        
+                        if self.sentiment_analyzer:
+                            # Analyze sentiment
+                            news_data = self.sentiment_analyzer.get_news_sentiment(symbol)
+                            social_data = self.sentiment_analyzer.get_social_sentiment(symbol)
+                            
+                            if news_data:
+                                sentiment_score = news_data.impact_score
+                                news_impact = news_data.impact_score
+                            
+                            if social_data:
+                                social_impact = (social_data.twitter_sentiment + social_data.reddit_sentiment) / 2
+                        
+                        # Create enhanced signal
+                        enhanced_signal = EnhancedSignal(
+                            base_signal=base_signal,
+                            sentiment_score=sentiment_score,
+                            news_impact=news_impact,
+                            social_impact=social_impact,
+                            technical_confidence=base_signal.confidence,
+                            fundamental_score=sentiment_score,
+                            market_regime="trending" if sentiment_score > 0.5 else "sideways",
+                            volatility_regime="high" if abs(sentiment_score) > 0.7 else "normal",
+                            correlation_score=0.0  # Placeholder
+                        )
+                        
+                        enhanced_signals.append(enhanced_signal)
+                        self.enhanced_signals.append(enhanced_signal)
+                        
+                        # Log enhanced signal
+                        log_msg = f"🎯 Enhanced Signal: {symbol} - Sentiment: {sentiment_score:.3f}, News: {news_impact:.3f}, Social: {social_impact:.3f}"
+                        self.logs.append(log_msg)
+                        logger.info(log_msg)
+                
+                except Exception as e:
+                    logger.error(f"Error generating enhanced signal for {symbol}: {e}")
+                    continue
+            
+            return enhanced_signals
+            
+        except Exception as e:
+            logger.error(f"Error generating enhanced signals: {e}")
+            return []
+    
+    def run_comprehensive_backtest(self, symbol: str, start_date: str = "2024-01-01", end_date: str = None) -> BacktestResult:
+        """Run comprehensive backtest for a symbol"""
+        try:
+            if end_date is None:
+                end_date = datetime.now().strftime('%Y-%m-%d')
+            
+            logger.info(f"Running comprehensive backtest for {symbol} from {start_date} to {end_date}")
+            
+            if self.advanced_backtester:
+                result = self.advanced_backtester.run_comprehensive_backtest(
+                    symbol, start_date, end_date, 
+                    strategies=['momentum', 'mean_reversion', 'divergence']
+                )
+                
+                if result:
+                    self.backtest_results.append(result)
+                    
+                    # Log backtest results
+                    log_msg = f"""
+📊 Backtest Complete: {symbol}
+📈 Total Return: {result.total_return:.2f}%
+📊 Sharpe Ratio: {result.sharpe_ratio:.3f}
+📉 Max Drawdown: {result.max_drawdown:.2f}%
+🎯 Win Rate: {result.win_rate:.1f}%
+📊 Total Trades: {result.total_trades}
+"""
+                    self.logs.append(log_msg)
+                    logger.info(log_msg)
+                    
+                    # Send Telegram alert
+                    if self.futures_system.enable_alerts:
+                        alert_message = f"""
+📊 **Comprehensive Backtest Complete**
+
+📈 **Symbol**: {symbol}
+📅 **Period**: {start_date} to {end_date}
+💰 **Total Return**: {result.total_return:.2f}%
+📊 **Sharpe Ratio**: {result.sharpe_ratio:.3f}
+📉 **Max Drawdown**: {result.max_drawdown:.2f}%
+🎯 **Win Rate**: {result.win_rate:.1f}%
+📊 **Total Trades**: {result.total_trades}
+✅ **Profitable Trades**: {result.profitable_trades}
+"""
+                        self.futures_system.send_telegram_alert(alert_message)
+                
+                return result
+            else:
+                logger.warning("Advanced backtester not available")
+                return None
+                
+        except Exception as e:
+            logger.error(f"Error running comprehensive backtest: {e}")
+            return None
+    
+    def run_security_audit(self) -> SecurityAudit:
+        """Run security audit"""
+        try:
+            logger.info("Running security audit...")
+            
+            if self.security_manager:
+                audit = self.security_manager.run_security_audit()
+                
+                if audit:
+                    self.security_audits.append(audit)
+                    
+                    # Log audit results
+                    log_msg = f"""
+🔒 Security Audit Complete
+📊 Risk Score: {audit.risk_score:.2f}
+✅ Status: {audit.compliance_status}
+⚠️ Vulnerabilities: {len(audit.vulnerabilities)}
+📋 Recommendations: {len(audit.recommendations)}
+"""
+                    self.logs.append(log_msg)
+                    logger.info(log_msg)
+                    
+                    # Send alert if action required
+                    if audit.action_required and self.futures_system.enable_alerts:
+                        alert_message = f"""
+🚨 **Security Audit Alert**
+
+⚠️ **Action Required**: {audit.action_required}
+📊 **Risk Score**: {audit.risk_score:.2f}
+✅ **Status**: {audit.compliance_status}
+🔍 **Vulnerabilities**: {len(audit.vulnerabilities)}
+📋 **Recommendations**: {len(audit.recommendations)}
+
+**Please review security recommendations immediately!**
+"""
+                        self.futures_system.send_telegram_alert(alert_message)
+                
+                return audit
+            else:
+                logger.warning("Security manager not available")
+                return None
+                
+        except Exception as e:
+            logger.error(f"Error running security audit: {e}")
+            return None
+    
+    def optimize_strategies(self, symbols: List[str] = None) -> Dict:
+        """Optimize trading strategies"""
+        try:
+            if symbols is None:
+                symbols = self.symbols[:5]  # Optimize top 5 symbols
+            
+            logger.info(f"Optimizing strategies for {len(symbols)} symbols")
+            
+            optimization_results = {}
+            
+            for symbol in symbols:
+                try:
+                    # Get historical data
+                    market_data = self.comprehensive_system.fetch_market_data(symbol, limit=500)
+                    if market_data.empty:
+                        continue
+                    
+                    if self.strategy_optimizer:
+                        # Optimize strategy parameters
+                        optimized_params = self.strategy_optimizer.optimize_strategy_parameters(
+                            'momentum', market_data
+                        )
+                        
+                        if optimized_params:
+                            optimization_results[symbol] = optimized_params
+                            
+                            # Store optimization result
+                            self.strategy_optimizations.append({
+                                'symbol': symbol,
+                                'timestamp': datetime.now(),
+                                'parameters': optimized_params
+                            })
+                            
+                            # Log optimization
+                            log_msg = f"🎯 Strategy Optimization Complete: {symbol} - Parameters: {len(optimized_params)}"
+                            self.logs.append(log_msg)
+                            logger.info(log_msg)
+                
+                except Exception as e:
+                    logger.error(f"Error optimizing strategy for {symbol}: {e}")
+                    continue
+            
+            return optimization_results
+            
+        except Exception as e:
+            logger.error(f"Error optimizing strategies: {e}")
+            return {}
+    
+    def create_advanced_charts(self, symbol: str) -> Dict:
+        """Create advanced visualization charts"""
+        try:
+            logger.info(f"Creating advanced charts for {symbol}")
+            
+            # Get market data
+            market_data = self.comprehensive_system.fetch_market_data(symbol, limit=200)
+            if market_data.empty:
+                return {}
+            
+            charts = {}
+            
+            if self.advanced_visualizer:
+                # Create interactive chart
+                interactive_chart = self.advanced_visualizer.create_interactive_chart(market_data, symbol)
+                if interactive_chart:
+                    charts['interactive'] = interactive_chart
+                
+                # Create advanced analysis chart
+                analysis_chart = self.advanced_visualizer.create_advanced_analysis_chart(market_data, symbol)
+                if analysis_chart:
+                    charts['analysis'] = analysis_chart
+                
+                # Log chart creation
+                log_msg = f"📊 Advanced Charts Created: {symbol} - {len(charts)} charts"
+                self.logs.append(log_msg)
+                logger.info(log_msg)
+            
+            return charts
+            
+        except Exception as e:
+            logger.error(f"Error creating advanced charts: {e}")
+            return {}
+    
+    def get_system_status_summary(self) -> Dict:
+        """Get comprehensive system status summary"""
+        try:
+            # Get ML status
+            ml_status = self.get_ml_training_status()
+            
+            # Get enhanced components status
+            enhanced_status = {
+                'sentiment_analyzer': self.sentiment_analyzer is not None,
+                'advanced_backtester': self.advanced_backtester is not None,
+                'security_manager': self.security_manager is not None,
+                'strategy_optimizer': self.strategy_optimizer is not None,
+                'enhanced_data_extractor': self.enhanced_data_extractor is not None,
+                'advanced_visualizer': self.advanced_visualizer is not None,
+                'file_manager': self.file_manager is not None
+            }
+            
+            # Get enhanced data counts
+            enhanced_counts = {
+                'enhanced_signals': len(self.enhanced_signals),
+                'sentiment_data': len(self.sentiment_data),
+                'news_data': len(self.news_data),
+                'social_data': len(self.social_data),
+                'backtest_results': len(self.backtest_results),
+                'security_audits': len(self.security_audits),
+                'strategy_optimizations': len(self.strategy_optimizations)
+            }
+            
+            return {
+                'system_status': '🟢 ONLINE' if self.running else '🔴 OFFLINE',
+                'trading_mode': '🔴 LIVE TRADING' if self.enable_live_trading else '🟡 PAPER TRADING',
+                'active_symbols': len(self.symbols),
+                'total_signals': len(self.signals),
+                'enhanced_signals': len(self.enhanced_signals),
+                'open_positions': len(self.positions),
+                'total_pnl': sum(pos.get('pnl', 0) for pos in self.positions),
+                'win_rate': self.calculate_win_rate(),
+                'ml_models': ml_status.get('total_symbols_trained', 0),
+                'ml_accuracy': self._calculate_ml_accuracy(ml_status),
+                'enhanced_components': enhanced_status,
+                'enhanced_data_counts': enhanced_counts,
+                'available_features': {
+                    'sentiment_analysis': SENTIMENT_ANALYSIS_AVAILABLE,
+                    'news_analysis': NEWS_ANALYSIS_AVAILABLE,
+                    'social_media': SOCIAL_MEDIA_AVAILABLE,
+                    'plotly_dash': PLOTLY_DASH_AVAILABLE,
+                    'tensorflow': TENSORFLOW_AVAILABLE,
+                    'pytorch': PYTORCH_AVAILABLE,
+                    'optuna': OPTUNA_AVAILABLE,
+                    'shap': SHAP_AVAILABLE,
+                    'mlflow': MLFLOW_AVAILABLE,
+                    'ta_library': TA_LIBRARY_AVAILABLE
+                }
+            }
+            
+        except Exception as e:
+            logger.error(f"Error getting system status summary: {e}")
+            return {}
+
 def main():
     """Main function to run the Unified Comprehensive Trading System"""
-    print("🚀 Unified Comprehensive Trading System")
+    print("UNIFIED COMPREHENSIVE TRADING SYSTEM")
     print("="*50)
     
     # Initialize the system
     system = UnifiedComprehensiveTradingSystem()
     
     # Get user input for trading mode
-    print("\n📊 Select Trading Mode:")
+    print("\nSelect Trading Mode:")
     print("1. Paper Trading (Safe)")
     print("2. Live Trading (Real Money)")
     print("3. Demo Mode (No Trading)")
@@ -1816,13 +2760,13 @@ def main():
             if mode_choice in ['1', '2', '3']:
                 break
             else:
-                print("❌ Invalid choice. Please enter 1, 2, or 3.")
+                print("Invalid choice. Please enter 1, 2, or 3.")
         except (EOFError, KeyboardInterrupt):
-            print("\n⏹️ Exiting...")
+            print("\nExiting...")
             return
     
     # Get user input for ML training
-    print("\n🎯 Select ML Training Option:")
+    print("\nSelect ML Training Option:")
     print("1. Skip ML Training")
     print("2. Train Top 10 Symbols")
     print("3. Full Training for All Symbols")
@@ -1833,9 +2777,9 @@ def main():
             if ml_choice in ['1', '2', '3']:
                 break
             else:
-                print("❌ Invalid choice. Please enter 1, 2, or 3.")
+                print("Invalid choice. Please enter 1, 2, or 3.")
         except (EOFError, KeyboardInterrupt):
-            print("\n⏹️ Exiting...")
+            print("\nExiting...")
             return
     
     # Set trading mode based on choice
@@ -1844,51 +2788,121 @@ def main():
         system.paper_trading = True
         system.futures_system.enable_live_trading = False
         system.futures_system.paper_trading = True
-        print("📊 Mode: Paper Trading (Safe)")
+        print("Mode: Paper Trading (Safe)")
     elif mode_choice == '2':
         system.enable_live_trading = True
         system.paper_trading = False
         system.futures_system.enable_live_trading = True
         system.futures_system.paper_trading = False
-        print("📊 Mode: Live Trading (Real Money)")
+        print("Mode: Live Trading (Real Money)")
     else:
         system.enable_live_trading = False
         system.paper_trading = False
         system.futures_system.enable_live_trading = False
         system.futures_system.paper_trading = False
-        print("📊 Mode: Demo Mode (No Trading)")
+        print("Mode: Demo Mode (No Trading)")
     
     # Set ML training option
     if ml_choice == '1':
-        print("🎯 ML Training: Skipped")
+        print("ML Training: Skipped")
     elif ml_choice == '2':
-        print("🎯 ML Training: Top 10 Symbols (Priority: BTCUSDT, ETHUSDT)")
+        print("ML Training: Top 10 Symbols (Priority: BTCUSDT, ETHUSDT)")
         # Prioritize BTCUSDT and ETHUSDT
         priority_symbols = ['BTCUSDT', 'ETHUSDT']
         other_symbols = [s for s in system.symbols[:8] if s not in priority_symbols]
         training_symbols = priority_symbols + other_symbols
         system.symbols = training_symbols[:10]
-        print(f"🎯 Priority symbols: {priority_symbols}")
-        print(f"📊 Other symbols: {other_symbols[:8]}")
+        print(f"Priority symbols: {priority_symbols}")
+        print(f"Other symbols: {other_symbols[:8]}")
     else:
-        print("🎯 ML Training: All Symbols (Priority: BTCUSDT, ETHUSDT)")
+        print("ML Training: All Symbols (Priority: BTCUSDT, ETHUSDT)")
         # Prioritize BTCUSDT and ETHUSDT in the full list
         priority_symbols = ['BTCUSDT', 'ETHUSDT']
         other_symbols = [s for s in system.symbols if s not in priority_symbols]
         system.symbols = priority_symbols + other_symbols
-        print(f"🎯 Priority symbols: {priority_symbols}")
-        print(f"📊 Total symbols: {len(system.symbols)}")
+        print(f"Priority symbols: {priority_symbols}")
+        print(f"Total symbols: {len(system.symbols)}")
     
-    print("⏳ Starting system...")
+    # Get user input for enhanced features
+    print("\nSelect Enhanced Features:")
+    print("1. Basic Mode (Core features only)")
+    print("2. Enhanced Mode (Sentiment + News + Social)")
+    print("3. Full Mode (All enhanced features)")
+    
+    while True:
+        try:
+            enhanced_choice = input("Enter your choice (1-3): ").strip()
+            if enhanced_choice in ['1', '2', '3']:
+                break
+            else:
+                print("Invalid choice. Please enter 1, 2, or 3.")
+        except (EOFError, KeyboardInterrupt):
+            print("\nExiting...")
+            return
+    
+    # Set enhanced features based on choice
+    if enhanced_choice == '1':
+        print("Enhanced Features: Basic Mode")
+        system.enhanced_features_enabled = False
+    elif enhanced_choice == '2':
+        print("Enhanced Features: Enhanced Mode (Sentiment + News + Social)")
+        system.enhanced_features_enabled = True
+        system.sentiment_analysis_enabled = True
+        system.news_analysis_enabled = True
+        system.social_media_enabled = True
+    else:
+        print("Enhanced Features: Full Mode (All enhanced features)")
+        system.enhanced_features_enabled = True
+        system.sentiment_analysis_enabled = True
+        system.news_analysis_enabled = True
+        system.social_media_enabled = True
+        system.advanced_backtesting_enabled = True
+        system.security_auditing_enabled = True
+        system.strategy_optimization_enabled = True
+        system.advanced_visualization_enabled = True
+    
+    # Display system status summary
+    print("\nSystem Status Summary:")
+    status_summary = system.get_system_status_summary()
+    
+    print(f"System Status: {status_summary.get('system_status', 'Unknown')}")
+    print(f"Trading Mode: {status_summary.get('trading_mode', 'Unknown')}")
+    print(f"Active Symbols: {status_summary.get('active_symbols', 0)}")
+    print(f"ML Models: {status_summary.get('ml_models', 0)}")
+    print(f"ML Accuracy: {status_summary.get('ml_accuracy', 0):.1f}%")
+    
+    # Display enhanced features status
+    if enhanced_choice in ['2', '3']:
+        print("\nEnhanced Features Status:")
+        available_features = status_summary.get('available_features', {})
+        
+        features_status = [
+            ("Sentiment Analysis", available_features.get('sentiment_analysis', False)),
+            ("News Analysis", available_features.get('news_analysis', False)),
+            ("Social Media", available_features.get('social_media', False)),
+            ("Plotly/Dash", available_features.get('plotly_dash', False)),
+            ("TensorFlow", available_features.get('tensorflow', False)),
+            ("PyTorch", available_features.get('pytorch', False)),
+            ("Optuna", available_features.get('optuna', False)),
+            ("SHAP", available_features.get('shap', False)),
+            ("MLflow", available_features.get('mlflow', False)),
+            ("TA Library", available_features.get('ta_library', False))
+        ]
+        
+        for feature, available in features_status:
+            status_icon = "[OK]" if available else "[X]"
+            print(f"  {status_icon} {feature}")
+    
+    print("Starting system...")
     
     try:
         system.start_system()
     except KeyboardInterrupt:
-        print("\n⏹️ Stopping system...")
+        print("\nStopping system...")
         if 'system' in locals():
             system.stop_system()
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
         logger.error(f"System error: {e}")
 
 if __name__ == "__main__":

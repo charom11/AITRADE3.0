@@ -503,7 +503,7 @@ class MultiExchangeManager:
             
             return result
             
-            except Exception as e:
+        except Exception as e:
             logger.error(f"Price comparison error: {e}")
             return {}
     
@@ -628,8 +628,8 @@ class BacktestingEngine:
             self.file_manager.save_file(filename, results)
             
             return results
-                
-                except Exception as e:
+            
+        except Exception as e:
             logger.error(f"Backtest error: {e}")
             return {}
 
@@ -668,7 +668,7 @@ class SentimentAnalyzer:
             
             return sentiment_data
             
-            except Exception as e:
+        except Exception as e:
             logger.error(f"Sentiment analysis error for {symbol}: {e}")
             return {}
 
